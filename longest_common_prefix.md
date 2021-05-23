@@ -1,16 +1,16 @@
 
 ### 最长公共前缀
 
-编写一个函数来查找字符串数组中的最长公共前缀，如果不存在公共前缀，返回空字符串。
+  编写一个函数来查找字符串数组中的最长公共前缀，如果不存在公共前缀，返回空字符串。
 
-比如：输入：["flower", "flow", "flight"]; 那么结果输出："fl"
+  比如：输入：["flower", "flow", "flight"]; 那么结果输出："fl"
 
-比如：输入：["dog", "racecar", "car"]; 那么结果输出："";
+  比如：输入：["dog", "racecar", "car"]; 那么结果输出："";
 
-说明：所有输入只包含小写字母 a-z.
+  说明：所有输入只包含小写字母 a-z.
 
-代码实现如下：
-
+  代码实现如下：
+```
 var arrs = ["flower", "flow", "flight"];
 var longestCommonPrefix = function(strs) {
 
@@ -32,7 +32,7 @@ var longestCommonPrefix = function(strs) {
   return re;
 };
 console.log(longestCommonPrefix(arrs));
-
+```
 
 
 

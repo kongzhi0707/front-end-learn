@@ -18,7 +18,7 @@ var longestCommonPrefix = function(strs) {
   let re = strs[0] || '';
 
   // 注意，这里遍历是从1开始，因为第一位被我们拿来当参照物了
-  for (let i = 0, ilen = strs.length; i < ilen; i++) {
+  for (let i = 1, ilen = strs.length; i < ilen; i++) {
 
     // 注意这里的正则加了^，表示从字符开始位置开始匹配
     var regex = new RegExp('^' + re);

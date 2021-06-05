@@ -1,0 +1,16 @@
+{
+  "name": "autodeployment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^4.0.1",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.1.0"
+  }
+}

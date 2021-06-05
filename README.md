@@ -66,4 +66,30 @@
 8. <a href="./react/redux3.md">redux优化</a>
 9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个React组件发布到npm中</a>
 
+### 8) 前端自动化部署
+
+1. <a href="./autoDeployment/inquirer.md">inquirer.js---命令行交互工具</a>
+2. <a href="./autoDeployment/archive.md">nodejs使用archive文件压缩</a>
+3. <a href="./autoDeployment/autoDeploy1.md"> Node实现前端自动化部署(一)</a>
+4. <a href="./autoDeployment/autoDeploy2.md">使用 WebHook 来自动部署 NodeJS 项目</a>
+5. <a href="./autoDeployment/frame.md">搭建一个 nodejs 脚手架</a>
+6. <a href="./autoDeployment/docker.md">docker全面学习</a>
+7. <a href="./autoDeployment/dockerCompose.md">Docker部署前端应用</a>
+8. <a href="./autoDeployment/multi.md">理解Docker多阶段构建减少镜像体积</a>
+9. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
+10. <a href="./autoDeployment/autoDocker.md">使用Docker+webHook实现前端自动化部署</a>
+
+### nodejs相关的知识
+
+1. <a href="./node/bin.md">理解package.json 中的 bin字段</a>
+2. <a href="./node/commander.md">了解Commander.js命令行框架</a>
+3. <a href="./node/nodeDeploy.md">nodejs代码部署到阿里云服务器</a>
+4. <a href="./node/nestjs.md">Nestjs搭建项目</a>
+5. <a href="./node/graphql.md">GraphQL入门教程</a>
+6. <a href="./node/graphqlKoa.md">Koa + GraphQL 入门教程</a>
+7. <a href="./node/log4js.md">log4js 入门介绍</a>
+8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从0到1搭建脚手架</a>
+9. <a href="./node/pm2.md">pm2入门及自动化部署nodejs项目</a>
+10. <a href="./node/interface.md">node实现接口转发</a>
+
 

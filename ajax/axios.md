@@ -510,7 +510,7 @@ getWidget({
   console.log(err);
 });
 ```
-<a href="https://github.com/tugenhua0707/HttpClient">github源码请查看</a>
+<a href="https://github.com/kongzhi0707/HttpClient">github源码请查看</a>
 
 
 

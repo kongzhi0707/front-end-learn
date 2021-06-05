@@ -54,6 +54,16 @@
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
 
+### 7）React技术相关的
 
+1. <a href="./react/objAndArray.md" target="_blank">React setState 数组、对象多种方式</a>
+2. <a href="./react/redux.md">redux的理解</a>
+3. <a href="./react/redux1.md">理解 react-redux, combineReducer 的使用</a>
+4. <a href="./react/redux2.md">理解Redux-thunk的使用</a>
+5. <a href="./react/reactStaging.md">搭建一个React脚手架</a>
+6. <a href="./react/ssr.md">React + Koa 实现服务器端渲染</a>
+7. <a href="./react/next.md">使用Next.js构建React服务端渲染</a>
+8. <a href="./react/redux3.md">redux优化</a>
+9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个React组件发布到npm中</a>
 
 

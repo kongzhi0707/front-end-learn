@@ -96,4 +96,8 @@
 
 1. <a href="./mock/mock.md">开发一个简单的前端mock工具</a>
 
+### 11) ajax相关
+
+1. <a href="./ajax/axios.md">axios对请求的封装和API接口管理</a>
+
 

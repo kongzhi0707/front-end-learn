@@ -48,7 +48,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
   我们可以使用一个流程图来演示上面代码要做的事情，如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/36.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/36.jpg" />
 
   如上所示，整个过程被分为 构建阶段 和 运行阶段。
 

@@ -68,7 +68,7 @@ sudo /usr/local/nginx/sbin/nginx
 /usr/local/nodejs/project下 执行 pm2 start deploy.js 回车就可以启动了我们node服务了。<br/>
   5.3）检查nodejs项目是否启动了：输出 pm2 list 回车。如果出现了如下显示，说明我们的nodejs项目已经启动了服务了。<br/>
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/50.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/50.jpg" /> <br />
 
 #### 6. 配置nginx反向代理
 

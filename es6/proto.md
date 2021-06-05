@@ -21,7 +21,7 @@ console.log(p2.name); // kongzhi
 
 #### 构造函数 和 原型关系
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/21.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/21.png" /> <br />
 
 #### 2. __proto__
 
@@ -34,7 +34,7 @@ console.log(obj);
 ```
   然后我们在控制台中打印信息如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/20.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/20.jpg" /> <br />
 
   可以看到，每个对象都会有一个 __proto__ 属性。该属性会指向对象的原型。obj它是一个普通对象。因此 obj.__proto__ === Object.prototype;
 如下代码打印可以看到：
@@ -50,7 +50,7 @@ console.log(p1.__proto__ === Person.prototype); // 打印：true
 ```
 #### 因此构造函数/实例原型 之间的关系如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/22.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/22.png" /> <br />
 
 #### 3. constructor 
 
@@ -62,7 +62,7 @@ console.log(Person.prototype.constructor === Person); // true
 ```
   因此他们之间的关系如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/23.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/23.png" /> <br />
 
 #### 4. 实例和原型关系
 
@@ -85,4 +85,4 @@ console.log(Object.prototype.constructor === Object); // true
 ```
   如上代码，我们明白，Person的函数也是对象，因此 Person.prototype.__proto__ 就指向了 Object.prototype; 但是 Object.prototype.__proto__ 就为null。因此 Object为最顶层的对象。如下所示可以解析他们之间的关系：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/24.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/24.png" /> <br />

@@ -13,7 +13,7 @@ const store = createStore(reducers, applyMiddleware(thunk));
 
   下面让我们来使用 redux-thunk 来做一个异步计数器demo，来更加了解 redux-thunk 来处理异步操作。
 
-  同样，这篇文章，也是在上篇文章之上进行的，因此我们也可以先了解下上篇文章的一些知识点，<a href="https://github.com/tugenhua0707/react-collection/blob/master/react/redux1.md">点击查看</a>
+  同样，这篇文章，也是在上篇文章之上进行的，因此我们也可以先了解下上篇文章的一些知识点，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/react/redux1.md">点击查看</a>
 
   现在还是假如我们现在的目录结构如下：
 ```

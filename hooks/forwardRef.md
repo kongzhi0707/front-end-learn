@@ -23,7 +23,7 @@ ReactDOM.render(<Index />, document.getElementById('app'));
 ```
   打印结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/9.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/9.jpg" /> <br />
 
 #### 2. ref作为子组件的属性，获取的是该子组件，代码如下：
 ```
@@ -52,7 +52,7 @@ ReactDOM.render(<Index />, document.getElementById('app'));
 ```
   打印结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/10.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/10.jpg" /> <br />
 
 #### 3. React.forwardRef()
 
@@ -86,7 +86,7 @@ ReactDOM.render(<Index />, document.getElementById('app'));
 ```
   通过如上方式，也可以从父组件中获取子组件的DOM实例。打印数据如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/11.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/11.jpg" /> <br />
 
 #### React.forwardRef() 的使用优势点：
 
@@ -220,7 +220,7 @@ ReactDOM.render(<ParentComponent />, document.getElementById('app'));
 ```
   当我们点击 页面上按钮的时候，会打印出如下信息：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/12.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/12.jpg" /> <br />
 
 
 

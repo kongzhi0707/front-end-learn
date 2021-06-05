@@ -81,7 +81,7 @@ Server ready at http://localhost:4000/
 ```
   然后我们在浏览器打开：http://localhost:4000/ 会看到如下界面操作：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/82.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/82.jpg" /> <br />
 
   如上就是我们的 GraphQL IDE，可用于更好的开发工作流程。
 
@@ -214,7 +214,7 @@ query {
 ```
   它会返回所有的用户给我们，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/83.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/83.jpg" /> <br />
 
   如果我们想返回特定的用户，代码改成如下：
 ```
@@ -227,7 +227,7 @@ query {
   }
 }
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/84.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/84.jpg" /> <br />
 
 #### 4.2) mutation (更改)
 
@@ -319,7 +319,7 @@ mutation {
 ```
   如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/85.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/85.jpg" /> <br />
 
   然后我们再查询下所有的用户看数据是否创建成功了。
 ```
@@ -334,7 +334,7 @@ query {
 ```
   如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/86.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/86.jpg" /> <br />
 
 #### 2）更新用户：
 ```
@@ -349,7 +349,7 @@ mutation {
 ```
   执行如上命令后，我们再来查询下，结果如下，可以看到数据已经更新了。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/87.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/87.jpg" /> <br />
 
 #### 3) 删除用户
 ```
@@ -364,7 +364,7 @@ mutation {
 ```
   同样的道理，执行上面的删除对应的用户的话，我们再来查询下所有用户的数据，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/88.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/88.jpg" /> <br />
 
 #### 4.3）subscription(订阅)
 
@@ -373,7 +373,7 @@ mutation {
 
 待续～  
 
-#### <a href="https://github.com/tugenhua0707/koa-graphql-mongodb/tree/master/graphql-server">源码请点击查看</a>
+#### <a href="https://github.com/kongzhi0707/koa-graphql-mongodb/tree/master/graphql-server">源码请点击查看</a>
 
 
 

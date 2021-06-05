@@ -38,7 +38,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   代码执行后，在render函数中分别打印 console.log(this), console.log(this.__proto__) 的值如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/25.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/25.jpg" /> <br />
 
   如上，我们可以看到，在render函数中this指针指向了 Component 类。并且有clickFunc2属性，因此在 clickFunc2 箭头函数中 this指向的就是当前的 Component 这个类。 了解箭头函数的this指向，请看这篇文章。<a href="./arrow.md">ES6中的箭头函数的this指向</a> 。 总之：箭头函数的this指向的是离它最近上下文函数对象中的this指向。它上下文函数对象 就是 Component 类，因此箭头函数中的this指向的是 Component。因此当我们点击后，在 clickFunc2 函数中的this指向的是Component类包含的所有属性。
 
@@ -69,7 +69,7 @@ constructor(props) {
 
   使用常规方式定义的方法，比如：<div onClick={() => {this.clickFunc1()}}>点击我</div> 定义的方法，存在类的原型上面，子类可以继承到该方法，而使用箭头函数定义的方法则属于类的自己的方法，子类是无法继承的。比如我们使用该方法点击div元素后，打印信息如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/26.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/26.jpg" /> <br />
 
   如上我们可以看到，clickFunc2 箭头函数定义的方式存在是 Component类自身属性中，而 clickFunc1 存在的是 Component的原型上。
 

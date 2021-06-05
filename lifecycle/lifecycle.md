@@ -163,7 +163,7 @@ App.defaultProps = {
 ReactDOM.render(<App />, document.getElementById('app'));
 ```
   打印效果如下所示：
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/7.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/7.jpg" /> <br />
 
 #### 二：数据更新阶段
 
@@ -272,7 +272,7 @@ ReactDOM.render(<Index />, document.getElementById('app'));
 ```
   如上代码运行的结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/8.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/8.jpg" /> <br />
 
   从上面运行结果我们可知：
 

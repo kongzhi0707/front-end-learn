@@ -106,11 +106,11 @@ docker run -d --name my-test-app -p 9001:80 tugenhua/react-app
 ```
   如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/30.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/30.jpg" />
 
   然后我们访问 http://localhost:9001/ 就可以看到页面，如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/31.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/31.jpg" />
 
   我们接下来就可以把项目上传到阿里云仓库里面去，然后可以下载使用即可。
 
@@ -164,17 +164,17 @@ docker run -d --name my-react-app-multi  -p 9002:80 tugenhua/react-app-multi
 ```
   我们先来看看端口映射如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/32.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/32.jpg" />
 
   访问 http://localhost:9002/ 可以看到页面，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/33.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/33.jpg" />
 
 #### 查看镜像大小
 
   运行 docker images , 如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/34.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/34.jpg" />
 
   可以看到，tugenhua/react-app 镜像有1.15G，而 tugenhua/react-app-multi 只有22.8M。
 
@@ -211,7 +211,7 @@ $ open http://localhost:7001
   Dockerfile 文件代码如下：
 ```
 FROM node:8
-LABEL tugenhua "tugenhua0707@qq.com"
+LABEL tugenhua "kongzhi0707@qq.com"
 COPY . .
 RUN npm install
 EXPOSE 7001
@@ -231,11 +231,11 @@ $ docker run -d --name test-egg-app2 -p 4002:7001 tugenhua/test-egg2
 ```
 如下图：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/34.2.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/34.2.jpg" />
 
 然后，我们打开浏览器，访问 http://localhost:4002/, 页面访问如下所示，说明成功了。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/35.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/35.jpg" />
 
 下面我们也可以使用 docker push 上传镜像后续操作等等了。
 

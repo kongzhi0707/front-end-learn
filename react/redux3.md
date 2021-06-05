@@ -458,7 +458,7 @@ class App extends Component {
 
 export default App;
 ```
-<a href="https://github.com/tugenhua0707/react-staging-template">github代码</a>
+<a href="https://github.com/kongzhi0707/react-staging-template">github代码</a>
 
 
 

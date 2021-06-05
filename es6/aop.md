@@ -21,7 +21,7 @@
 
 #### 了解装饰器（Decorator）
 
-  提到AOP，就先要了解ES7中的装饰器了，想要了解装饰器，请看<a href="https://github.com/tugenhua0707/react-collection/blob/master/es6/decorator.md">这篇文章</a>
+  提到AOP，就先要了解ES7中的装饰器了，想要了解装饰器，请看<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/es6/decorator.md">这篇文章</a>
 
   在ES6+之前，要使用装饰器模式，一般是通过 Function.prototype.before 做前置装饰，使用 Function.prototype.after做后置装饰。但是在ES7中，javascript引入了 Decorator提案，提供了对javascript的类和类里面的方法进行装饰的能力。
 

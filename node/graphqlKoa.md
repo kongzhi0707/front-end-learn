@@ -82,7 +82,7 @@ npm install @babel/core @babel/preset-env @babel/register --save-dev
 #### 三：实现mongodb的基本数据模型
 
   这里我们需要 mongodb 存储数据 及 利用 mongoose 模块操作 mongodb 数据库. 
-想要了解更多关于 mongoose类实现增删改查，<a href="https://www.cnblogs.com/tugenhua0707/p/9256605.html">请看这篇文章</a>
+想要了解更多关于 mongoose类实现增删改查，<a href="https://www.cnblogs.com/kongzhi0707/p/9256605.html">请看这篇文章</a>
 
   1）在mongodb文件夹新建一个index.js 和 schema 文件夹，在schema文件夹下面新建 info.js 和 student.js. info.js是基础信息表。 student.js
 是学生表。
@@ -383,7 +383,7 @@ npm install --save apollo-server-koa
 ```
   apollo-server-koa 的使用请看 npm 包的使用方式，<a href="https://www.npmjs.com/package/apollo-server-koa">点击请查看</a> 
 
-  graphQl的入门教程，<a href="https://github.com/tugenhua0707/react-collection/blob/master/node/graphql.md">请看这篇文章</a>
+  graphQl的入门教程，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/node/graphql.md">请看这篇文章</a>
 
   graphql/schema.js 代码如下：
 ```
@@ -460,7 +460,7 @@ module.exports = {
 ```
   如上完成后，我们重启服务器, 运行 npm start 后，访问 http://localhost:4000/graphql 就可以看到如下界面了，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/89.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/89.jpg" /> <br />
 
   现在我们可以在左侧添加一条数据进去，执行如下命令：
 ```
@@ -479,7 +479,7 @@ mutation {
 ```
   执行效果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/90.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/90.jpg" /> <br />
 
   然后我们进行查询所有学生的数据，使用如下命令即可：
 ```
@@ -491,7 +491,7 @@ query {
   }
 }
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/91.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/91.jpg" /> <br />
 
   然后我们再新增学生的一些基本信息，执行如下命令操作：
 ```
@@ -510,7 +510,7 @@ mutation {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/92.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/92.jpg" /> <br />
 
   然后我们进行查询学生信息，执行如下命令操作：
 ```
@@ -525,7 +525,7 @@ query {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/93.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/93.jpg" /> <br />
 
 #### 实现前端接口调用
 
@@ -591,9 +591,9 @@ window.onload = function () {
 ```
   然后当我们点击html中的按钮时候，页面显示的信息如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/94.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/94.jpg" /> <br />
 
-#### <a href="https://github.com/tugenhua0707/koa-graphql-mongodb/tree/master/koa-graphql-mongodb">源码请点击查看</a>
+#### <a href="https://github.com/kongzhi0707/koa-graphql-mongodb/tree/master/koa-graphql-mongodb">源码请点击查看</a>
 
 
 

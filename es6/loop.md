@@ -102,7 +102,7 @@ const json = [
 ```
   我们树形菜单需要如下的数据结构，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/29.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/29.jpg" /> <br />
 
   因此我们需要使用递归循环，来判断是否有子节点children，有子节点的话，继续递归循环，基本代码如下：
 ```
@@ -164,5 +164,5 @@ console.log(getParamsById(32, json));
 ```
   打印效果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/30.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/30.jpg" /> <br />
 

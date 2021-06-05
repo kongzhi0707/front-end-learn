@@ -146,7 +146,7 @@ kongzhi@kongzhi-PC:/media/kongzhi/_dde_data/r-doc/koa-demo$ pm2 list
 
   使用 pm2 monit方法，即可监控cpu和内存的使用情况。并且应用报错信息会打印到 Global Logs 窗口中，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/100.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/100.jpg" /> <br />
 
 #### 2.5）监听代码的变化
 

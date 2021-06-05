@@ -121,11 +121,11 @@ target.ondrop = function(event) {
 ```
   页面初始化是如下这个样子：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/58.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/58.jpg" /> <br />
 
   当我们对元素进行拖动的时候，并且把元素放置到目标div上时，结果变成如下这个样子：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/59.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/59.jpg" /> <br />
 
 #### 拖拽设置
 

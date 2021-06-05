@@ -153,7 +153,7 @@ interface VariableDeclarator <: Node {
 ```
   我们可以看如下流程图就可以很清晰了；
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/114.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/114.png" /> <br />
 
 #### 2.1 babel解析成抽象语法树
 
@@ -171,7 +171,7 @@ console.log('-------ast------', ast);
 ```
   在浏览器中 打印的结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/43.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/43.jpg" />
 
 #### 2.2 转换器 babel-traverse 
 
@@ -197,15 +197,15 @@ traverse(ast, {
 ```
   打印结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/44.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/44.jpg" />
 
   traverse方法第一个参数是ast，第二个参数是一个对象，我们写了一个enter方法，方法的参数是path，打印的结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/45.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/45.jpg" />
 
   如上可以看到，我们的path被打印了5次，那是因为ast上有5个节点。如下可以看到：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/46.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/46.jpg" />
 
   traverse 方法是对树的深度遍历，它有两个方法，分别为 enter 和 exit，向下遍历树我们会进入entry每个节点，它是进入节点的回调函数，向上遍历回去时我们退出(exit)每个节点。它是离开节点的回调函数，对于AST来说，traverse遍历了2遍，我们可以选择进入还是退出的时候，来操纵节点。
 
@@ -243,7 +243,7 @@ console.log('-------ast------', ast);
 ```
   然后打印效果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/47.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/47.jpg" />
 
 #### 2.3 生成器 babel-generator
 
@@ -274,7 +274,7 @@ console.log('----genCode----', genCode);
 ``` 
   打印效果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/48.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/48.jpg" />
 
 #### 编写一个babel插件
 
@@ -460,7 +460,7 @@ fs.writeFileSync('./after.js', res.code, 'utf8');
 ```
 如下图：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/50.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/50.jpg" />
 
   然后在访问者 visitor 中对 Identifier(需要对访问者操作的节点)进行操作，判断 path.node.name === "myPlugin" 节点名称，然后进行更改即可。
 

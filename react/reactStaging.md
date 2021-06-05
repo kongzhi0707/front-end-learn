@@ -354,7 +354,7 @@ module.exports = merge(baseWebpackConfig, {
   因此chunkhash比hash更好，但是它也有一个缺点是：当js文件中因此了css文件代码，当我们改动js文件的时候，该css文件的hash值也会发生改变。css文件代码不能被缓存。<br/>
   contenthash：是最优的方案，它可以解决 hash 和 chunkhash的缺点，并且兼容chunkhash的优点，因此我们使用 contenthash 来做hash值。
 
-  想了解更多，可以看我这篇文章，<a href="https://www.cnblogs.com/tugenhua0707/p/9615822.html">请点击查看</a>。
+  想了解更多，可以看我这篇文章，<a href="https://www.cnblogs.com/kongzhi0707/p/9615822.html">请点击查看</a>。
 
   因此我们需要修改 webpack.prod.conf.js文件，增加如下代码：
 ```
@@ -439,7 +439,7 @@ module.exports = merge(baseWebpackConfig, {
 
   我们先看下，我们之前打包编译时候，控制台的信息：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/63.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/63.jpg" /> <br />
 
   可以看到，我们打包之后的app.js文件大小为128kb，如果以后业务代码越来越多，这个包就会变得越来越大，每次上线后，用户都需要重新下载这个包，下载会更慢。
 因此我们需要将 公共代码 和 业务代码分离出来。比如 react 和 react-dom, 那么这部分不变的代码单独进行打包。
@@ -545,7 +545,7 @@ module.exports = merge(baseWebpackConfig, {
 ```
   最后我们再执行 npm run build 打包后可以看到如下打包信息：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/64.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/64.jpg" /> <br />
 
   如上我们可以看到框架代码 js/framework.f7c2c022.js 大小为127kb，业务代码 js/app.bc1543a3.js大小才为1.69kb。
 ```
@@ -604,7 +604,7 @@ module.exports = merge(baseWebpackConfig, {
 }
 ```  
   然后我们再在命令行中执行 npm run dev 命令，就可以自动打开浏览器页面了，当我们修改某个文件后，就会自动更新代码了。<br/>
-  想要了解更多的 devServer 配置项，我们可以看 <a href="https://www.cnblogs.com/tugenhua0707/p/9418526.html#_labe1_10">这篇文章</a>。
+  想要了解更多的 devServer 配置项，我们可以看 <a href="https://www.cnblogs.com/kongzhi0707/p/9418526.html#_labe1_10">这篇文章</a>。
 
 #### <div id="id6">6）独立导出css文件.<a href="#back">回到顶部</a></div>
 
@@ -806,7 +806,7 @@ module.exports = merge(baseWebpackConfig, {
 ```
   然后我们再运行 npm run build 打包就可以看到 在dist/index.html 文件内，css被单独引入进去了。我们在浏览器源码中也可以看得到，如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/65.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/65.jpg" /> <br />
 
 #### <div id="id7">7) 压缩打包出的css文件.<a href="#back">回到顶部</a></div>
 
@@ -952,7 +952,7 @@ module: {
 ```
   然后我们将src/css目录下的app.css 改成app.less, 重新进行打包也是可以的。
 
-#### 注意：想要支持stylus样式文件的话，可以看我这篇文章配置 <a href="https://www.cnblogs.com/tugenhua0707/p/9478921.html">点击查看</a>
+#### 注意：想要支持stylus样式文件的话，可以看我这篇文章配置 <a href="https://www.cnblogs.com/kongzhi0707/p/9478921.html">点击查看</a>
 
 #### <div id="id9">9) 使用PostCSS. <a href="#back">回到顶部</a></div>
 
@@ -1130,7 +1130,7 @@ module: {
   sourcemap的作用是什么呢？
   我们在项目进行打包后，会将开发中的多个文件代码打包到一个文件中，并且经过压缩，去掉多余的空格，且babel编译化后，最终会用于线上环境，那么这样处理后的代码和源代码会有很大的差别，当有bug的时候，我们只能定位到压缩处理后的代码位置，无法定位到开发环境中的代码，对于开发不好调式，因此sourceMap出现了，它就是为了解决不好调式代码问题的。
 
-  想了解更多，<a href="https://www.cnblogs.com/tugenhua0707/p/9464984.html">请看这篇文章</a>
+  想了解更多，<a href="https://www.cnblogs.com/kongzhi0707/p/9464984.html">请看这篇文章</a>
 
 #### 最后总结：
 
@@ -1250,7 +1250,7 @@ module.exports = {
   NODE_ENV: "production"
 }
 ```
-  因此我们可以根据这样的信息，来区分开发环境和正式环境。如果需要在不同的平台上使用该环境的话，我们可以使用 cross-env 来处理。这里不做多介绍，想了解更多的话，请看我之前 <a href="https://www.cnblogs.com/tugenhua0707/p/9780621.html">这篇文章</a>
+  因此我们可以根据这样的信息，来区分开发环境和正式环境。如果需要在不同的平台上使用该环境的话，我们可以使用 cross-env 来处理。这里不做多介绍，想了解更多的话，请看我之前 <a href="https://www.cnblogs.com/kongzhi0707/p/9780621.html">这篇文章</a>
 
 #### 4) DllPlugin插件打包第三方类库
 
@@ -1369,7 +1369,7 @@ plugins: [
   }),
 ]
 ```
-  更多可以看我之前 <a href="https://www.cnblogs.com/tugenhua0707/p/9562389.html">这篇文章</a>
+  更多可以看我之前 <a href="https://www.cnblogs.com/kongzhi0707/p/9562389.html">这篇文章</a>
 
 #### <div id="id14">14) 在 react 项目中加 eslint <a href="#back">回到顶部</a></div>
 
@@ -1418,8 +1418,8 @@ module.exports = {
  }
 ```
   这里的rulse更多匹配规则，就补贴代码了，详情请看如下这篇文章。
- <a href="https://github.com/tugenhua0707/react-collection/blob/master/es6/eslint.md">在项目中添加eslint规范配置文档</a><br />
- <a href="https://github.com/tugenhua0707/eslints-rule/blob/master/.eslintrc.js">eslint配置代码查看</a> <br />
+ <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/es6/eslint.md">在项目中添加eslint规范配置文档</a><br />
+ <a href="https://github.com/kongzhi0707/eslints-rule/blob/master/.eslintrc.js">eslint配置代码查看</a> <br />
 
   3) 修改 build/webpack.dev.conf.js 文件配置项
 
@@ -1442,7 +1442,7 @@ module.exports = {
 ```
   当我执行 npm run dev 打包的时候，通过eslint检测 会报错如下信息：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/66.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/66.jpg" /> <br />
 
 #### <div id="id15">15）在框架中引入mock工具 <a href="#back">回到顶部</a></div>
 
@@ -1475,14 +1475,14 @@ module.exports = {
 
 <a href="https://www.npmjs.com/package/json-mocker-tool">了解更多请点击查看</a> <br />
 
-<a href="https://github.com/tugenhua0707/react-collection/blob/master/mock/mock.md">如何开发一个简单的前端mock工具</a> <br />
+<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/mock/mock.md">如何开发一个简单的前端mock工具</a> <br />
 
 #### <div id="id16">16）axios对请求的封装和API接口管理 <a href="#back">回到顶部</a></div>
 
   对于项目中有ajax请求，我会在项目中引入axios作为http库，因此我会引入 我之前写的一个叫 http-client-axios 封装的http库到我本地项目中来。
 如何使用，请看我npm包的介绍 <a href="https://www.npmjs.com/package/http-client-axios">axios对请求的封装和API接口管理</a>
 
-  代码如何实现的，<a href="https://github.com/tugenhua0707/react-collection/blob/master/ajax/axios.md">请看我这篇文章</a>。<br/>
+  代码如何实现的，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/ajax/axios.md">请看我这篇文章</a>。<br/>
 
 #### <div id="id17">17）支持typeScript <a href="#back">回到顶部</a></div>
 
@@ -1761,11 +1761,11 @@ ReactDOM.render(<App />, document.getElementById("root"));
 ```
   项目可以运行的，基本的源码可以点击如下：
 
-### typeScript脚手架模版，<a href="https://github.com/tugenhua0707/react-staging-template/tree/supportTypeScript">请点击这里</a>
+### typeScript脚手架模版，<a href="https://github.com/kongzhi0707/react-staging-template/tree/supportTypeScript">请点击这里</a>
 
 ### typeScript基本语法使用，<a href="https://www.tslang.cn/docs/handbook/react-&-webpack.html">请点击官网API</a>
 
-### react脚手架模版配置，<a href="https://github.com/tugenhua0707/react-staging-template/tree/master">请点击这里</a>
+### react脚手架模版配置，<a href="https://github.com/kongzhi0707/react-staging-template/tree/master">请点击这里</a>
 
 
 

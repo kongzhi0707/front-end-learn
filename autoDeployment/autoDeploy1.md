@@ -5,13 +5,13 @@
   前端项目部署时，一般在nginx配置完成后，我们需要将打包后的文件上传到指定的服务器目录下即可。
 
   传统的有如下方式完成：
-  1. xshell 等命令工具完成。<a href="https://www.cnblogs.com/tugenhua0707/p/8278772.html">请看我之前的文章</a> <br />
+  1. xshell 等命令工具完成。<a href="https://www.cnblogs.com/kongzhi0707/p/8278772.html">请看我之前的文章</a> <br />
   2. ftp等可视化工具上传。<br />
-  3. jenkins等自动化部署服务。<a href="https://www.cnblogs.com/tugenhua0707/p/11949644.html">请看我之前的文章</a> <br />
+  3. jenkins等自动化部署服务。<a href="https://www.cnblogs.com/kongzhi0707/p/11949644.html">请看我之前的文章</a> <br />
 
   使用xshell和ftp部署项目比较繁琐，并且xshell一直需要使用命令来操作。而jenkins等自动化部署服务需要安装环境，并且需要熟悉配置流程，相对来说比较麻烦。因此我们希望使用node服务实现对前端打包后的文件进行本地压缩，上传工作。我们只需要配置一下config.js文件，我们进入项目的根目录下，执行一个命令行，比如 npm run deploy 这个命令就可以把我们本地打包后的文件进行上传到服务器上了。
 
-  <a href="https://github.com/tugenhua0707/fe-deploy-cli-template/tree/master/my-auto-deploy">github 项目代码查看</a>
+  <a href="https://github.com/kongzhi0707/fe-deploy-cli-template/tree/master/my-auto-deploy">github 项目代码查看</a>
   
   使用node实现自动化部署，一般要经过如下几个流程：
 ```
@@ -56,7 +56,7 @@ const config = [
       passphrase: '', // 本地私钥密码, 非必填，有私钥 就配置
     },
     // 项目通过webpack打包后生成的dist文件目录（可使用相对地址）
-    targetDir: '/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist',  
+    targetDir: '/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist',  
     targetFile: 'dist.zip', // 目标文件
     openBackUp: true, // 是否开启远端备份
     deployDir: '/usr/local/nginx/html' + '/', // 远端目录
@@ -73,7 +73,7 @@ const config = [
       passphrase: '', // 本地私钥密码, 非必填，有私钥 就配置
     },
     // 项目通过webpack打包后生成的dist文件目录（可使用相对地址）
-    targetDir: '/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist',  
+    targetDir: '/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist',  
     targetFile: 'dist.zip', // 目标文件
     openBackUp: true, // 是否开启远端备份
     deployDir: '/usr/local/nginx/html' + '/', // 远端目录
@@ -84,8 +84,8 @@ module.exports = config;
 ```
 #### 1. 压缩文件（utils/compressFileZip.js）
 
-  我们首先通过config.js 指定配置项 targetDir，该配置项就是我们本地项目打包后生成的dist文件的目录。比如我们本地有个项目名叫 webpack+react+demo, 通过打包后在项目的根目录生成dist文件夹，它的全路径为：'/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist'; 因此 targetDir = '/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist'; 配置即可。 
-  然后我们首先会找到该目录文件进行本地压缩; nodejs使用archive文件压缩, <a href="https://github.com/tugenhua0707/react-collection/blob/master/autoDeployment/archive.md">了解archive文件压缩</a> 。
+  我们首先通过config.js 指定配置项 targetDir，该配置项就是我们本地项目打包后生成的dist文件的目录。比如我们本地有个项目名叫 webpack+react+demo, 通过打包后在项目的根目录生成dist文件夹，它的全路径为：'/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist'; 因此 targetDir = '/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist'; 配置即可。 
+  然后我们首先会找到该目录文件进行本地压缩; nodejs使用archive文件压缩, <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/autoDeployment/archive.md">了解archive文件压缩</a> 。
 
   utils/compressFileZip.js 代码如下：
 ```
@@ -115,9 +115,9 @@ function compressFileZip(targetDir, localFile) {
 }
 module.exports = compressFileZip;
 ```
-  如上参数：targetDir = '/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist'; 
+  如上参数：targetDir = '/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist'; 
   localFile = __dirname + '/' + SELECT_CONFIG.targetFile = __dirname + '/' + 'dist.zip'; localFile 是待上传本地文件目录。
-  因此如上compressFileZip函数的含义是：通过找到 '/Users/tugenhua/work/learn/react-collection/webpack+react+demo/dist' 目录下的文件进行压缩，压缩完成后的文件目录为 __dirname + '/' + 'dist.zip'; 也就是当前项目my-auto-deploy上传文件包的根目录下会有一个 dist.zip文件。
+  因此如上compressFileZip函数的含义是：通过找到 '/Users/tugenhua/work/learn/front-end-learn/webpack+react+demo/dist' 目录下的文件进行压缩，压缩完成后的文件目录为 __dirname + '/' + 'dist.zip'; 也就是当前项目my-auto-deploy上传文件包的根目录下会有一个 dist.zip文件。
   压缩完成后，我们需要链接ssh服务器。ssh服务器链接完成后，我们需要使用ssh进行文件上传。因此我们先来看ssh链接服务器代码。
 
 #### 2. 链接ssh服务器 (utils/connectServer.js)
@@ -277,7 +277,7 @@ module.exports = runCommand;
 
   'mv dist ' + SELECT_CONFIG.releaseDir 这句命令代码即: mv dist web; 将文件 dist 更改为 web。从第四步解压文件，我们知道会解压到 目录为: /usr/local/nginx/html/dist 文件夹下，现在我们把 dist 改成 web。 因此目录就变成了 /usr/local/nginx/html/web 了。 我们上传文件后可以看到如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/31.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/31.jpg" /> <br />
 
 #### 7. 删除本地压缩文件dist.zip(utils/deleteLocalZip.js)
 
@@ -356,7 +356,7 @@ main();
   6. 修改发布目录 
   7. 删除本地压缩文件zip(deleteLocalZip.js)
 ```
-  其中 utils/helper.js 就是使用 inquirer 库一些命令式操作，想要了解 命令式交付操作，请看 <a href="https://github.com/tugenhua0707/react-collection/blob/master/autoDeployment/inquirer.md">这篇文章</a>
+  其中 utils/helper.js 就是使用 inquirer 库一些命令式操作，想要了解 命令式交付操作，请看 <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/autoDeployment/inquirer.md">这篇文章</a>
 
   utils/helper.js 代码如下：
 ```
@@ -415,20 +415,20 @@ module.exports = showHelper;
 
   执行该命令后，第一步会有一个命令交互操作，选择是 dev环境还是prod环境，如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/32.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/32.jpg" /> <br />
 
   因此我们选择dev环境还是线上环境，选择dev环境就是把我们的代码上传到开发环境服务器上，选择 线上环境就是把我们代码上传到线上环境服务器上。这里我们选择dev
 环境，选择完成后，输出如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/33.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/33.jpg" /> <br />
 
   如上可以看到我们代码已经上传到服务器上了，即：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/34.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/34.jpg" /> <br />
 
 #### 其他：为了测试该操作，我特意在阿里云租了一年的服务器。具体如何租用，可以看<a href="https://blog.csdn.net/Kevinblant/article/details/103168451">这篇文章</a>
 
-<a href="https://github.com/tugenhua0707/fe-deploy-cli-template/tree/master/my-auto-deploy">github 项目代码查看</a>
+<a href="https://github.com/kongzhi0707/fe-deploy-cli-template/tree/master/my-auto-deploy">github 项目代码查看</a>
 
 
 

@@ -1,5 +1,5 @@
 ### 搭建一个 nodejs 脚手架
-#### <a href="https://github.com/tugenhua0707/front-end-staging">github源码查看</a>
+#### <a href="https://github.com/kongzhi0707/front-end-staging">github源码查看</a>
 #### 1. 为什么需要脚手架？
 ```
 1）可以减少重复性的工作，可以从零创建一个项目和文件。
@@ -44,7 +44,7 @@ $ npm init
 #!/usr/bin/env node
 console.log('hello world');
 ```
-  nodejs 内置了对命令行操作支持，node工程下对package.json中对bin字段可以定义命令名和关联的执行文件。更多关于bin的知识，<a href="https://github.com/tugenhua0707/react-collection/blob/master/node/bin.md">请看这篇文章</a>。
+  nodejs 内置了对命令行操作支持，node工程下对package.json中对bin字段可以定义命令名和关联的执行文件。更多关于bin的知识，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/node/bin.md">请看这篇文章</a>。
 
   因此我们在package.json文件中添加bin字段，可以直接关联的执行文件。改成如下：
 ```
@@ -161,7 +161,7 @@ program.parse(process.argv);
 ```
   执行 xx 命令后，如下图所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/36.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/36.jpg" /> <br />
 
 #### 4.3) 模版下载 download-git-repo 
 
@@ -175,7 +175,7 @@ program.parse(process.argv);
 
   安装包：npm install --save inquirer
 
-  了解更多关于 inquirer， <a href="https://github.com/tugenhua0707/react-collection/blob/master/autoDeployment/inquirer.md">请看这篇文章</a>
+  了解更多关于 inquirer， <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/autoDeployment/inquirer.md">请看这篇文章</a>
 
 #### 4.5) ora 进度显示
 
@@ -200,7 +200,7 @@ proce.succeed();
 ```
   运行结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/37.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/37.jpg" /> <br />
 
 #### 4.6）log-symbols 在信息前面加上 √ 或 × 等的图标
 
@@ -216,7 +216,7 @@ console.log(symbols.success, chalk.green('SUCCESS'))
 console.log(symbols.error, chalk.red('FAIL'))
 ```
   运行结果如下所示：
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/38.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/38.jpg" /> <br />
 
 #### 5. 实现一个脚手架
 
@@ -277,7 +277,7 @@ program
 // 解析输入参数，记得放在最后即可
 program.parse(process.argv);
 ```
-  了解更多关于 commander，请看<a href="https://github.com/tugenhua0707/react-collection/blob/master/node/commander.md">这篇文章</a>
+  了解更多关于 commander，请看<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/node/commander.md">这篇文章</a>
 
   2. 在 lib/init.js 中定义init子命令
 
@@ -389,10 +389,10 @@ module.exports = function (target) {
   return new Promise((resolve, reject) => {
     /*
      这里可以根据具体的模板地址设置下载的url，注意，如果是git，url后面的branch不能忽略
-     切记：我们github地址是这样的：git@github.com:tugenhua0707/store-base-template.git#webpackReactDemo
-     但是下载要改成：github.com:tugenhua0707/store-base-template#webpackReactDemo
+     切记：我们github地址是这样的：git@github.com:kongzhi0707/store-base-template.git#webpackReactDemo
+     但是下载要改成：github.com:kongzhi0707/store-base-template#webpackReactDemo
     */
-    let url = 'github.com:tugenhua0707/store-base-template#webpackReactDemo';
+    let url = 'github.com:kongzhi0707/store-base-template#webpackReactDemo';
     const spinner = ora(`正在下载项目模板，源地址：${url}`)
     spinner.start();
     download(url, target, { clone: true }, function(err) {
@@ -418,7 +418,7 @@ module.exports = function (target) {
 ```
   如上代码，就可以把我们的 webpack+react+demo 目录下载下来了，会在我们的脚手架目录下面生成 hello-cli 项目模版，如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/39.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/39.jpg" /> <br />
 
   如上的 .download-temp 临时下载目录中的项目模版文件需要转移到项目目录中。然后把 .download-temp 目录删除掉了，这个先晚点弄。
 
@@ -429,7 +429,7 @@ module.exports = function (target) {
 ```
 #### 4. 使用 inquirer.js 处理命令行交互
 
-  对于命令行交互的功能，我们可以使用 inquirer.js 来处理，了解更多 inquirer.js, <a href="https://github.com/tugenhua0707/react-collection/blob/master/autoDeployment/inquirer.md">请看这篇文章</a>
+  对于命令行交互的功能，我们可以使用 inquirer.js 来处理，了解更多 inquirer.js, <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/autoDeployment/inquirer.md">请看这篇文章</a>
 
   因此我们会对 lib/init.js 代码改成如下：
 ```
@@ -564,11 +564,11 @@ function goFunc() {
 
   首先会打印 如下图所示: 
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/40.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/40.jpg" /> <br />
 
   当我们继续回答对应的信息后，打印的信息如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/41.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/41.jpg" /> <br />
 
 #### 5. 使用metalsmith处理模版 和 handlebars 模版引擎。
 
@@ -781,7 +781,7 @@ npm publish
 
   打开https://www.npmjs.com， 搜索front-end-staging，就可以看到刚刚发布的包了. 如下所示：
 
-  <img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/42.jpg" /> <br />
+  <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/42.jpg" /> <br />
 
 ### 验证发布的包
   执行安装命令:
@@ -793,11 +793,11 @@ sudo npm i front-end-staging -g
 kz init hello-cli
 ```
   我们会看到如下可以正常下载模版下来。
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/43.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/43.jpg" /> <br />
 
 #### 注意：如上的脚手架我们默认下载一个react框架。
 
-#### <a href="https://github.com/tugenhua0707/front-end-staging">github源码查看</a>
+#### <a href="https://github.com/kongzhi0707/front-end-staging">github源码查看</a>
 
 
 

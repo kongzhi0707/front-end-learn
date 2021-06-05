@@ -40,14 +40,14 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
   如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/4.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/4.jpg" /> <br />
 
   当我们点击按钮的时候，我们通过 setCount方法重新对count值发生改变，因此会重新渲染页面，渲染完成页面后，同样会执行 useEffect 函数，最后打印 
 "the value is 1"; 还会打印 "button" 对象。
 
   如下图：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/5.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/5.jpg" /> <br />
 
   如上代码，我们使用来 useRef创建来 ref1对象，如代码：const ref1 = useRef(null); 最后将值 ref1 赋值给来 button 的ref属性。因此如果我们要访问button对象的话，我们需要使用 ref1.current 就可以访问得到。
 

@@ -171,7 +171,7 @@ module.exports = {
 };
 ```
 
-<a href="https://github.com/tugenhua0707/eslints-rule">github 源码配置</a>
+<a href="https://github.com/kongzhi0707/eslints-rule">github 源码配置</a>
 
 
 

@@ -12,7 +12,7 @@
 
   在前几篇文章中，我们安装过 Docker Desktop， 因此会默认自动安装好 docker-compose。 我们可以在命令中查看当前版本就可以看出的，如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/37.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/37.jpg" />
 
 #### 二：Docker-Compose部署项目
 
@@ -93,11 +93,11 @@ server {
 ```
 $ docker-compose up -d
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/38.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/38.jpg" />
 
   执行如上命令后，就会运行我们的react应用了。我们现在可以打开浏览器，访问：http://localhost:3001/ 就可以访问到我们的页面了，如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/39.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/39.jpg" />
 
   我们现在来分析下 docker-compose.yml 代码的含义；
 ```
@@ -131,11 +131,11 @@ services:
 ```
 $ docker-conpose up -d
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/38.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/38.jpg" />
 
   如上执行命令后，首先在本地查询是否有配置文件中配置的镜像文件，如果没有，就会从Docker Hub上直接下载该镜像。如上执行后就会在后台运行了，如果我们想要验证容器是否处于活动状态，我们可以运行命令：docker-compose ps; 如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/40.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/40.jpg" />
 
   如上会显示有关正在运行的容器及状态，还有端口映射等信息；
 
@@ -162,7 +162,7 @@ $ npm run dev
   Dockerfile 文件代码如下：
 ```
 FROM node:8
-LABEL tugenhua "tugenhua0707@qq.com"
+LABEL tugenhua "kongzhi0707@qq.com"
 COPY . .
 RUN npm install
 EXPOSE 7003
@@ -212,7 +212,7 @@ docker-compose up -d
 ```
 执行上面完成后，我们就可以通过浏览器访问 http://localhost:3000/ 就可以访问到页面了。如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/41.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/41.jpg" />
 
 #### 编排多个服务
 
@@ -291,7 +291,7 @@ docker-compose up -d
 ```
   现在我们就可以访问8080服务了，http://localhost:8080/ ， 如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/42.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/42.jpg" />
 
   按照上面的思路，我们也可以加入其他的服务，比如mongodb/mysql/redis等。可以通过 network 和 links 来进行通信。
 

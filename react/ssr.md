@@ -1,7 +1,7 @@
 
 ### React + Koa 实现服务器端渲染
 
-  搭建前端开发环境，我直接使用 react脚手架中的代码拿过来的。详情看 <a href="https://github.com/tugenhua0707/react-staging-template">点击这里</a>，搭建完成后，我们就可以使用 npm run dev 就可以重启开发环境，然后访问：http://localhost:8080/ 就可以访问到页面了。<br />
+  搭建前端开发环境，我直接使用 react脚手架中的代码拿过来的。详情看 <a href="https://github.com/kongzhi0707/react-staging-template">点击这里</a>，搭建完成后，我们就可以使用 npm run dev 就可以重启开发环境，然后访问：http://localhost:8080/ 就可以访问到页面了。<br />
 
     项目初始结构如下：
 ```
@@ -562,7 +562,7 @@ export default routes;
 ```
   重启npm run server 刷新下localhost:9000看看效果; 然后从 首页进入列表页，http://localhost:9000/list 这个页面，现在我们刷新下这个页面，服务器端渲染出来的页面数据是如下，但是页面上显示的数据是不一样的，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/67.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/67.jpg" /> <br />
 
   出现如上问题是：这是因为我们加载了index.js他又重新初始化store，所以会产生这样的问题。
 
@@ -662,7 +662,7 @@ ReactDOM.render(
 #### 注意：页面首次进入的时候使用的是服务器端渲染，然后页面跳转的时候，会使用客户端渲染，因此会使用客户端的数据，但是当我们重新刷新页面的时候，又使用的是服务器端渲染的数据。
 
 
-#### <a href="https://github.com/tugenhua0707/react-ssr">源码请看这里</a>
+#### <a href="https://github.com/kongzhi0707/react-ssr">源码请看这里</a>
 
 
 

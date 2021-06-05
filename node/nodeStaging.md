@@ -385,7 +385,7 @@ npm install --save koa koa-bodyparser koa-static koa-router koa2-cors apollo-ser
 ```
 #### 实现mongodb的基本数据模型
 
-  想要了解更多关于 mongoose类实现增删改查，<a href="https://www.cnblogs.com/tugenhua0707/p/9256605.html">请看这篇文章</a> 
+  想要了解更多关于 mongoose类实现增删改查，<a href="https://www.cnblogs.com/kongzhi0707/p/9256605.html">请看这篇文章</a> 
 ```
   1) 在mongodb文件夹新建一个 index.js 和 schema文件夹，在schema文件夹下面新建 user.js 和 info.js, user.js 是用户表, info.js 是用户信息表。
   2）在 config.js 文件中添加配置代码。
@@ -602,7 +602,7 @@ module.exports = router;
 ```
 npm install --save apollo-server-koa
 ```
-  graphQl的入门教程，<a href="https://github.com/tugenhua0707/react-collection/blob/master/node/graphql.md">请看这篇文章</a>
+  graphQl的入门教程，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/node/graphql.md">请看这篇文章</a>
 
   graphql/schema.js 代码如下：
 ```
@@ -697,7 +697,7 @@ mutation {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/95.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/95.jpg" /> <br />
 
   然后我们进行查询所有用户的数据，使用如下命令即可：
 ```
@@ -711,7 +711,7 @@ query {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/96.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/96.jpg" /> <br />
 
   然后我们再新增用户的一些基本信息，执行如下命令操作：
 ```
@@ -730,7 +730,7 @@ mutation {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/97.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/97.jpg" /> <br />
 
   然后我们进行查询用户信息，执行如下命令操作：
 ```
@@ -745,7 +745,7 @@ query {
 ```
   执行结果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/98.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/98.jpg" /> <br />
 
 #### 三：在项目中引入React(或React脚手架)
 
@@ -819,7 +819,7 @@ app.use(cors({
 
   最后我们在页面中访问，可以看到接口请求成功了，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/99.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/99.jpg" /> <br />
 
   如上我们就可以拿到数据了，然后去渲染页面即可。
 
@@ -834,7 +834,7 @@ app.use(cors({
   然后我们在项目的根目录下新建 config文件夹，在该文件夹下新建 index.js 代码如下：
 
 
-  <a href="https://github.com/tugenhua0707/koa-staging">Github查看源码</a>
+  <a href="https://github.com/kongzhi0707/koa-staging">Github查看源码</a>
 
 
 

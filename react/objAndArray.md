@@ -102,7 +102,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   点击一下，如下效果：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/13.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/13.jpg" /> <br />
 
 #### 2.2 删除数组的尾部
 
@@ -152,7 +152,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   点击一下，效果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/14.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/14.jpg" /> <br />
 
 #### 2.3 删除数组中的任意一项
 
@@ -204,7 +204,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   效果如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/15.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/15.jpg" /> <br />
 
 #### 2.4 数组尾部添加一项
 
@@ -252,7 +252,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   效果如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/16.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/16.jpg" /> <br />
 
 #### 2.5 数组头部添加一项
 
@@ -300,7 +300,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   效果如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/17.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/17.jpg" /> <br />
 
 #### 2.6 数组任意位置添加一项
 
@@ -351,7 +351,7 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   效果如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/18.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/18.jpg" /> <br />
 
 #### 2.7 修改数组中任意一项中的值
 
@@ -400,4 +400,4 @@ ReactDOM.render(<Component />, document.getElementById('app'));
 ```
   效果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/19.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/19.jpg" /> <br />

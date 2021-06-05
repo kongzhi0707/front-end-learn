@@ -13,13 +13,13 @@
 ```
 #### 一：创建webhook
 
-  首先我们需要把我们到nodejs项目先推送到github上去，比如我node项目地址为：https://github.com/tugenhua0707/git-node-webhook 推送完成后我们进入该项目到 settings ---> Webhooks---> Add webhook， 然后如下所示操作：
+  首先我们需要把我们到nodejs项目先推送到github上去，比如我node项目地址为：https://github.com/kongzhi0707/git-node-webhook 推送完成后我们进入该项目到 settings ---> Webhooks---> Add webhook， 然后如下所示操作：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/51.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/51.jpg" /> <br />
 
   如果创建成功后，显示是如下所示的：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/52.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/52.jpg" /> <br />
 
   如上就是webhook创建完成了。
 
@@ -128,11 +128,11 @@ function run_cmd(cmd, args, callback) {
 
   1. 首先在我们ssh服务器上存放nodejs项目中克隆我们的git-node-webhook项目下来，比如在 /usr/local/nodejs/ 目录下是存放所有的node项目的。因此我们登录我们的ssh服务器后，进入该项目下，执行 git-node-webhook项目 克隆。执行命令如下：
 ```
-git clone https://github.com/tugenhua0707/git-node-webhook.git
+git clone https://github.com/kongzhi0707/git-node-webhook.git
 ```  
   然后进入 git-node-webhook项目后，执行 npm install 把项目的包安装下。安装完成后，就变成如下的目录了，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/53.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/53.jpg" /> <br />
 
   这些东西做完以后，我们需要去配置nginx了。
 
@@ -156,12 +156,12 @@ server {
 
   上面所有的配置完成后，我们进入 /usr/local/nodejs/git-node-webhook 目录，运行 pm2 start deploy.js 后就启动来我们到node服务了，然后我们在本地node项目随便更改一些东西，我们在本地运行 npm run watch 命令后，就可以把我们到代码推送到github上了，然后推送完成后，我们的node服务会监听到push这个监听，然后会执行deploy.sh脚本对github代码进行拉取，拉取后会自动执行 npm run build 命令打包，打包完成后，会自动重启nginx服务器。因此我们在页面刷新下就可以看到新内容了。shell执行后如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/54.jpg" /> <br />
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/55.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/54.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/55.jpg" /> <br />
 
   如上我们就打包完成了，因此我们刷新页面就可以看到效果了。如上就是整个自动化过程了。～
 
-<a href="https://github.com/tugenhua0707/git-node-webhook">查看github代码</a>
+<a href="https://github.com/kongzhi0707/git-node-webhook">查看github代码</a>
 
 
 

@@ -58,7 +58,7 @@ console.log('app started at port 8083');
 
 当我们在浏览器中 运行： http://localhost:8083/ 后就可以看到 "欢迎光临" 的字样了。
 
-koa-bodyparser 插件的使用，可以看 <a href="https://www.cnblogs.com/tugenhua0707/p/9904892.html#_labe1_0">这篇文章</a>
+koa-bodyparser 插件的使用，可以看 <a href="https://www.cnblogs.com/kongzhi0707/p/9904892.html#_labe1_0">这篇文章</a>
 
 注意：我们还可以给路由加一个前缀，比如如下代码：
 

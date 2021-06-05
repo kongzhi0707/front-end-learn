@@ -90,7 +90,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
   我们可以直接通过this.props.onClick，来调用dispatch,这样就不需要在代码中来进行store.dispatch了。
 
-  我们还是在上篇文章的基础之上来学习，<a href="https://github.com/tugenhua0707/react-collection/blob/master/react/redux.md">查看上篇文章</a>
+  我们还是在上篇文章的基础之上来学习，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/react/redux.md">查看上篇文章</a>
 
   首先结构目录如下：
 
@@ -304,7 +304,7 @@ export default connect(mapStateToProps, Action)(App);
 ```
   我们点击 increment 按钮或 decrement 按钮的时候，会打印 this.props 的值可以看到如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/60.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/60.jpg" /> <br />
 
 
 

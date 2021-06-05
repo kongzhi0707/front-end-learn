@@ -165,12 +165,12 @@ export default PostList;
 ```
   在如上 index.jsx 中，showList被初始化为false，因此PostList组件是不显示的。页面只显示：'显示' 和 '增加数量' 按钮。当我点击 显示按钮的 时候，页面效果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/1.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/1.jpg" /> <br />
 
   可以看到，showList 为 true，会显示 PostList 组件，并且此时 count 值为初始化的 5。因此会调用 子组件 PostList 函数。然后执行 遍历：new Array(count).fill('文章标题') 这样的代码，当执行完成后，就会调用 useEffect 函数。此时会插入数据到页面body最后面去。如上就是一个执行先后顺序。
 
   现在当我们点击 增加数量 按钮的时候，postCount值为6. 我们可以看到页面及打印信息如下：
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/2.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/2.jpg" /> <br />
 
   useEffect 的执行顺序和上面是一样的。唯一不同的是，每次点击按钮的时候都会往页面插入p元素。这有可能就会造成内存泄漏的问题产生。当我们每次点击按钮的时候，p元素都会被在页面中追加一次。为了解决这个问题，我们可以使用 useEffect 添加一个返回值，并且在返回函数内部删除我们追加的p元素即可。如下代码:
 
@@ -210,7 +210,7 @@ function PostList({ count = 5 }) {
 export default PostList;
 ```
   最后执行点击按钮后的效果如下：
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/3.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/3.jpg" /> <br />
 
 #### 2) useEffect 异步处理
 

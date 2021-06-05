@@ -8,7 +8,7 @@
 4. <a href="./selection_sort.md">选择排序</a> <br/>
 5. <a href="./bubble_sort.md">冒泡排序</a> <br/>
 6. <a href="./fast_sort.md">快速排序</a> <br/>
-7. <div>JS 链表</div> <br/>
+7. <div>JS 链表</div>
       |--- <a href="./single-link.md">js实现单向链表</a> <br/>
       |--- <a href="">js实现双向链表</a> <br/>
       |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
@@ -79,7 +79,7 @@
 9. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
 10. <a href="./autoDeployment/autoDocker.md">使用Docker+webHook实现前端自动化部署</a>
 
-### nodejs相关的知识
+### 9) nodejs相关的知识
 
 1. <a href="./node/bin.md">理解package.json 中的 bin字段</a>
 2. <a href="./node/commander.md">了解Commander.js命令行框架</a>
@@ -91,5 +91,9 @@
 8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从0到1搭建脚手架</a>
 9. <a href="./node/pm2.md">pm2入门及自动化部署nodejs项目</a>
 10. <a href="./node/interface.md">node实现接口转发</a>
+
+### 10) mock数据
+
+1. <a href="./mock/mock.md">开发一个简单的前端mock工具</a>
 
 

@@ -16,7 +16,7 @@ mySql才能正常运行，如果还是使用传统方法的话，运维人员需
 
   如下所示:
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/0.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/0.jpg" />
 
 #### 总结概括Docker
 
@@ -51,11 +51,11 @@ mySql才能正常运行，如果还是使用传统方法的话，运维人员需
 比如我们有三个环境，开发(或叫日常)环境，测试环境，生产环境。并且每个环境都需要部署相同的软件/脚本/运行程序。每次环境中任意一个环境升级的时候，我们都需要维护三份。
 那么如果某一天某个环境疏忽的话，就可能会出现问题。如下传统部署的方式：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/1.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/1.jpg" />
 
   但是如果我们引入了Docker后，我们只需要维护一个Docker镜像就可以了。可以实现多套环境，一个镜像，实现系统级别的一次构建到处运行。如下基本流程：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/2.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/2.jpg" />
 
   如上，通过Docker流程改造，我们的镜像文件生成后就可以跑在任何系统上，并且快速部署。基于Docker部署，可以充分利用机器资源，节省成本。
 
@@ -68,7 +68,7 @@ mySql才能正常运行，如果还是使用传统方法的话，运维人员需
 
   安装完成后启动，Mac顶部导航栏出现了一个图标，通过菜单可以进行docker配置和退出等操作。如下图：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/3.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/3.jpg" />
 
   官方指南文档（https://docs.docker.com/get-docker/）
   阿里云指南 (Linux) (https://developer.aliyun.com/article/110806)
@@ -79,7 +79,7 @@ mySql才能正常运行，如果还是使用传统方法的话，运维人员需
 
   查看结果，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/4.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/4.jpg" />
 
 #### 三：搭建web服务器
 
@@ -102,17 +102,17 @@ docker run -p 80 --name web -i -t centos /bin/bash
 
 如下图：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/5.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/5.jpg" />
 
   但是，当我们第二次执行 docker run 时，因为Docker在本机中已经安装过该镜像，因此 Docker 会直接创建一个新的容器并且启动该程序。
 
   如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/6.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/6.jpg" />
 
 #### 注意： docker run 每次使用都会创建一个新的容器，因此，我们以后再次启动这个容器时，只需要使用命令 docker start 即可。docker start 的作用是用在重新启动已存在的镜像。而 docker run 包含该镜像放入容器中 docker create，然后将容器启动 docker start，如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/7.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/7.jpg" />
 
 #### 1) 安装nginx服务器
 
@@ -135,11 +135,11 @@ nginx
 ```
   我们执行 ctrl + P +  Q 切换到后台。然后，通过 docker ps -a 来查看随机分配的端口。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/8.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/8.jpg" />
 
   如上可以看到 端口是：32768， 那么我们通过浏览器访问：http://127.0.0.1:32768 即可。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/9.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/9.jpg" />
 
 #### 2) 了解docker命令
 
@@ -190,7 +190,7 @@ docker images
 ```
   查询结果，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/10.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/10.jpg" />
 
   对上面的名词解析下含义如下：
 ```
@@ -215,13 +215,13 @@ IMAGE ID(镜像唯一的ID)为：'300e315adb2f';
 ```
 docker search nginx
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/11.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/11.jpg" />
 
   现在，我们可以通过 docker pull nginx 来拉取最新的nginx镜像文件，当然我们也可以通过 docker pull nginx:latest 来操作。
 ```
 docker pull nginx:latest
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/12.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/12.jpg" />
 
   然后我们通过如下命令创建并且运行一个容器。
 ```
@@ -233,11 +233,11 @@ docker run -p 8080:80 -d --name nginx nginx
 
   我们再通过 docker ps -a 来查看，发现容器已经在后台运行了，并且后台执行了nginx命令，并且对外开放了8080端口。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/13.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/13.jpg" />
 
   因此，我们通过浏览器访问：http://127.0.0.1:8080 即可，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/14.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/14.jpg" />
 
 #### 注意：如上是使用 Docker Hub 上的软件，当然国内也有阿里云服务器，我们也可以登陆阿里云，也可以拉取公开的镜像。
 
@@ -258,7 +258,7 @@ docker run -p 8080:80 -d --name nginx nginx
 #### 1）下面我们需要在 centos/Dockfile 文件下编写如下代码：
 ```
 FROM centos:7
-MAINTAINER tugenhua "tugenhua0707@qq.com"
+MAINTAINER tugenhua "kongzhi0707@qq.com"
 RUN rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 RUN yum install -y nginx
 EXPOSE 80
@@ -266,7 +266,7 @@ EXPOSE 80
   参数解析含义如下：
 ```
 FROM centos:7 含义：指定centos作为基础镜像，它的版本是7(CentOS 7).
-MAINTAINER tugenhua "tugenhua0707@qq.com" 含义：指定该镜像的作者是 tugenhua，邮箱是：tugenhua0707@qq.com。
+MAINTAINER tugenhua "kongzhi0707@qq.com" 含义：指定该镜像的作者是 tugenhua，邮箱是：kongzhi0707@qq.com。
 
 RUN rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 RUN yum install -y nginx
@@ -287,7 +287,7 @@ docker build -t="tugenhua/nginx_demo:v1" .
 
   构建结果如下报错的话：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/15.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/15.jpg" />
 
   解决的办法很简单，在命令行中进入该文件：sudo vi /etc/resolv.conf
 
@@ -297,13 +297,13 @@ nameserver 114.114.114.114
 ```
   最后再执行命令：docker build -t="tugenhua/nginx_demo:v1" . 即可，如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/16.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/16.jpg" />
 
   出现上面提示，说明构建成功了。
 
   现在， 我们来通过 docker images 看下我们的新镜像吧。如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/17.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/17.jpg" />
 
 #### 注意：Dockerfile 指令 可以网上搜索下。
 
@@ -335,27 +335,27 @@ docker push tugenhua/nginx_demo:v1
 
 #### 1.1）登录地址：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors 如果没有账号，自己注册一个。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/18.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/18.jpg" />
 
 #### 1.2）创建命名空间
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/19.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/19.jpg" />
 
 #### 1.3) 创建仓库名称
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/20.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/20.jpg" />
 
   点击下一步
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/21.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/21.jpg" />
 
   仓库创建完成。查看当前仓库信息 (https://cr.console.aliyun.com/cn-hangzhou/instances/repositories) 如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/22.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/22.jpg" />
 
   如何登陆，拉取，推送等，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/23.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/23.jpg" />
 
 #### 2）在docker上登录阿里云仓库
 
@@ -363,7 +363,7 @@ docker push tugenhua/nginx_demo:v1
 ```
 $ sudo docker login --username=我叫空智0707 registry.cn-hangzhou.aliyuncs.com
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/24.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/24.jpg" />
 
 #### 注意：第一次输入的密码是因为使用了sudo，因此第一次输入的密码是：自己电脑登陆密码，第二次才是 仓库密码。docker login 登陆失败，请看这里原因（https://help.aliyun.com/knowledge_detail/60761.html）
 
@@ -378,20 +378,20 @@ $ sudo docker push registry.cn-hangzhou.aliyuncs.com/docker_demo0707/tomcat07:[�
 
   先使用 sudo docker images 查看当前镜像列表信息；如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/25.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/25.jpg" />
 ```
 docker tag 9a988767f411 registry.cn-hangzhou.aliyuncs.com/docker_demo0707/tomcat07:v1
 docker push registry.cn-hangzhou.aliyuncs.com/docker_demo0707/tomcat07:v1
 ```
   如下，说明推送成功了。
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/26.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/26.jpg" />
 
 #### 4）在公网上查看是否有自己的镜像
 
 https://cr.console.aliyun.com/cn-hangzhou/instances/images
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/27.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/27.jpg" />
 
 #### 5）从阿里云上拉取我们自己的镜像看是否可以使用
 ```
@@ -404,11 +404,11 @@ https://cr.console.aliyun.com/cn-hangzhou/instances/images
 3) 运行镜像：docker run -d -p 8084:80 --name tugenhua nginx
 4) 查看映射端口: docker ps
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/28.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/28.jpg" />
 
   在浏览器端访问运行：http://127.0.0.1:8084/  如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/autoDeployment/images/29.jpg" />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/29.jpg" />
 
 
 

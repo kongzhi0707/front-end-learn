@@ -52,7 +52,7 @@ npm run dev
 ```
   然后在浏览器打开 http://localhost:3000/ 网页显示如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/68.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/68.jpg" /> <br />
 
 #### 4) 前端路由
 
@@ -92,11 +92,11 @@ export default Index;
 
   如下，刷新 http://localhost:3000/ 页面，然后点击进去about页面，结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/69.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/69.jpg" /> <br />
 
   然后当我点击后退按钮，后退页面，再点击 about 按钮进来，结果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/70.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/70.jpg" /> <br />
 
   如上可以看到，第二次进来当时候，没有请求about.js。
 
@@ -215,11 +215,11 @@ export default About;
 ```
   因此当我们访问 http://localhost:3000/ 的时候，页面显示的效果如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/71.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/71.jpg" /> <br />
 
   当我们访问 http://localhost:3000/about 的时候，页面显示效果变成如下：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/72.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/72.jpg" /> <br />
 
   因此目前项目的整个目录架构如下所示：
 ```
@@ -292,11 +292,11 @@ export default withRouter(Detail);
 
   因此当我们访问：http://localhost:3000/ 的时候，显示如下结果：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/73.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/73.jpg" /> <br />
 
   当我们点击其中的第一项的时候，进入详情页面，我们显示如下结果：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/74.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/74.jpg" /> <br />
 
   如上我们使用 query string 可以实现页面间的传值，但是使用这种方式会导致页面的url不太友好，尤其是当页面传递多个参数的时候。因此 next.js 提供了 Route Masking这个特性用于路由的美化。
 
@@ -332,15 +332,15 @@ export default Index;
   如上代码我们点击 Hello next.js 项的时候就能进入 详情页 http://localhost:3000/p/111000 这样的地址了.
   如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/75.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/75.jpg" /> <br />
 
   当我们点击 next.js is awesome 的时候，我们也一样可以进入 详情页，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/76.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/76.jpg" /> <br />
 
   如上我们可以伪装 history 前进和后退很友好，但是当我们刷新页面的时候 结果发现页面 404了。如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/77.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/77.jpg" /> <br />
 
   这是因为刷新页面会直接向服务器请求这个url，而服务器端并没有该url对应的页面，所以报错。为了解决这个问题，需要使用到next.js提供的自定义服务接口。
 
@@ -422,7 +422,7 @@ app.prepare()
 ```
   然后我们再运行 npm run dev 的时候，进入详情页，再刷新页面，就会保留页面，并且渲染出页面对应的数据了。如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/78.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/78.jpg" /> <br />
 
   但是这里有个小问题是：前端路由打开的页面和后端路由打开的页面的title不一样，这是因为后端路由传过去的是id，而前端路由页面显示的是title。该问题在实际项目中可以
 避免的，因为在实际项目中我们一般会通过id来获取到title，然后再显示出来。
@@ -473,7 +473,7 @@ export default Index;
 ```
   如上代码我们在 getInitialProps 中获取到数据并且返回，因此我们在Index的props就可以拿到数据了，再遍历渲染成列表。如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/79.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/79.jpg" /> <br />
 
   现在我们来看详情页，我们在 server.js 中的代码改成如下：
 ```
@@ -509,7 +509,7 @@ export default Detail;
 ```
   重启项目，从列表页进入详情页, 如下图所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/80.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/80.jpg" /> <br />
 
 #### 6）添加样式
 
@@ -569,7 +569,7 @@ export default Index;
 ```
   如上样式：<style jsx> 可以理解为我们内链样式，添加样式后，我们就可以看到我们的页面生效了，如下所示：
 
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/81.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/81.jpg" /> <br />
 
   我们可以按照上面的方式添加更多的样式。
 
@@ -639,7 +639,7 @@ npm start
 ```
   这样我们就解决了自定义服务的部署，重启项目后刷新详情页也是能够正常访问的了。
 
-### 源码请查看 <a href="https://github.com/tugenhua0707/next-server-render">点击这里</a>
+### 源码请查看 <a href="https://github.com/kongzhi0707/next-server-render">点击这里</a>
 
 
 

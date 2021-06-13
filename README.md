@@ -14,6 +14,8 @@
       |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
       |--- <a href="">合并两个有序链表。</a> <br/>
 8. <a href="./request.md">实现一个请求控制函数</a>
+9. <a href="./arrangement.md">全排列组合算法</a>
+10. <a href="./flatten.md">JS扁平化(flatten)数组</a>
 
 ### 二）React Hooks相关的
 
@@ -50,6 +52,7 @@
 12. <a href="./es6/drop.md">HTML5元素拖拽drag与拖放drop</a>
 13. <a href="./es6/indexDB.md">indexDB的封装</a>
 14. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
+15. <a href="./es6/promise.md">理解 Promise 的实现</a>
 
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>

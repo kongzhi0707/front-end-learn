@@ -1,13 +1,13 @@
 ### axios对请求的封装和API接口管理
 
   Axios中文文档，<a href="https://segmentfault.com/a/1190000020786471?utm_source=tag-newest">请点击这里</a> <br/>
-  <a href="https://github.com/tugenhua0707/HttpClient">github源码请查看</a> <br/>
+  <a href="https://github.com/kongzhi0707/HttpClient">github源码请查看</a> <br/>
 
   我们首先来了解下axios有默认如下配置项：
 ```
 console.log(axios.defaults); // 打印axios的默认配置项有如下默认配置
 ```
-<img src="https://raw.githubusercontent.com/tugenhua0707/react-collection/master/images/56.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/56.jpg" /> <br />
 
   在项目中，如果我们想使用axios作为http库来完成和后台数据接口对接工作的话，在axios库中，有 axios.get(url[,config]), axios.post(url[,data[,config]]), axios.delete(url[,config]), axios.put(url[,data[,config]]) 等常见的方法，在代码中，我们可能像如下完成一个get请求，如下代码：
 ```

@@ -4,7 +4,7 @@
 思路看这篇文章：<a href="https://www.jianshu.com/p/e3cb5423f89c">归并排序</a>
 
 代码如下：
-
+```
 function mergeSort(array) {
   let len = array.length;
   if (len <=1) {
@@ -33,3 +33,4 @@ function mergeSort(array) {
  }
 }
 console.log(mergeSort([38, 27, 43, 3, 9, 82, 10])); // [3, 9, 10, 27, 38, 43, 82]
+```

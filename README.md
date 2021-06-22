@@ -17,6 +17,7 @@
 9. <a href="./arrangement.md">全排列组合算法</a>
 10. <a href="./flatten.md">JS扁平化(flatten)数组</a>
 11. <a href="./mergeSort.md">js归并排序</a>
+12. <a href="./hasCycle.md">判断链表是否有环</a>
 
 ### 二）React Hooks相关的
 

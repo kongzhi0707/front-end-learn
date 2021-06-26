@@ -10,7 +10,7 @@
 6. <a href="./fast_sort.md">快速排序</a> <br/>
 7. <div>JS 链表</div>
       |--- <a href="./single-link.md">js实现单向链表</a> <br/>
-      |--- <a href="">js实现双向链表</a> <br/>
+      |--- <a href="./double-link.md">js实现双向链表</a> <br/>
       |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
       |--- <a href="">合并两个有序链表。</a> <br/>
 8. <a href="./request.md">实现一个请求控制函数</a>

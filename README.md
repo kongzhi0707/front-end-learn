@@ -106,4 +106,8 @@
 
 1. <a href="./ajax/axios.md">axios对请求的封装和API接口管理</a>
 
+### 12) javascript 设计模式
+
+1、<a href="./mode/memento.md">JS备忘录模式</a>
+
 

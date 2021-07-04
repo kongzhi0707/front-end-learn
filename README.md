@@ -55,6 +55,14 @@
 13. <a href="./es6/indexDB.md">indexDB的封装</a>
 14. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
 15. <a href="./es6/promise.md">理解 Promise 的实现</a>
+16. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
+17. <a href="./learn/debounce.md">函数防抖</a>
+18. <a href="./learn/throttle.md">函数节流</a>
+19. <a href="./learn/curry.md">函数柯里化</a>
+20. <a href="./learn/deepClone.md">深度克隆</a>
+21. <a href="./learn/flatten.md">数组扁平化</a>
+22. <a href="./learn/jsonp.md">实现JSONP</a>
+23. <a href="./learn/unique.md">js数组去重</a>
 
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>

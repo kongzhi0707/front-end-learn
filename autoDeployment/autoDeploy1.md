@@ -428,7 +428,7 @@ module.exports = showHelper;
 
 #### 其他：为了测试该操作，我特意在阿里云租了一年的服务器。具体如何租用，可以看<a href="https://blog.csdn.net/Kevinblant/article/details/103168451">这篇文章</a>
 
-<a href="https://github.com/kongzhi0707/fe-deploy-cli-template/tree/master/my-auto-deploy">github 项目代码查看</a>
+<a href="https://github.com/kongzhi0707/my-auto-deploy-cli">github 项目代码查看</a>
 
 
 

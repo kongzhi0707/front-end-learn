@@ -67,6 +67,7 @@
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
 2. <a href="./visual/expression.md">表达式计算</a>
+3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
 ### 7）React技术相关的
 

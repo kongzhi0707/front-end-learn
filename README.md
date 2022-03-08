@@ -120,4 +120,9 @@
 
 1、<a href="./mode/memento.md">JS备忘录模式</a>
 
+### 13）深入了解Vite模式
+
+1）<a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
+
+
 

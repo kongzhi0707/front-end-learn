@@ -124,5 +124,9 @@
 
 1）<a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 
+### 14) React前端组件化整理
+
+1）<a href="./frontEndComponent/design.md">React组件设计原则</a>
+
 
 

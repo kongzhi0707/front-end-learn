@@ -53,6 +53,9 @@ export default class Index extends Component {
   constructor(props) {
     super(props);
   }
+  static defaultProps = {
+    title: ''
+  };
   static propTypes = {
     title: PropTypes.string.isRequired,
   }

@@ -19,11 +19,11 @@
 
 比如我们设计一个Select组件，一般情况下我们会设计成如下这个样子：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/frontEndComponent/images/0.png" /><br />
+<img src="https://kongzhi0707.github.io/front-end-learn/frontEndComponent/images/0.png" /><br />
 
 如上是我们很常见的结构，但是有时候Select组件还有可能是如下这个样子：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/frontEndComponent/images/1.png" /><br />
+<img src="https://kongzhi0707.github.io/front-end-learn/frontEndComponent/images/1.png" /><br />
 
 因此我们设计组件的时候不仅仅要考虑上面的通用性各种情况下结构外，我们还需要给组件预留类似 itemRender 的自定义渲染函数，对于一些特殊的结构可以让用户自己去渲染相对应的DOM结构来满足对应的需求。也就是需要把对应的钩子回调初始化函数暴露给开发者，让他们自己去负责渲染操作。当然提供回调钩子还有很多情况，比如选择下拉框的某一项后，我们也可以给开发者提供回调，让他们自己做自己的事情。
 

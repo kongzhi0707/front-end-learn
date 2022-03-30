@@ -55,7 +55,7 @@ module.exports = {
 ```
 效果如下：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/1.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/1.png"/>
 
 #### 3）添加导航栏
 
@@ -80,7 +80,7 @@ module.exports = {
 ```
 效果变成如下：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/2.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/2.png"/>
 
 更多配置请参考 <a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%AF%BC%E8%88%AA%E6%A0%8F">VuePress导航栏</a>
 
@@ -137,7 +137,7 @@ module.exports = {
 ```
 效果如下所示：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/3.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/3.png"/>
 
 handbook/xxx.md 文档如下：
 
@@ -171,7 +171,7 @@ module.exports = {
 ```
 刷新下页面，我们会看到上面会有一个图标，点击图标会下拉，会有不同的切换主题，如下所示：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/4.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/4.png"/>
 
 #### 6）设置语言
 
@@ -210,7 +210,7 @@ $accentColor = #3178c6
 
 如下我们可以发现主题颜色发生改变了，
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/5.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/5.png"/>
 
 <a href="https://vuepress.vuejs.org/zh/config/#patterns">查看palette.styl 更多配置</a>
 
@@ -302,11 +302,11 @@ cd -
 ```
 然后命令行切换到 vuepress-init 目录下，执行 sudo sh deploy.sh 命令，就会开始构建，然后提交到远程仓库，注意这里提交到了 gh-pages 分支，我们查看下对应仓库分支的代码：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/6.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/6.png"/>
 
 我们可以在仓库的 Setting -> Pages 中看到最后的地址：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/vuepress/7.png"/>
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/vuepress/7.png"/>
 
 最后我们访问 https://kongzhi0707.github.io/learn-vuepress-test/ 就可以了。
 

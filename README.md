@@ -95,6 +95,7 @@
 9. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
 10. <a href="./autoDeployment/autoDocker.md">使用Docker+webHook实现前端自动化部署</a>
 11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
+12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 
 ### 9) nodejs相关的知识
 

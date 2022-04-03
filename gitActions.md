@@ -239,3 +239,5 @@ $ git push
 然后我们点击生成的链接即可看到自动构建完成的应用了。从此以后，我们只需要推送yml文件中指定的分支，就可以自动触发构建，自动更新我们的网站。如下访问的效果：
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/githubAction/9.png" />
+
+最后我们点击访问 <a href="https://kongzhi0707.github.io/react-github-actions-workflow-demo/">https://kongzhi0707.github.io/react-github-actions-workflow-demo/ </a> 就可以访问我们的项目了。

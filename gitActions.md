@@ -10,12 +10,12 @@ Github Action 是 Github推出的持续集成工具。每次提交代码到Githu
 #### 基本概念
 
 Github Actions 有一些自己的术语。
-
+```
 1）workflow（工作流程）：持续集成一次运行的过程，就是一个workflow。
 2）job（任务）：一个workflow由一个或多个jobs构成。
 3）step（步骤）：每个job由多个step构成，一步步完成。
 4）action（动作）：每个step可以依次执行一个或多个命令(action).
-
+```
 #### workflow 文件
 
 Github Actions 的配置文件叫做 workflow文件，存放在代码仓库的 .github/workflows 目录下。
@@ -24,15 +24,16 @@ workflow 文件采用 YAML格式，文件名可以任意取，但是后缀名统
 
 workflow 文件常用的配置字段有如下：
 
-1）name
+#### 1）name
 
 name 字段是 workflow 的名称，如果省略该字段，默认为当前 workflow 的文件名。
 
 // 我们可以叫如下名字，随便自定义名称
-
+```
 name: Github Actions Demo
+```
 
-2) on 
+#### 2) on 
 
 on字段指定触发 workflow 的条件，一般指某些事件。
 
@@ -51,7 +52,7 @@ on:
 ```
 如上代码，当master分支上发生了push事件时，就会触发 workflow。
 
-3）jobs.<job_id>.name
+#### 3）jobs.<job_id>.name
 
 workflow 文件的主体是 jobs字段，表示要执行的一项或多项任务。jobs字段里面，需要写出每一项任务的 job_id(名称自定义)，job_id里面的name字段是任务的说明。
 ```
@@ -63,7 +64,7 @@ jobs:
 ```
 上面代码的 jobs字段包含两个任务，job_id 分别为 my_first_job 和 my_second_job。
 
-4）jobs.<job_id>.needs
+#### 4）jobs.<job_id>.needs
 
 needs 字段指定当前任务的依赖关系，即运行顺序。
 ```
@@ -77,7 +78,7 @@ jobs:
 如上代码，my_first_job 必须先执行，然后 my_second_job 才执行。my_third_job 必须等待 my_first_job 和 my_second_job 的完成才能运行。 因此，该workflow
 的运行顺序依次为：my_first_job，my_second_job，my_third_job。
 
-5）jobs.<job_id>.runs-on
+#### 5）jobs.<job_id>.runs-on
 
 runs-on 字段指定运行所需要的虚拟机环境。它是必填字段。目前可用的虚拟机如下：
 ```
@@ -89,7 +90,7 @@ macOS-latest 或 macOS-10.14
 ```
 runs-on: ubuntu-latest
 ```
-6) jobs.<job_id>.steps
+#### 6) jobs.<job_id>.steps
 
 steps字段指定每个Job的运行步骤，可以包含一个或多个步骤，每个步骤都可以指定以下三个字段。
 

@@ -124,8 +124,8 @@
 
 ### 13）深入了解Vite模式
 
-1）<a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
-2）<a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
+1. <a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
+2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
 
 ### 14) React前端组件化整理
 

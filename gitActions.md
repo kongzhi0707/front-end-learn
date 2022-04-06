@@ -4,8 +4,8 @@
 #### Github Action简介
 
 Github Action 是 Github推出的持续集成工具。每次提交代码到Github的仓库后，Github都会自动创建一个虚拟机(比如 Mac/Windows/Linux), 来执行一段或多段指令。
-
-主要作用是：当我们想要在线上查看我们的项目效果时，可以使用 github actions。
+它和jenkins是同一类产品，但是Actions最大的优势是：它是与Github高度整合在一起 ，我们只需要一个配置文件即可自动开启服务，甚至我们都不需要购买服务器，Github Actions
+自带云环境运行。
 
 #### 基本概念
 
@@ -159,7 +159,7 @@ $ npm run start
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/githubAction/4.png" />
 
-如上点击后，就会自动帮我吗创建一个 npm-publish.yml, 如下：
+如上点击后，就会自动帮我们创建一个 npm-publish.yml, 如下：
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/githubAction/5.png" />
 

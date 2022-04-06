@@ -16,4 +16,7 @@
 
 因此实现前端自动化部署后，我们开发者只需要把代码推送到仓库，其他事情都可以通过服务器上的自动化脚本完成。
 
+想要全面了解Docker，请看<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/autoDeployment/docker.md">这篇文章</a>
+
+
 

@@ -109,6 +109,7 @@
 8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从0到1搭建脚手架</a>
 9. <a href="./node/pm2.md">pm2入门及自动化部署nodejs项目</a>
 10. <a href="./node/interface.md">node实现接口转发</a>
+11. <a href="./node/npx.md">npx, npm, yarn, cnpm, pnpm 的区别</a>
 
 ### 10) mock数据
 
@@ -126,6 +127,7 @@
 
 1. <a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
+3. <a href="./vite/vite1.md">初识vite使用及工作机制</a>
 
 ### 14) React前端组件化整理
 

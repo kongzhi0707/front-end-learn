@@ -46,6 +46,18 @@ $ npx create-react-app react-1
 
 注意：如果我们第一次使用该命令，npx会下载 create-react-app放在临时文件中，过一段时间会自动清除，但是不会立即清除。
 
+4) npm init 和 npx 相似
+
+在npm@6版本中，增加了一个新命令 npm init <pkg>
+
+如下两个命令是等价的：
+
+npm init react-app myapp 
+
+npx create-create-app myapp
+
+npm init <pkg> 对与 create 开头的脚手架制定了一个特殊的命令，比如 create-react-app, npm init 下载时会默认对安装的 pkg 包添加 create 前缀，同时像 npx 一样不会全局安装，只是运行一次，后面会删除。
+
 #### 2. yarn
 
 yarn 也是一个包管理器，它和npm其实没有本质的区别，都是管理和安装包的。它解决了早期npm的一些问题：比如 不支持离线模式，树形结构的依赖，依赖安装不确定等。

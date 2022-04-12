@@ -110,6 +110,7 @@
 9. <a href="./node/pm2.md">pm2入门及自动化部署nodejs项目</a>
 10. <a href="./node/interface.md">node实现接口转发</a>
 11. <a href="./node/npx.md">npx, npm, yarn, cnpm, pnpm 的区别</a>
+12. <a href="./node/peerDependencies.md">理解peerDependencies作用</a>
 
 ### 10) mock数据
 
@@ -132,6 +133,15 @@
 ### 14) React前端组件化整理
 
 1）<a href="./frontEndComponent/design.md">React组件设计原则</a>
+
+### 15) git 集合
+
+1）<a href="./git/cherry-pick.md">git cherry-pick</a>
+
+### 16）组件库搭建
+
+1）<a href="https://github.com/kongzhi0707/v-component-ui">Vue组件库搭建</a>
+2）<a href="">React组件库搭建</a>
 
 
 

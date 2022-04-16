@@ -64,6 +64,7 @@
 22. <a href="./learn/jsonp.md">实现JSONP</a>
 23. <a href="./learn/unique.md">js数组去重</a>
 24. <a href="./learn/ztreeData.md">JS树形数据操作</a>
+25. <a href="./learn/filterData.md">JS树形数据递归过滤</a>
 
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>

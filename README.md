@@ -82,6 +82,7 @@
 7. <a href="./react/next.md">使用Next.js构建React服务端渲染</a>
 8. <a href="./react/redux3.md">redux优化</a>
 9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个React组件发布到npm中</a>
+10. <a href="./react/react-app-rewired.md">react-app-rewired使用</a>
 
 ### 8) 前端自动化部署
 
@@ -113,6 +114,7 @@
 11. <a href="./node/npx.md">npx, npm, yarn, cnpm, pnpm 的区别</a>
 12. <a href="./node/peerDependencies.md">理解peerDependencies作用</a>
 13. <a href="./node/tsconfig.md">tsconfig.json配置详解</a>
+14. <a href="./node/prettierrc.md">prettierrc文件常见配置</a>
 
 ### 10) mock数据
 

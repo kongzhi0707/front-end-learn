@@ -1,38 +1,38 @@
 
-### 使用 father 搭建react组件库
+### 使用 father 打包 react组件库
 
 #### 1) 使用create-react-app 生成 react 脚手架 father-app 项目
 
 首先使用 create-react-app 生成一个react项目，执行如下命令：
-
+```
 $ sudo npm i -g npx
 $ npx create-react-app father-app --template typescript
 $ cd father-app
 $ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
 $ npm start
-
+```
 项目重启后，可以看到一个react项目。
 
 #### 2）安装Antd
-
+```
 npm install antd --save
-
+```
 #### 3) 安装 React Router
-
+```
 npm install --save react-router-dom @types/react-router-dom
-
+```
 #### 4）使用 eslint & prettier & husky 统一编码风格
 
 安装依赖：
-
+```
 npm install -D eslint eslint-config-prettier eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks lint-staged prettier husky
-
+```
 上面安装完成后，我们来看下项目的根目录下 tsconfig.json 配置文件，默认配置如下：
 
 tsconfig.json，表示该项目支持 typeScript，编译器启动时会从目录中寻找 tsconfig.json 文件，并且根据其中的配置信息对项目进行编译。
 
 配置如下：
-
+```
 {
   "compilerOptions": {
     "target": "es5",                            // 用来指定ts被编译为ES5版本
@@ -59,11 +59,11 @@ tsconfig.json，表示该项目支持 typeScript，编译器启动时会从目�
     "src"
   ]
 }
-
+```
 #### 5）添加 .eslintrc 文件
 
 在项目中的根目录添加 .eslintrc文件，指定我们想要支持的 Javascript 语言选项。
-
+```
 {
   "extends": "react-app",
   "plugins": ["prettier"],
@@ -77,17 +77,17 @@ tsconfig.json，表示该项目支持 typeScript，编译器启动时会从目�
     }]
   }
 }
-
+```
 #### 6) 添加 .eslintignore 文件
 
 在项目的根目录下创建一个 .eslintignore 文件来告诉 ESLint 去忽略特定的文件和目录，.eslintignore 文件是一个纯文本文件。其中的每一行glob模式表明哪些路径应该忽略检测。
-
+```
 node_modules/*
-
+```
 #### 7）添加 .prettierrc.js 文件
 
 在项目的根目录下新建 .prettierrc.js 文件，创造一个适合我们团队代码配置。作用是：一键改变代码风格.
-
+```
 module.exports = {
   singleQuote: true,            // 使用单引号
   trailingComma: 'all',         // 行尾逗号,默认none,可选 none|es5|all ,es5 包括es5中的数组、对象  all 包括函数对象等所有可选
@@ -102,18 +102,105 @@ module.exports = {
     },
   ],
 };
-
+```
 #### 8）添加 .env 文件
 
-在项目的根目录添加 .env 文件，作用是解决 alias 的问题。
-
+在项目的根目录添加 .env 文件，作用是解决 alias 的问题。请看 <a href="https://github.com/facebook/create-react-app/issues/2188">这篇文章</a>
+```
 NODE_PATH=src
-
+```
 #### 使用Less
 
 安装如下依赖文件：
-
+```
 npm i -D react-app-rewired customize-cra babel-plugin-import less less-loader
+```
+
+react-app-rewired 作用是： 帮我们重写编写 react 脚手架配置，详情 请看 <a href="https://github.com/kongzhi0707/front-end-learn/blob/master/react/react-app-rewired.md">这篇文章</a>
+
+##### 修改 package.json
+
+"scripts": {
+-   "start": "react-scripts start",
++   "start": "react-app-rewired start",
+-   "build": "react-scripts build",
++   "build": "react-app-rewired build",
+-   "test": "react-scripts test",
++   "test": "react-app-rewired test",
+-   "eject": "react-scripts eject",
++   "eject": "react-app-rewired eject"
+}
+
+#### 9) config-overrides.js
+
+在项目的根目录下创建一个 config-overrides.js 文件，用于修改默认配置。
+
+const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+
+module.exports = override(
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true,
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+  }),
+);
+
+#### 10）添加react路由
+
+使用 create-react-app 创建的src目录结构如下：
+
+|--- src
+| |--- App.css 
+| |--- App.test.tsx
+| |--- App.tsx
+| |--- index.css
+| |--- index.tsx
+| |--- logo.svg
+| |--- react-app-env.d.ts
+| |--- reportWebVitals.ts
+| |--- setupTests.ts
+
+现在我们添加 react 路由，我们在src原来的目录基础之上 添加 pages 和 components 文件夹，pages 是用来存放路由相关的组件，components 是用来存放通用的组件。
+
+代码结构变成如下：
+
+|--- src
+| |--- App.css 
+| |--- App.test.tsx
+| |--- App.tsx
+| |--- components
+| | |--- empty-line
+| | | |--- EmptyLine.tsx
+| | | |--- demo.tsx
+| | | |--- index.tsx
+| | | |--- style
+| |--- index.css
+| |--- index.tsx
+| |--- logo.svg
+| |--- pages
+| | |--- Component
+| | | |--- index.tsx
+| | | |--- index.less
+| | |--- Home
+| | | |--- index.tsx
+| | | |--- index.less
+| | |--- NotFound
+| | | |--- index.tsx
+| |--- react-app-env.d.ts
+| |--- reportWebVitals.ts
+| |--- setupTests.ts
+
+如上 pages 下面的目录结构，存放了 组件 及 样式文件。
+
+
+
+
+
+
+
 
 
 

@@ -65,6 +65,7 @@
 23. <a href="./learn/unique.md">js数组去重</a>
 24. <a href="./learn/ztreeData.md">JS树形数据操作</a>
 25. <a href="./learn/filterData.md">JS树形数据递归过滤</a>
+26. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
@@ -145,7 +146,6 @@
 ### 16）组件库搭建
 
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue组件库搭建</a>
-2. <a href="">React组件库搭建</a>
 
 
 

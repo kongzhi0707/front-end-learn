@@ -3,26 +3,26 @@
 
 #### 一：Babel 是什么？
 
-Babel 是一个JavaScript的编译器。
-ES6是2015年发布的下一代javascript语言标准，它引入了新的语法和API，使我们编写js代码更加得心应手，比如class，let,for...of promise等等这样的，但是可惜的是这些js新特性只被最新版本的浏览器支持，但是低版本浏览器并不支持，那么低版本浏览器下就需要一个转换工具，把es6代码转换成浏览器能识别的代码，babel就是这样的一个工具。可以理解为 babel是javascript语法的编译器。
+  Babel 是一个JavaScript的编译器。
+  ES6是2015年发布的下一代javascript语言标准，它引入了新的语法和API，使我们编写js代码更加得心应手，比如class，let,for...of promise等等这样的，但是可惜的是这些js新特性只被最新版本的浏览器支持，但是低版本浏览器并不支持，那么低版本浏览器下就需要一个转换工具，把es6代码转换成浏览器能识别的代码，babel就是这样的一个工具。可以理解为 babel是javascript语法的编译器。
 
 #### 配置Babel
 
-.babelrc 和 babel.config.js 都是Babel的配置文件。
-babel 7.x 以上开始支持两种类型的配置文件, 分别是.babelrc 和 babel.config.js
+  .babelrc 和 babel.config.js 都是Babel的配置文件。
+  babel 7.x 以上开始支持两种类型的配置文件, 分别是.babelrc 和 babel.config.js
 
-babel.config.js是在babel第7版引入的，主要是为了解决babel6中的一些问题。
+  babel.config.js是在babel第7版引入的，主要是为了解决babel6中的一些问题。
 
 比如如下：
 
-.babelrc会在一些情况下，莫名地应用在node_modules中。
-.babelrc的配置不能应用在使用符号链接引用进来的文件。
-在 node_modules 中的.babelrc会被检测到，即使它们中的插件和预设通常没有安装，也可能在Babel编译文件的版本中无效。
+  .babelrc会在一些情况下，莫名地应用在node_modules中。
+  .babelrc的配置不能应用在使用符号链接引用进来的文件。
+  在 node_modules 中的.babelrc会被检测到，即使它们中的插件和预设通常没有安装，也可能在Babel编译文件的版本中无效。
 
 #### 二：Babel编译器
 
-在Babel执行编译的过程中，会从项目的根目录下的 .babelrc文件中读取配置。.babelrc是一个json格式的文件。
-在.babelrc配置文件中，主要是对预设(presets) 和 插件(plugins) 进行配置。.babelrc配置文件一般为如下：
+  在Babel执行编译的过程中，会从项目的根目录下的 .babelrc文件中读取配置。.babelrc是一个json格式的文件。
+  在.babelrc配置文件中，主要是对预设(presets) 和 插件(plugins) 进行配置。.babelrc配置文件一般为如下：
 ```
 {
   "plugins": [
@@ -51,23 +51,23 @@ babel.config.js是在babel第7版引入的，主要是为了解决babel6中的�
 
 #### 1. 理解 babel-polyfill 和 babel-runtime 及 babel-plugin-transform-runtime
 
-Babel默认只转换新的javascript语法，而不转换新的API，比如 Iterator, Generator, Set, Maps, Proxy, Reflect,Symbol,Promise 等全局对象。以及一些在全局对象上的方法(比如 Object.assign)都不会转码。
-比如说，ES6在Array对象上新增了Array.form方法，Babel就不会转码这个方法，如果想让这个方法运行，必须使用 babel-polyfill来转换等。
+  Babel默认只转换新的javascript语法，而不转换新的API，比如 Iterator, Generator, Set, Maps, Proxy, Reflect,Symbol,Promise 等全局对象。以及一些在全局对象上的方法(比如 Object.assign)都不会转码。
+  比如说，ES6在Array对象上新增了Array.form方法，Babel就不会转码这个方法，如果想让这个方法运行，必须使用 babel-polyfill来转换等。
 
-因此：babel-polyfill和babel-runtime就是为了解决新的API与这种全局对象或全局对象方法不足的问题，因此可以使用这两个插件可以转换的。
+  因此：babel-polyfill和babel-runtime就是为了解决新的API与这种全局对象或全局对象方法不足的问题，因此可以使用这两个插件可以转换的。
 
 那么他们两者的区别是什么？
 
-babel-polyfill 的原理是当运行环境中并没有实现的一些方法，babel-polyfill会做兼容。
-babel-runtime 它是将es6编译成es5去执行。我们使用es6的语法来编写，最终会通过babel-runtime编译成es5.也就是说，不管浏览器是否支持ES6，只要是ES6的语法，它都会进行转码成ES5.所以就有很多冗余的代码。
+  babel-polyfill 的原理是当运行环境中并没有实现的一些方法，babel-polyfill会做兼容。
+  babel-runtime 它是将es6编译成es5去执行。我们使用es6的语法来编写，最终会通过babel-runtime编译成es5.也就是说，不管浏览器是否支持ES6，只要是ES6的语法，它都会进行转码成ES5.所以就有很多冗余的代码。
 
-babel-polyfill 它是通过向全局对象和内置对象的prototype上添加方法来实现的。比如运行环境中不支持Array.prototype.find 方法，引入polyfill, 我们就可以使用es6方法来编写了，但是缺点就是会造成全局空间污染。
+  babel-polyfill 它是通过向全局对象和内置对象的prototype上添加方法来实现的。比如运行环境中不支持Array.prototype.find 方法，引入polyfill, 我们就可以使用es6方法来编写了，但是缺点就是会造成全局空间污染。
 
-babel-runtime: 它不会污染全局对象和内置对象的原型，比如说我们需要Promise，我们只需要import Promise from 'babel-runtime/core-js/promise'即可，这样不仅避免污染全局对象，而且可以减少不必要的代码。
+  babel-runtime: 它不会污染全局对象和内置对象的原型，比如说我们需要Promise，我们只需要import Promise from 'babel-runtime/core-js/promise'即可，这样不仅避免污染全局对象，而且可以减少不必要的代码。
 
-虽然 babel-runtime 可以解决 babel-polyfill中的避免污染全局对象，但是它自己也有缺点的，比如上，如果我现在有100个文件甚至更多的话，难道我们需要一个个文件加import Promise from 'babel-runtime/core-js/promise' 吗？那这样肯定是不行的，因此这个时候出来一个 叫 babel-plugin-transform-runtime，
-它就可以帮助我们去避免手动引入 import的痛苦，并且它还做了公用方法的抽离。比如说我们有100个模块都使用promise，但是promise的polyfill仅仅存在1份。
-这就是 babel-plugin-transform-runtime 插件的作用。
+  虽然 babel-runtime 可以解决 babel-polyfill中的避免污染全局对象，但是它自己也有缺点的，比如上，如果我现在有100个文件甚至更多的话，难道我们需要一个个文件加import Promise from 'babel-runtime/core-js/promise' 吗？那这样肯定是不行的，因此这个时候出来一个 叫 babel-plugin-transform-runtime，
+  它就可以帮助我们去避免手动引入 import的痛苦，并且它还做了公用方法的抽离。比如说我们有100个模块都使用promise，但是promise的polyfill仅仅存在1份。
+  这就是 babel-plugin-transform-runtime 插件的作用。
 
 #### 2. 理解 babel-plugin-transform-runtime 的配置一些选项
 
@@ -90,14 +90,14 @@ babel-runtime: 它不会污染全局对象和内置对象的原型，比如说�
 
 配置项可以看官网. <a href="https://babeljs.io/docs/en/babel-plugin-transform-runtime/#helpers">查看官网</a>
 
-helpers: 默认值为true，表示是否开启内联的babel helpers(即babel或者环境本来存在的某些对象方法函数)如：extends，etc这样的
-在调用模块名字时将被替换名字。
+  helpers: 默认值为true，表示是否开启内联的babel helpers(即babel或者环境本来存在的某些对象方法函数)如：extends，etc这样的
+  在调用模块名字时将被替换名字。
 
-polyfill：默认值为true，表示是否把内置的东西(Promise, Set, Map)等转换成非全局污染的。
+  polyfill：默认值为true，表示是否把内置的东西(Promise, Set, Map)等转换成非全局污染的。
 
-regenerator：默认值为true，是否开启generator函数转换成使用regenerator runtime来避免污染全局域。
+  regenerator：默认值为true，是否开启generator函数转换成使用regenerator runtime来避免污染全局域。
 
-moduleName：默认值为 babel-runtime，当调用辅助 设置模块（module）名字/路径.
+  moduleName：默认值为 babel-runtime，当调用辅助 设置模块（module）名字/路径.
 比如如下这样设置：
 ```
 {

@@ -114,14 +114,14 @@ files中指定 xxx.ts。xxx.ts会自动纳入待编译文件。
 
 配置完成后，我们可以在项目根目录下执行 tsc 命令，执行编译完成后，我们可以在 src 目录下 得到一个 index.js 文件 和 一个 index.js.map 文件。 证明我们编译成功了。
 index.js 文件内容如下：
-
+```
 function getVersion(version) {
     if (version === void 0) { version = "1.0.0."; }
     return version;
 }
 console.log(getVersion("1.0.1"));
 //# sourceMappingURL=index.js.map
-
+```
 如上可以看到，我们的注释被去掉了，说明我们的 tsconfig.json 中的 removeComments 配置项生效了。
 
 #### 四： tsconfig.json 文件结构介绍

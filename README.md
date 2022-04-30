@@ -116,6 +116,7 @@
 12. <a href="./node/peerDependencies.md">理解peerDependencies作用</a>
 13. <a href="./node/tsconfig.md">tsconfig.json配置详解</a>
 14. <a href="./node/prettierrc.md">prettierrc文件常见配置</a>
+15. <a href="./node/babelrc.md">babel 配置文件详解</a>
 
 ### 10) mock数据
 

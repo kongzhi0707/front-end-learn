@@ -5,8 +5,14 @@
 
 #### 1）安装 Prettier
 
-全局安装： npm install -g prettier
-局部安装： npm install --save-dev --save-exact prettier
+全局安装： 
+```
+npm install -g prettier
+```
+局部安装： 
+```
+npm install --save-dev --save-exact prettier
+```
 
 #### 2) 在项目的根目录下添加 .prettierrc.js 文件
 
@@ -38,3 +44,15 @@ module.exports = {
 }
 
 ```
+
+#### 3) 在vscode编辑器中如何配置
+
+安装插件 prettier-vscode。如下所示：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images2/prettier/1.png" /> <br />
+
+安装好后，在项目中的根目录新建 .prettierrc 配置文件，把上面的配置复制进去即可。
+然后我们需要打开 vscode 的设置中 打开 settings.json 文件添加如下两条：
+
+"editor.formatOnType":true,
+"editor.formatOnSave": true,

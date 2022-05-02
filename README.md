@@ -150,5 +150,10 @@
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue组件库搭建</a>
 2. <a href="https://github.com/kongzhi0707/r-component-ui">React组件库搭建</a>
 
+### 17) jest单元测试
+
+1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
+2. <a href="./jest/jest2.md">jest 自动化测试 --- matchers 匹配器</a>
+
 
 

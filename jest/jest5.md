@@ -114,8 +114,9 @@ test('测试 callbackFunc, 使用mockReturnValueOnce设置返回值', () => {
 ```
 #### 注意如下几点：
 
-  1）jest.mock('./index')会设置自动从__mocks__文件中找文件。
-  2）设置后import拿的文件就是__mocks__中的，但是我们还需要测试其他方法，因此需要设置const { callbackFun } = jest.requireActual('./index'),从原本的index.js文件中找到方法，否则会提示callbackFun找不到。
+##### 1）jest.mock('./index')会设置自动从__mocks__文件中找文件。
+##### 2）设置后import拿的文件就是__mocks__中的，但是我们还需要测试其他方法，因此需要设置const { callbackFun } = jest.requireActual('./index'),从原本的index.js文件中找到方法，否则会提示callbackFun找不到。
+
 
 
 

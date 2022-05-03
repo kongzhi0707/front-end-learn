@@ -153,7 +153,11 @@
 ### 17) jest单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
-2. <a href="./jest/jest2.md">jest 自动化测试 --- matchers 匹配器</a>
+2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>
+3. <a href="./jest/jest3.md">jest 异步代码测试</a>
+4. <a href="./jest/jest4.md">jest钩子函数</a>
+5. <a href="./jest/jest5.md">jest mock函数</a>
+6. <a href="./jest/timeout.md">jest 定时器测试</a>
 
 
 

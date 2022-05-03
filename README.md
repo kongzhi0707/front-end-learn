@@ -158,7 +158,4 @@
 4. <a href="./jest/jest4.md">jest钩子函数</a>
 5. <a href="./jest/jest5.md">jest mock函数</a>
 6. <a href="./jest/timeout.md">jest 定时器测试</a>
-7. <a href="./jest/snapshot快照测试">jest snapshot快照测试</a>
-
-
-
+7. <a href="./jest/snapshot.md">jest snapshot快照测试</a>

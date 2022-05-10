@@ -53,20 +53,19 @@
 11. <a href="./es6/eslint.md">在项目中添加eslint规范</a>
 12. <a href="./es6/drop.md">HTML5元素拖拽drag与拖放drop</a>
 13. <a href="./es6/indexDB.md">indexDB的封装</a>
-14. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
-15. <a href="./es6/promise.md">理解 Promise 的实现</a>
-16. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
-17. <a href="./learn/debounce.md">函数防抖</a>
-18. <a href="./learn/throttle.md">函数节流</a>
-19. <a href="./learn/curry.md">函数柯里化</a>
-20. <a href="./learn/deepClone.md">深度克隆</a>
-21. <a href="./learn/flatten.md">数组扁平化</a>
-22. <a href="./learn/jsonp.md">实现JSONP</a>
-23. <a href="./learn/unique.md">js数组去重</a>
-24. <a href="./learn/ztreeData.md">JS树形数据操作</a>
-25. <a href="./learn/filterData.md">JS树形数据递归过滤</a>
-26. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
-27. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
+14. <a href="./es6/promise.md">理解 Promise 的实现</a>
+15. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
+16. <a href="./learn/debounce.md">函数防抖</a>
+17. <a href="./learn/throttle.md">函数节流</a>
+18. <a href="./learn/curry.md">函数柯里化</a>
+19. <a href="./learn/deepClone.md">深度克隆</a>
+20. <a href="./learn/flatten.md">数组扁平化</a>
+21. <a href="./learn/jsonp.md">实现JSONP</a>
+22. <a href="./learn/unique.md">js数组去重</a>
+23. <a href="./learn/ztreeData.md">JS树形数据操作</a>
+24. <a href="./learn/filterData.md">JS树形数据递归过滤</a>
+25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
+26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
 
 ### 6）可视化搭建整理
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
@@ -117,7 +116,6 @@
 12. <a href="./node/peerDependencies.md">理解peerDependencies作用</a>
 13. <a href="./node/tsconfig.md">tsconfig.json配置详解</a>
 14. <a href="./node/prettierrc.md">prettierrc文件常见配置</a>
-15. <a href="./node/babelrc.md">babel 配置文件详解</a>
 
 ### 10) mock数据
 
@@ -159,3 +157,9 @@
 5. <a href="./jest/jest5.md">jest mock函数</a>
 6. <a href="./jest/timeout.md">jest 定时器测试</a>
 7. <a href="./jest/snapshot.md">jest snapshot快照测试</a>
+8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试React的应用</a>
+
+### 18) babel 相关的
+1. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
+2. <a href="./node/babelrc.md">babel 配置文件详解</a>
+3. <a href="./babel/babel2.md">Babel中plugin,preset的区别和使用</a>

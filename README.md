@@ -163,3 +163,4 @@
 1. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
 3. <a href="./babel/babel2.md">Babel中plugin,preset的区别和使用</a>
+4. <a href="./babel/astType.md">AST节点类型对照表</a>

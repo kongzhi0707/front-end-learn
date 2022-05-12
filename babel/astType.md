@@ -2,6 +2,7 @@
 ### AST节点类型对照表
 
 |  序号       |   类型原名称               |     中文名称         |       描述                                            |
+|  ---       |   ---                     |     ---            |       ---                                             |
 |   1        |   Program                 |     程序主体         |    整段代码的主体                                       |
 |   2        |   VariableDeclaration     |     变量声明         |    声明一个变量，例如 var let const                      |
 |   3        |   FunctionDeclaration     |     函数声明         |    声明一个函数，例如 function                           |

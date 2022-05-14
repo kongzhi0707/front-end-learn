@@ -84,6 +84,8 @@
 8. <a href="./react/redux3.md">redux优化</a>
 9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个React组件发布到npm中</a>
 10. <a href="./react/react-app-rewired.md">react-app-rewired使用</a>
+11. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
+12. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts实现飞线图效果</a>
 
 ### 8) 前端自动化部署
 
@@ -164,3 +166,4 @@
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
 3. <a href="./babel/babel2.md">Babel中plugin,preset的区别和使用</a>
 4. <a href="./babel/astType.md">AST节点类型对照表</a>
+5. <a href="./babel/babelPlugin.md">如何编写babel插件及在项目中调用</a>

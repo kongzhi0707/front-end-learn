@@ -561,6 +561,8 @@ plugins: [
 ```
 然后发布包， 在其他项目中 下载该包，最后在项目的 babelrc 配置文件中引入该插件即可。
 
+#### <a href="https://github.com/kongzhi0707/babel-plugin-demo">查看demo项目环境配置</a>
+
 
 
 

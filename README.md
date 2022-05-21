@@ -1,5 +1,3 @@
-
-
 ### 一) 数据结构与算法整理
 
 1. <a href="./path.md">二叉树的所有路径。</a> <br/>
@@ -9,50 +7,53 @@
 5. <a href="./bubble_sort.md">冒泡排序</a> <br/>
 6. <a href="./fast_sort.md">快速排序</a> <br/>
 7. <div>JS 链表</div>
-      |--- <a href="./single-link.md">js实现单向链表</a> <br/>
-      |--- <a href="./double-link.md">js实现双向链表</a> <br/>
-      |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
-      |--- <a href="">合并两个有序链表。</a> <br/>
+    |--- <a href="./single-link.md">js实现单向链表</a> <br/>
+    |--- <a href="./double-link.md">js实现双向链表</a> <br/>
+    |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
+    |--- <a href="">合并两个有序链表。</a> <br/>
 8. <a href="./request.md">实现一个请求控制函数</a>
 9. <a href="./arrangement.md">全排列组合算法</a>
-10. <a href="./flatten.md">JS扁平化(flatten)数组</a>
-11. <a href="./mergeSort.md">js归并排序</a>
+10. <a href="./flatten.md">JS 扁平化(flatten)数组</a>
+11. <a href="./mergeSort.md">js 归并排序</a>
 12. <a href="./hasCycle.md">判断链表是否有环</a>
 
-### 二）React Hooks相关的
+### 二）React Hooks 相关的
 
-介绍：react Hooks 是React16.8的新增特性。它可以让我们在函数组件中使用state，生命周期及react中其他特性。react Hooks的出现标示的react中不会存在无状态组件。我们只有类组件和函数组件。
-  1. <a href="./hooks/Fragment.md" target="_blank">理解 React.Fragment 用法</a> <br />
-  2. <a href="./hooks/useState.md" target="_blank">理解 useState 的用法 </a><br />
-  3. <a href="./hooks/useMemo.md" target="_blank">理解 useMemo 的用法 </a><br />
-  4. <a href="./hooks/useReducer.md" target="_blank">理解useReducer的用法</a><br />
-  5. <a href="./hooks/useEffect.md" target="_blank">理解 useEffect 的用法</a><br />
-  6. <a href="./hooks/useContext.md" target="_blank">理解 useContext 的用法</a> <br />
-  7. <a href="./hooks/useRef.md" target="_blank">理解 useRef 的用法</a><br />
-  8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
-  9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle和forwardRef的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
+介绍：react Hooks 是 React16.8 的新增特性。它可以让我们在函数组件中使用 state，生命周期及 react 中其他特性。react Hooks 的出现标示的 react 中不会存在无状态组件。我们只有类组件和函数组件。
+
+1. <a href="./hooks/Fragment.md" target="_blank">理解 React.Fragment 用法</a> <br />
+2. <a href="./hooks/useState.md" target="_blank">理解 useState 的用法 </a><br />
+3. <a href="./hooks/useMemo.md" target="_blank">理解 useMemo 的用法 </a><br />
+4. <a href="./hooks/useReducer.md" target="_blank">理解 useReducer 的用法</a><br />
+5. <a href="./hooks/useEffect.md" target="_blank">理解 useEffect 的用法</a><br />
+6. <a href="./hooks/useContext.md" target="_blank">理解 useContext 的用法</a> <br />
+7. <a href="./hooks/useRef.md" target="_blank">理解 useRef 的用法</a><br />
+8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
+9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle 和 forwardRef 的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
 
 ### 三）React 生命周期
 
-1. <a href="./lifecycle/lifecycle.md" target="_blank">React生命周期</a> <br />
+1. <a href="./lifecycle/lifecycle.md" target="_blank">React 生命周期</a> <br />
 
-### 四）React性能优化
-1. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props发生改变组件重新渲染</a>
+### 四）React 性能优化
 
-### 五）ES6知识相关的
-1. <a href="./es6/each.md" target="_blank">JS遍历数组方法集合</a>
-2. <a href="./es6/module.md">ES6/AMD/CMD/CommonJS 中Module的介绍</a>
-3. <a href="./es6/class.md">ES6中class类 静态方法/静态属性 的理解</a>
-4. <a href="./es6/arrow.md">ES6中的箭头函数的this指向</a>
-5. <a href="./es6/proto.md">理解JavaScript原型链__proto__</a>
-6. <a href="./es6/method.md">ES6中两种定义及调用方法的区别</a>
-7. <a href="./es6/loop.md">js递归数组及优化</a>
-8. <a href="./es6/curry.md">js函数柯里化--参数复用和延迟执行函数</a>
-9. <a href="./es6/decorator.md">Es6/Es7之Decorator装饰器模式</a>
-10. <a href="./es6/aop.md">了解面向切面编程AOP应用场景</a>
-11. <a href="./es6/eslint.md">在项目中添加eslint规范</a>
-12. <a href="./es6/drop.md">HTML5元素拖拽drag与拖放drop</a>
-13. <a href="./es6/indexDB.md">indexDB的封装</a>
+1. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props 发生改变组件重新渲染</a>
+
+### 五）ES6 知识相关的
+
+1. <a href="./es6/each.md" target="_blank">JS 遍历数组方法集合</a>
+2. <a href="./es6/module.md">ES6/AMD/CMD/CommonJS 中 Module 的介绍</a>
+3. <a href="./es6/class.md">ES6 中 class 类 静态方法/静态属性 的理解</a>
+4. <a href="./es6/arrow.md">ES6 中的箭头函数的 this 指向</a>
+5. <a href="./es6/proto.md">理解 JavaScript 原型链**proto**</a>
+6. <a href="./es6/method.md">ES6 中两种定义及调用方法的区别</a>
+7. <a href="./es6/loop.md">js 递归数组及优化</a>
+8. <a href="./es6/curry.md">js 函数柯里化--参数复用和延迟执行函数</a>
+9. <a href="./es6/decorator.md">Es6/Es7 之 Decorator 装饰器模式</a>
+10. <a href="./es6/aop.md">了解面向切面编程 AOP 应用场景</a>
+11. <a href="./es6/eslint.md">在项目中添加 eslint 规范</a>
+12. <a href="./es6/drop.md">HTML5 元素拖拽 drag 与拖放 drop</a>
+13. <a href="./es6/indexDB.md">indexDB 的封装</a>
 14. <a href="./es6/promise.md">理解 Promise 的实现</a>
 15. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
 16. <a href="./learn/debounce.md">函数防抖</a>
@@ -60,86 +61,87 @@
 18. <a href="./learn/curry.md">函数柯里化</a>
 19. <a href="./learn/deepClone.md">深度克隆</a>
 20. <a href="./learn/flatten.md">数组扁平化</a>
-21. <a href="./learn/jsonp.md">实现JSONP</a>
-22. <a href="./learn/unique.md">js数组去重</a>
-23. <a href="./learn/ztreeData.md">JS树形数据操作</a>
-24. <a href="./learn/filterData.md">JS树形数据递归过滤</a>
+21. <a href="./learn/jsonp.md">实现 JSONP</a>
+22. <a href="./learn/unique.md">js 数组去重</a>
+23. <a href="./learn/ztreeData.md">JS 树形数据操作</a>
+24. <a href="./learn/filterData.md">JS 树形数据递归过滤</a>
 25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
 
 ### 6）可视化搭建整理
+
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
 2. <a href="./visual/expression.md">表达式计算</a>
 3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
-### 7）React技术相关的
+### 7）React 技术相关的
 
 1. <a href="./react/objAndArray.md" target="_blank">React setState 数组、对象多种方式</a>
-2. <a href="./react/redux.md">redux的理解</a>
+2. <a href="./react/redux.md">redux 的理解</a>
 3. <a href="./react/redux1.md">理解 react-redux, combineReducer 的使用</a>
-4. <a href="./react/redux2.md">理解Redux-thunk的使用</a>
-5. <a href="./react/reactStaging.md">搭建一个React脚手架</a>
-6. <a href="./react/ssr.md">React + Koa 实现服务器端渲染</a>
-7. <a href="./react/next.md">使用Next.js构建React服务端渲染</a>
-8. <a href="./react/redux3.md">redux优化</a>
-9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个React组件发布到npm中</a>
-10. <a href="./react/react-app-rewired.md">react-app-rewired使用</a>
-11. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
-12. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts实现飞线图效果</a>
+4. <a href="./react/redux2.md">理解 Redux-thunk 的使用</a>
+5. <a href="./react/ssr.md">React + Koa 实现服务器端渲染</a>
+6. <a href="./react/next.md">使用 Next.js 构建 React 服务端渲染</a>
+7. <a href="./react/redux3.md">redux 优化</a>
+8. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个 React 组件发布到 npm 中</a>
+9. <a href="./react/react-app-rewired.md">react-app-rewired 使用</a>
+10. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
+11. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts 实现飞线图效果</a>
 
 ### 8) 前端自动化部署
 
 1. <a href="./autoDeployment/inquirer.md">inquirer.js---命令行交互工具</a>
-2. <a href="./autoDeployment/archive.md">nodejs使用archive文件压缩</a>
-3. <a href="./autoDeployment/autoDeploy1.md"> Node实现前端自动化部署(一)</a>
+2. <a href="./autoDeployment/archive.md">nodejs 使用 archive 文件压缩</a>
+3. <a href="./autoDeployment/autoDeploy1.md"> Node 实现前端自动化部署(一)</a>
 4. <a href="./autoDeployment/autoDeploy2.md">使用 WebHook 来自动部署 NodeJS 项目</a>
 5. <a href="./autoDeployment/frame.md">搭建一个 nodejs 脚手架</a>
-6. <a href="./autoDeployment/docker.md">docker全面学习</a>
-7. <a href="./autoDeployment/dockerCompose.md">Docker部署前端应用</a>
-8. <a href="./autoDeployment/multi.md">理解Docker多阶段构建减少镜像体积</a>
+6. <a href="./autoDeployment/docker.md">docker 全面学习</a>
+7. <a href="./autoDeployment/dockerCompose.md">Docker 部署前端应用</a>
+8. <a href="./autoDeployment/multi.md">理解 Docker 多阶段构建减少镜像体积</a>
 9. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
-10. <a href="./autoDeployment/autoDocker.md">使用Docker+webHook实现前端自动化部署</a>
+10. <a href="./autoDeployment/autoDocker.md">使用 Docker+webHook 实现前端自动化部署</a>
 11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
 12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 
-### 9) nodejs相关的知识
+### 9) nodejs 相关的知识
 
-1. <a href="./node/bin.md">理解package.json 中的 bin字段</a>
-2. <a href="./node/commander.md">了解Commander.js命令行框架</a>
-3. <a href="./node/nodeDeploy.md">nodejs代码部署到阿里云服务器</a>
-4. <a href="./node/nestjs.md">Nestjs搭建项目</a>
-5. <a href="./node/graphql.md">GraphQL入门教程</a>
+1. <a href="./node/bin.md">理解 package.json 中的 bin 字段</a>
+2. <a href="./node/commander.md">了解 Commander.js 命令行框架</a>
+3. <a href="./node/nodeDeploy.md">nodejs 代码部署到阿里云服务器</a>
+4. <a href="./node/nestjs.md">Nestjs 搭建项目</a>
+5. <a href="./node/graphql.md">GraphQL 入门教程</a>
 6. <a href="./node/graphqlKoa.md">Koa + GraphQL 入门教程</a>
 7. <a href="./node/log4js.md">log4js 入门介绍</a>
-8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从0到1搭建脚手架</a>
-9. <a href="./node/pm2.md">pm2入门及自动化部署nodejs项目</a>
-10. <a href="./node/interface.md">node实现接口转发</a>
+8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从 0 到 1 搭建脚手架</a>
+9. <a href="./node/pm2.md">pm2 入门及自动化部署 nodejs 项目</a>
+10. <a href="./node/interface.md">node 实现接口转发</a>
 11. <a href="./node/npx.md">npx, npm, yarn, cnpm, pnpm 的区别</a>
-12. <a href="./node/peerDependencies.md">理解peerDependencies作用</a>
-13. <a href="./node/tsconfig.md">tsconfig.json配置详解</a>
-14. <a href="./node/prettierrc.md">prettierrc文件常见配置</a>
+12. <a href="./node/peerDependencies.md">理解 peerDependencies 作用</a>
+13. <a href="./node/tsconfig.md">tsconfig.json 配置详解</a>
+14. <a href="./node/prettierrc.md">prettierrc 文件常见配置</a>
+15. <a href="./node/vscode.md">vscode代码格式化prettier,eslint环境配置</a>
 
-### 10) mock数据
+### 10) mock 数据
 
-1. <a href="./mock/mock.md">开发一个简单的前端mock工具</a>
+1. <a href="./mock/mock.md">开发一个简单的前端 mock 工具</a>
 
-### 11) ajax相关
+### 11) ajax 相关
 
-1. <a href="./ajax/axios.md">axios对请求的封装和API接口管理</a>
+1. <a href="./ajax/axios.md">axios 对请求的封装和 API 接口管理</a>
 
 ### 12) javascript 设计模式
 
-1. <a href="./mode/memento.md">JS备忘录模式</a>
+1. <a href="./mode/memento.md">JS 备忘录模式</a>
 
-### 13）深入了解Vite模式
+### 13）深入了解 Vite 模式
 
-1. <a href="./vite/specification.md">理解JS模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
+1. <a href="./vite/specification.md">理解 JS 模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
-3. <a href="./vite/vite1.md">初识vite使用及工作机制</a>
+3. <a href="./vite/vite1.md">初识 vite 使用及工作机制</a>
 
-### 14) React前端组件化整理
+### 14) React 前端组件化整理
 
-1. <a href="./frontEndComponent/design.md">React组件设计原则</a>
+1. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
 
 ### 15) git 集合
 
@@ -147,23 +149,29 @@
 
 ### 16）组件库搭建
 
-1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue组件库搭建</a>
-2. <a href="https://github.com/kongzhi0707/r-component-ui">React组件库搭建</a>
+1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue 组件库搭建</a>
+2. <a href="https://github.com/kongzhi0707/r-component-ui">React 组件库搭建</a>
 
-### 17) jest单元测试
+### 17) 脚手架搭建
+
+1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>
+2. <a href="./react/reactTypeStaging.md">React+TypeScript 项目搭建</a>
+
+### 18) jest 单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
 2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>
 3. <a href="./jest/jest3.md">jest 异步代码测试</a>
-4. <a href="./jest/jest4.md">jest钩子函数</a>
-5. <a href="./jest/jest5.md">jest mock函数</a>
+4. <a href="./jest/jest4.md">jest 钩子函数</a>
+5. <a href="./jest/jest5.md">jest mock 函数</a>
 6. <a href="./jest/timeout.md">jest 定时器测试</a>
-7. <a href="./jest/snapshot.md">jest snapshot快照测试</a>
-8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试React的应用</a>
+7. <a href="./jest/snapshot.md">jest snapshot 快照测试</a>
+8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试 React 的应用</a>
 
-### 18) babel 相关的
-1. <a href="./babel/babelCode.md">深入了解babel 及编写babel插件</a>
+### 19) babel 相关的
+
+1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
-3. <a href="./babel/babel2.md">Babel中plugin,preset的区别和使用</a>
-4. <a href="./babel/astType.md">AST节点类型对照表</a>
-5. <a href="./babel/babelPlugin.md">如何编写babel插件及在项目中调用</a>
+3. <a href="./babel/babel2.md">Babel 中 plugin,preset 的区别和使用</a>
+4. <a href="./babel/astType.md">AST 节点类型对照表</a>
+5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>

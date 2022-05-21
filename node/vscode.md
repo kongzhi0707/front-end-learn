@@ -45,7 +45,7 @@ const name = "kongzhi"
 ```
   现在我们运行 npm run lint 命令后，控制台会出现警告，告诉我们 index.js 定义了 name 变量，但是没有使用。如下所示：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/node/images/1.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/node/master/images/1.png" />
 
   如上第二个警告提示，提示我们变量末尾未带分号，这个时候我们可以使用 Eslint 自带的格式化功能，它能对我们一些比较基本的语法问题进行自动格式化，我们可以在 package.json scripts中添加一条格式化脚本，可以看到 它 和 lint 命令区别就是增加了一个 --fix 参数。如下：
 ```
@@ -115,11 +115,11 @@ module.exports = {
 ```
   我们先手动修改 index.js 去掉句尾分号，然后我们运行 npm start， 观察控制台会发现出现警告，并且打开浏览器输入网址: http://localhost:9000/,我们打开控制台也一样能看到警告。
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/node/images/2.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/node/master/images/2.png" /> 
 
   在浏览器也可以看到报错，如下：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/node/images/3.png" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/node/master/images/3.png" />
 
   然后我们手动修改 index.js 加上句尾分号，运行 npm start, 控制台警告消失了，浏览器的控制台也消失了。
 

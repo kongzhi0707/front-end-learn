@@ -154,8 +154,8 @@
 
 ### 17) 脚手架搭建
 
-1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>
-2. <a href="./react/reactTypeStaging.md">React+TypeScript 项目搭建</a>
+1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
+2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
 ### 18) jest 单元测试
 

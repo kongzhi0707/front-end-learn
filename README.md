@@ -31,15 +31,23 @@
 8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
 9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle 和 forwardRef 的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
 
-### 三）React 生命周期
+### 三）React 技术相关的
+1. <a href="./lifecycle/lifecycle.md" target="_blank">React 生命周期</a>
+2. <a href="./react/objAndArray.md" target="_blank">React setState 数组、对象多种方式</a>
+3. <a href="./react/redux.md">redux 的理解</a>
+4. <a href="./react/redux1.md">理解 react-redux, combineReducer 的使用</a>
+5. <a href="./react/redux2.md">理解 Redux-thunk 的使用</a>
+6. <a href="./react/ssr.md">React + Koa 实现服务器端渲染</a>
+7. <a href="./react/next.md">使用 Next.js 构建 React 服务端渲染</a>
+8. <a href="./react/redux3.md">redux 优化</a>
+9. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个 React 组件发布到 npm 中</a>
+10. <a href="./react/react-app-rewired.md">react-app-rewired 使用</a>
+11. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
+12. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts 实现飞线图效果</a>
+13. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props 发生改变组件重新渲染</a>
+14. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
 
-1. <a href="./lifecycle/lifecycle.md" target="_blank">React 生命周期</a> <br />
-
-### 四）React 性能优化
-
-1. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props 发生改变组件重新渲染</a>
-
-### 五）ES6 知识相关的
+### 四）ES6 知识相关的
 
 1. <a href="./es6/each.md" target="_blank">JS 遍历数组方法集合</a>
 2. <a href="./es6/module.md">ES6/AMD/CMD/CommonJS 中 Module 的介绍</a>
@@ -68,28 +76,13 @@
 25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
 
-### 6）可视化搭建整理
+### 五）可视化搭建整理
 
 1. <a href="./visual/react-dnd.md">react-dnd 使用介绍</a>
 2. <a href="./visual/expression.md">表达式计算</a>
 3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
-### 7）React 技术相关的
-
-1. <a href="./react/objAndArray.md" target="_blank">React setState 数组、对象多种方式</a>
-2. <a href="./react/redux.md">redux 的理解</a>
-3. <a href="./react/redux1.md">理解 react-redux, combineReducer 的使用</a>
-4. <a href="./react/redux2.md">理解 Redux-thunk 的使用</a>
-5. <a href="./react/ssr.md">React + Koa 实现服务器端渲染</a>
-6. <a href="./react/next.md">使用 Next.js 构建 React 服务端渲染</a>
-7. <a href="./react/redux3.md">redux 优化</a>
-8. <a href="https://github.com/kongzhi0707/react-npm-plugin-demo">封装一个 React 组件发布到 npm 中</a>
-9. <a href="./react/react-app-rewired.md">react-app-rewired 使用</a>
-10. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
-11. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts 实现飞线图效果</a>
-12. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
-
-### 8) 前端自动化部署
+### 六) 前端自动化部署
 
 1. <a href="./autoDeployment/inquirer.md">inquirer.js---命令行交互工具</a>
 2. <a href="./autoDeployment/archive.md">nodejs 使用 archive 文件压缩</a>
@@ -104,7 +97,7 @@
 11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
 12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 
-### 9) nodejs 相关的知识
+### 七) nodejs 相关的知识
 
 1. <a href="./node/bin.md">理解 package.json 中的 bin 字段</a>
 2. <a href="./node/commander.md">了解 Commander.js 命令行框架</a>
@@ -122,35 +115,35 @@
 14. <a href="./node/prettierrc.md">prettierrc 文件常见配置</a>
 15. <a href="./node/vscode.md">vscode代码格式化prettier,eslint环境配置</a>
 
-### 10) mock 数据
+### 八) mock 数据
 
 1. <a href="./mock/mock.md">开发一个简单的前端 mock 工具</a>
 
-### 11) ajax 相关
+### 九) ajax 相关
 
 1. <a href="./ajax/axios.md">axios 对请求的封装和 API 接口管理</a>
 
-### 12）深入了解 Vite 模式
+### 十）深入了解 Vite 模式
 
 1. <a href="./vite/specification.md">理解 JS 模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
 3. <a href="./vite/vite1.md">初识 vite 使用及工作机制</a>
 
-### 13) git 集合
+### 十一) git 集合
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
 
-### 14）组件库搭建
+### 十二）组件库搭建
 
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue 组件库搭建</a>
 2. <a href="https://github.com/kongzhi0707/r-component-ui">React 组件库搭建</a>
 
-### 15) 脚手架搭建
+### 十三) 脚手架搭建
 
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
-### 16) babel 相关的
+### 十四) babel 相关的
 
 1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
@@ -158,11 +151,11 @@
 4. <a href="./babel/astType.md">AST 节点类型对照表</a>
 5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
 
-### 17）前端构建工具相关的
+### 十五）前端构建工具相关的
 
-### 18）chrome扩展插件相关的
+### 十六）chrome扩展插件相关的
 
-### 19) jest 单元测试
+### 十七) jest 单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
 2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>

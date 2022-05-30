@@ -150,7 +150,19 @@
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
-### 16) jest 单元测试
+### 16) babel 相关的
+
+1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
+2. <a href="./node/babelrc.md">babel 配置文件详解</a>
+3. <a href="./babel/babel2.md">Babel 中 plugin,preset 的区别和使用</a>
+4. <a href="./babel/astType.md">AST 节点类型对照表</a>
+5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
+
+### 17）前端构建工具相关的
+
+### 18）chrome扩展插件相关的
+
+### 19) jest 单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
 2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>
@@ -161,14 +173,4 @@
 7. <a href="./jest/snapshot.md">jest snapshot 快照测试</a>
 8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试 React 的应用</a>
 
-### 17) babel 相关的
 
-1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
-2. <a href="./node/babelrc.md">babel 配置文件详解</a>
-3. <a href="./babel/babel2.md">Babel 中 plugin,preset 的区别和使用</a>
-4. <a href="./babel/astType.md">AST 节点类型对照表</a>
-5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
-
-### 18）前端构建工具相关的
-
-### 19）chrome扩展插件相关的

@@ -87,6 +87,7 @@
 9. <a href="./react/react-app-rewired.md">react-app-rewired 使用</a>
 10. <a href="https://github.com/kongzhi0707/slider">实现时间轴滑块效果</a>
 11. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts 实现飞线图效果</a>
+12. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
 
 ### 8) 前端自动化部署
 
@@ -129,35 +130,27 @@
 
 1. <a href="./ajax/axios.md">axios 对请求的封装和 API 接口管理</a>
 
-### 12) javascript 设计模式
-
-1. <a href="./mode/memento.md">JS 备忘录模式</a>
-
-### 13）深入了解 Vite 模式
+### 12）深入了解 Vite 模式
 
 1. <a href="./vite/specification.md">理解 JS 模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
 3. <a href="./vite/vite1.md">初识 vite 使用及工作机制</a>
 
-### 14) React 前端组件化整理
-
-1. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
-
-### 15) git 集合
+### 13) git 集合
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
 
-### 16）组件库搭建
+### 14）组件库搭建
 
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue 组件库搭建</a>
 2. <a href="https://github.com/kongzhi0707/r-component-ui">React 组件库搭建</a>
 
-### 17) 脚手架搭建
+### 15) 脚手架搭建
 
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
-### 18) jest 单元测试
+### 16) jest 单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
 2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>
@@ -168,10 +161,14 @@
 7. <a href="./jest/snapshot.md">jest snapshot 快照测试</a>
 8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试 React 的应用</a>
 
-### 19) babel 相关的
+### 17) babel 相关的
 
 1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
 3. <a href="./babel/babel2.md">Babel 中 plugin,preset 的区别和使用</a>
 4. <a href="./babel/astType.md">AST 节点类型对照表</a>
 5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
+
+### 18）前端构建工具相关的
+
+### 19）chrome扩展插件相关的

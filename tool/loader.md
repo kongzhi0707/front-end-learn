@@ -367,6 +367,7 @@ bLoader Pitching Loader->aLoader]
 ```
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/tool/loaderImage/5.png" />
 
+<a href="https://github.com/kongzhi0707/webpack-loader-demo/tree/main/pitchingLoader"> 请看github代码 --- demo </a>
 #### 三）处理参数
 
   我们在配置loader时，经常会给loader传递参数进行配置，一般是通过options属性来传递的，也有其他传递参数方式，比如像 url-loader 通过字符串来传递参数：

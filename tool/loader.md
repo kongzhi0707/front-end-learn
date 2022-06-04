@@ -513,12 +513,12 @@ this.sourceMap：bool 类型，是否应该生成一个 sourceMap。
 #### <div id="id6">六）实现一个简单的loader</div>
 
   开发Loader原则如下：
-
+```
   1）单一原则：每个Loader只做一件事，简单易用，便于维护。
   2）链式调用：webpack 会按顺序链式调用每个Loader。
   3）统一原则：遵循webpack制定的设计规则和结构，输入与输出均为字符串，各个Loader完全独立，即查即用；
   4）无状态原则：在转换不同模块时，不应该在Loader中保留状态；
-
+```
   简介：我们实现的loader功能是：在编译出的代码中加上 /** 公司@年份 */ 格式的注释和简单做一下去除代码中的 console.log. 
 
   我们在上面的loaders文件夹下 新建 company-loader.js ， 代码如下：

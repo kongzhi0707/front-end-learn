@@ -1,9 +1,16 @@
 
 ### webpack手写loader
 
+- [x] [Loader本质是什么](#id1) <br/>
+- [x] [什么是 Normal Loader 和 Pitching Loader](#id2) <br/>
+- [x] [处理参数](#id3) <br/>
+- [x] [四种loader](#id4) <br/>
+- [x] [其他的API](#id5) <br/>
+- [x] [实现一个简单的loader](#id6) <br/>
+
   webpack是一个模块化打包工具，它被广泛的应用在前端领域的项目中，webpack本身只能打包js文件/json文件，但是对于图片，css，字体等其他资源文件是不能打包的，但是为了让除了js/json其他模块支持打包，因此loader就出现了。
 
-#### 1）Loader本质是什么？
+#### <div id="id1">1）Loader本质是什么？</div>
 
   Loader本质上是导出函数的Javascript模块。所导出的函数，可用于实现内容的转换。该函数支持以下3个参数：
 ```
@@ -27,7 +34,7 @@
 ```
   如上 simpleLoader 并没有对输出的content做任何处理，只是打印的一些信息。
 
- #### 2）什么是 Normal Loader 和 Pitching Loader ?
+ #### <div id="id2">2）什么是 Normal Loader 和 Pitching Loader ?</div>
 
  #### Normal Loader
 
@@ -368,7 +375,8 @@ bLoader Pitching Loader->aLoader]
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/tool/loaderImage/5.png" />
 
 <a href="https://github.com/kongzhi0707/webpack-loader-demo/tree/main/pitchingLoader"> 请看github代码 --- demo </a>
-#### 三）处理参数
+
+#### <div id="id3">三）处理参数</div>
 
   我们在配置loader时，经常会给loader传递参数进行配置，一般是通过options属性来传递的，也有其他传递参数方式，比如像 url-loader 通过字符串来传递参数：
 ```
@@ -416,7 +424,7 @@ function getOptions(loaderContext) {
 }
 module.exports = getOptions;
 ```
-#### 四）四种loader
+#### <div id="id4">四）四种loader</div>
 
   我们基本可以把常见的loader分为四种：
 ```
@@ -487,7 +495,7 @@ module.exports = function(content, soruceMap, meta) {
 
 module.exports.raw = true;
 ```
-#### 五）其他的API
+#### <div id="id5">五）其他的API</div>
 ```
 this.addDependency: 加入一个文件进行监听，一旦文件产生变化就会重新调用这个loader进行处理。
 this.cacheable: 默认情况下loader的处理结果会有缓存效果，给这个方法传入false可以关闭这个效果。
@@ -501,6 +509,80 @@ this.resource：获取当前请求路径，包含参数：'/abc/resource.js?rrr'
 this.resourcePath：不包含参数的路径：'/abc/resource.js'
 this.sourceMap：bool 类型，是否应该生成一个 sourceMap。
 ```
+
+#### <div id="id6">六）实现一个简单的loader</div>
+
+  简介：我们实现的loader功能是：在编译出的代码中加上 /** 公司@年份 */ 格式的注释和简单做一下去除代码中的 console.log. 
+
+  我们在上面的loaders文件夹下 新建 company-loader.js ， 代码如下：
+
+  loaders/company-loader.js 
+```
+module.exports = function (source, sourceMap, meta) { 
+  // 获取 webpack 配置中传来的 option 参数
+  const options = this.getOptions();
+  console.log('----options----', options); // 打印 ----options---- { sign: 'we-doctor@2021' }
+  this.callback(null, addSign(source, options.sign));
+}
+
+function addSign(content, sign) {
+  return  `/** ${sign} */\n${content}`
+}
+```
+  loaders/console-loader.js 
+```
+module.exports = function (source, sourceMap, meta) { 
+  return handleConsole(source);
+}
+
+function handleConsole(source) { 
+  return source.replace(/console.log\(['|"](.*?)['|"]\)/, '');
+}
+```
+webpack.config.js 文件配置如下：
+```
+const path = require('path');
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, "dist"),
+  },
+  mode: "development",
+  module: {
+    rules: [
+      {
+        test: /\.txt$/i,
+        use: ["a-loader", "b-loader", "c-loader"],
+      },
+      {
+        test: /\.js$/,
+        use: [
+          'console-loader',
+          {
+            loader: 'company-loader',
+            options: {
+              sign: 'we-doctor@2021',
+            },
+          },
+        ],
+      },
+    ]
+  },
+  resolveLoader: {
+    modules: [
+      path.resolve(__dirname, "loaders"),
+      path.resolve(__dirname, "node_modules"),
+    ]
+  }
+};
+```
+  在项目的根目录下执行 npx webpack 命令后，在dist文件下bundle.js代码中搜索注释： /** we-doctor@2021 */ 就可以搜索的到了;
+
+
+
+
 
 
 

@@ -153,6 +153,8 @@
 
 ### 十五）前端构建工具相关的
 
+1. <a href="./tool/loader.md">webpack手写loader</a>
+
 ### 十六）chrome扩展插件相关的
 
 ### 十七) jest 单元测试

@@ -106,7 +106,7 @@ msgElement.innerText = Data;
 ```
 大家好，我是空智
 ```
-#### 注意：这里的内容就在第一行，不要换行，否则打包的时候会报错。如<a href="https://one-more-tech.gitlab.io/%E8%A7%A3%E5%86%B3-Syntax-Error--Unterminated-string-constant-%E9%94%99%E8%AF%AF/index/">报错</a> 
+#### 注意：这里的内容就在第一行，不要换行，否则打包的时候会报错。如<a href="https://one-more-tech.gitlab.io/%E8%A7%A3%E5%86%B3-Syntax-Error--Unterminated-string-constant-%E9%94%99%E8%AF%AF/index/">解决-Syntax-Error--Unterminated-string-constant-错误</a> 
 
   loaders/a-loader.js 代码如下：
 ```
@@ -259,9 +259,9 @@ function (remainingRequest, precedingRequest, data) {
   // ....
 }
 ```
-  remainingRequest: loader 链中排在自己后面的loader以及资源文件的绝对路径以！作为连接符组成的字符串。
-  precedingRequest：loader 链中排在自己前面的loader的绝对路径以！作为连接符组成的字符串。
-  data: 每个loader中存放上下文中的固定字段，可用于pitch给loader 传递的数据。
+  remainingRequest: loader 链中排在自己后面的loader以及资源文件的绝对路径以！作为连接符组成的字符串。<br />
+  precedingRequest：loader 链中排在自己前面的loader的绝对路径以！作为连接符组成的字符串。<br />
+  data: 每个loader中存放上下文中的固定字段，可用于pitch给loader 传递的数据。<br />
 
   第三个参数data，可以用于数据传递，即在pitch函数中往data对象上添加数据，之后在 normal 函数中可以通过 this.data 的方式可以读取该data中的数据。
   比如如下代码：

@@ -587,11 +587,3 @@ module.exports = {
 };
 ```
   在项目的根目录下执行 npx webpack 命令后，在dist文件下bundle.js代码中搜索注释： /** we-doctor@2021 */ 就可以搜索的到了;
-
-
-
-
-
-
-
-

@@ -154,6 +154,7 @@
 ### 十五）前端构建工具相关的
 
 1. <a href="./tool/loader.md">webpack手写loader</a>
+2. <a href="./tool/plugin.md">webpack手写plugin</a>
 
 ### 十六）chrome扩展插件相关的
 

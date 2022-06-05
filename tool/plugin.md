@@ -8,11 +8,11 @@
   2. plugin 是一个扩展器。webpack打包的整个过程中，它并不直接操作文件，而是基于事件机制工作，会监听 webpack 打包过程中的某些节点，执行广泛任务。
 
   编写webpack 插件有如下特征：
-
+```
   1）是一个独立的模块。
   2）模块对外暴露一个js函数。
   3）函数的原型 上定义了一个注入的 compiler 对象的 apply方法。
-
+```
   apply 函数中需要有通过 compiler 对象挂载的 webpack 事件钩子，钩子的回调中能拿到当前编译的 compilation 对象，如果是异步编译插件的话可以拿到回调callback。
 
   如下代码：
@@ -40,11 +40,11 @@ class DemoPlugin {
 module.exports = DemoPlugin;
 ```
   如上代码 在 webpack上执行的过程中如下：
-
+```
   1） webpack 读取配置的过程中会先执行 new DemoPlugin(options) 初始化一个 DemoPlugin 获得其实例。
   2） 初始化 compiler 对象后调用 DemoPlugin.apply(compiler) 给插件实例传入 compiler 对象。
   3） 插件实例在获取到 compiler 对象后，就可以通过 compiler.plugin(事件名称，回调函数) 监听到 webpack 广播出来的事件，并且可以通过 compiler 对象去操作 webpack.
-
+```
 #### 事件流机制
 
   webpack是一种事件流的机制，它的工作是将各个插件串联起来。但是实现这一切的核心是 Tapable.
@@ -54,10 +54,12 @@ module.exports = DemoPlugin;
   编写一个简单的webpack插件，请看这篇文章 <a href="https://www.cnblogs.com/tugenhua0707/p/11332463.html">如何编写一个WebPack的插件原理及实践</a>
 
   我们先来搭建一个简单的环境。
-
+```
   1）创建一个项目的目录： mkdir webpack-plugins-demo
   2) 进入该目录，使用 npm init -y 命令执行初始化操作。执行完成后，会在项目的根目录下生成一个 package.json 文件。
+```
   然后我们安装webpack 和 webpack-cli 依赖包；安装命令如下：
+
 ```
 npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin clean-webpack-plugin -D
 ```
@@ -189,13 +191,13 @@ module.exports = {
 |   钩子               |     类型             |       什么时候调用                                      |
 |   ---               |     ---              |       ---                                             |
 |   run               |     AsyncSeriesHook  |    在编译器开始读取记录前执行                              |
-｜  compile           |     SyncHook         |    在一个新的 compilation 创建之前执行                    ｜
-｜  compilation       |     SyncHook         |    在一次 compilation 创建后执行插件                      ｜
-｜  make              |  AsyncParalleHook    |    完成一次编译之前执行                                   ｜
-｜  emit              |  AsyncSeriesHook     |   在生成文件到output目录之前执行，回调函数：compilation      |
+|  compile           |     SyncHook         |    在一个新的 compilation 创建之前执行                     |
+|  compilation       |     SyncHook         |    在一次 compilation 创建后执行插件                      |
+|  make              |  AsyncParalleHook    |    完成一次编译之前执行                                   ｜
+|  emit              |  AsyncSeriesHook     |   在生成文件到output目录之前执行，回调函数：compilation      |
 |  afterEmit          | AsyncSeriesHook      |  在生成文件到 output 目录之后执行                         ｜
 | assetEmitted        | AsyncSeriesHook      | 生成文件到时候执行，提供访问产出文件信息的入口                ｜
-｜ done               | AsyncSeriesHook      | 一次编译完成后执行，回调参数 stats                          |
+| done               | AsyncSeriesHook      | 一次编译完成后执行，回调参数 stats                          |
 
   下面再弄个插件，在 src/plugins 目录下 新建 plugin2.js, 添加如下代码：
 ```

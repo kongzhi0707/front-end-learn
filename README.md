@@ -75,6 +75,7 @@
 24. <a href="./learn/filterData.md">JS 树形数据递归过滤</a>
 25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
+27. <a href="./es6/objSort.md">JS中的数组对象排序</a>
 
 ### 五）可视化搭建整理
 

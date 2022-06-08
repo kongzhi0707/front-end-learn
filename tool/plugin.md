@@ -193,7 +193,7 @@ module.exports = {
 |   run               |     AsyncSeriesHook  |    在编译器开始读取记录前执行                              |
 |  compile           |     SyncHook         |    在一个新的 compilation 创建之前执行                     |
 |  compilation       |     SyncHook         |    在一次 compilation 创建后执行插件                      |
-|  make              |  AsyncParalleHook    |    完成一次编译之前执行                                   ｜
+|  make              |  AsyncParalleHook    |    完成一次编译之前执行                                   |
 |  emit              |  AsyncSeriesHook     |   在生成文件到output目录之前执行，回调函数：compilation      |
 |  afterEmit          | AsyncSeriesHook      |  在生成文件到 output 目录之后执行                         ｜
 | assetEmitted        | AsyncSeriesHook      | 生成文件到时候执行，提供访问产出文件信息的入口                ｜
@@ -253,6 +253,38 @@ module.exports = {
   我们在执行 npm run build 命令后，执行效果如下：
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/tool/pluginImage/2.png" />
+
+#### Compilation 对象
+
+Compilation 对象代表了一次资源版本构建，当运行webpack开发环境中间件时，每当检测到一个文件变化，就会创建一个新的 compilation, 从而生成一组新的编译资源。一个Compilation对象表现了当前的模块资源，编译生成资源，文件变化及被跟踪依赖的状态信息 换句话说是把本次打包编译的内容存到内存里。Compilation 对象也提供了插件需要自定义功能的回调，以供插件做自定义处理时选择使用。
+
+Compiler 代表整个Webpack从启动到关闭的生命周期，而 Compilation 只代表了一次新的编译，只要文件有改动，compilation就会被重新创建。
+
+Compilation 上暴露的一些常用的钩子
+
+|   钩子               |     类型             |       什么时候调用                                      |
+|   ---               |     ---              |       ---                                             |
+|   buildModule       |     SyncHook         |    在模块开始编译之前触发，可以用于修改模块                  |
+|   succeedModule     |     SyncHook         |    当一个模块被成功编译，会执行这个钩子                     |
+|   finishModules     |     AsyncSeriesHook  |    当所有模块都编译成功后被调用                            |
+|   seal              |     SyncHook         |    当一次compilation停止接收新模块时触发                   |
+|   optimizeDependencies |     SyncBailHook  |    在依赖优化的开始执行                                   |
+|   optimize          |     SyncHook         |    在优化阶段的开始执行                                   |
+|   optimizeModules   |     SyncBailHook     |    在模块优化阶段开始执行，插件可以在这个钩子里执行对模块的优化  |
+|   optimizeChunks    |     SyncBailHook     |    在代码优化阶段开始时执行，插件可以在这个钩子里执行对代码块的优化 |
+|   optimizeChunkAssets |     AsyncSeriesHook  |  优化任何代码块资源，这些资源存放在 compilation.assets上   |
+|   optimizeAssets    |     AsyncSeriesHook  |    优化所有存放在 compilation.assets 的所有资源            |
+
+#### Compiler 和 Compilation 的区别
+
+Compiler: 代表了整个webpack从启动到关闭的生命周期。
+Compilation: 只是代表了一次新的编译，只要文件有改动，compilation 就会被重新创建。
+
+#### 文件清单插件
+
+这里是网上的demo， 当作提供编写插件的思路。
+
+在每次webpack打包之后，自动产生一个一个markdown文件清单，记录打包之后的文件夹dist里所有的文件的一些信息。
 
 
 

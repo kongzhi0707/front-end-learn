@@ -415,18 +415,18 @@ module.exports = {
 
 #### 2）去除注释
 
-开发一个插件能够去除打包后的代码注释。
+  开发一个插件能够去除打包后的代码注释。
 
-实现思路：
-
-1. 通过 compiler.hooks.emit.tapAsync() 来触发生成资源到output目录之前的钩子。---- 监听emit事件，编译完成后，文件内容输出到硬盘上，触发该事件。
-2. 通过 compilation.assets 拿到生成后的文件，然后去遍历各个文件。
-3. 通过 .source() 获取构建产物的文本， 然后使用正则去 replace 替换注释的代码。
-4. 更新构建产物对象。
-5. 执行回调，让webpack继续执行。
-
-在 src/plugins 目录下新建 removeCommentPlugin.js 文件。添加如下代码：
-
+  实现思路：
+``` 
+  1. 通过 compiler.hooks.emit.tapAsync() 来触发生成资源到output目录之前的钩子。---- 监听emit事件，编译完成后，文件内容输出到硬盘上，触发该事件。
+  2. 通过 compilation.assets 拿到生成后的文件，然后去遍历各个文件。
+  3. 通过 .source() 获取构建产物的文本， 然后使用正则去 replace 替换注释的代码。
+  4. 更新构建产物对象。
+  5. 执行回调，让webpack继续执行。
+``` 
+  在 src/plugins 目录下新建 removeCommentPlugin.js 文件。添加如下代码：
+``` 
 class RemoveCommentPlugin { 
   constructor(options) { 
     this.options = options;
@@ -456,9 +456,9 @@ class RemoveCommentPlugin {
 }
 
 module.exports = RemoveCommentPlugin;
-
-然后我们在 webpack.config.js 引入如下插件
-
+``` 
+  然后我们在 webpack.config.js 引入如下插件
+``` 
 //.... 其他代码
 
 const RemoveCommentPlugin = require('./src/plugins/removeCommentPlugin');
@@ -469,7 +469,7 @@ module.exports = {
     new RemoveCommentPlugin(),
   ]
 }
-
+``` 
 
 
 

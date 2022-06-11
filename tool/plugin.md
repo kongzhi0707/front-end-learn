@@ -7,6 +7,8 @@
 
   2. plugin 是一个扩展器。webpack打包的整个过程中，它并不直接操作文件，而是基于事件机制工作，会监听 webpack 打包过程中的某些节点，执行广泛任务。
 
+  Plugin 提供了很多比loader中更完备的功能，它使用阶段式的构建回调，webpack给我们提供了非常多的hook用来在构建的阶段让我们开发者自由的去引入自己的行为。
+
   编写webpack 插件有如下特征：
 ```
   1）是一个独立的模块。
@@ -53,6 +55,47 @@ module.exports = DemoPlugin;
 
   编写一个简单的webpack插件，请看这篇文章 <a href="https://www.cnblogs.com/tugenhua0707/p/11332463.html">如何编写一个WebPack的插件原理及实践</a>
 
+#### 同步与异步
+
+  plugin 的hooks 有同步和异步区分的，在同步的情况下，我们使用 <hookName>.tap 的方式进行调用，而在异步hook内我们可以进行一些异步操作，并且在异步操作的情况下，我们使用 tapAsync 或者 tapPromise 方法来告知webpack这里的内容是异步的。
+
+#### 1）tapAsync
+
+  使用 tapAsync 的时候，我们需要多传入一个callback回调，并且在结束的时候一定要调用这个来告知webpack这个异步操作结束了，比如如下代码：
+``` 
+class HelloPlugin {
+  apply(compiler) {
+    compiler.hooks.emit.tapAsync('Helloxxx', (compilation, callback) => {
+      setTimeout(() => {
+        console.log('----async---');
+        callback();
+      }, 1000)
+    })
+  }
+}
+
+module.exports = HelloPlugin;
+```
+#### 2) tapPromise
+
+  当我们使用 tapPromise 来处理异步的时候，我们需要返回一个Promise对象并且让她在结束的时候 resolve。如下代码：
+```
+class HelloPlugin {
+  apply(compiler) {
+    compiler.hooks.emit.tapPromise("xxxxx", (compilation) => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log('---async---');
+          resolve();
+        }, 1000)
+      })
+    })
+  }
+}
+
+module.exports = HelloPlugin;
+```
+#### 搭建环境
   我们先来搭建一个简单的环境。
 ```
   1）创建一个项目的目录： mkdir webpack-plugins-demo
@@ -131,10 +174,18 @@ div.innerHTML = 'webpack 插件原理分析'
   一个webpack插件由以下组成：
 ```
   1）一个javascript命名函数。
-  2）在插件函数的 prototype 上定义一个 apply 方法。
-  3）指定一个绑定到webpack 自身的事件钩子。
-  4）处理webpack内部实例饿的特定数据。
-  5）功能完成后调用 webpack 提供的回调。
+  2）一个apply方法，apply方法在webpack装载这个插件的时候被调用，并且会传入compiler对象。
+  3）使用不同的hooks来指定自己需要发生的处理行为。
+  4）在异步调用时最后需要调用webpack提供给我们的callback或通过promise的方式。
+```
+```
+class HelloPlugin {
+  apply(compiler) {
+    compiler.hooks.<hookName>.tap(PluginName, (params) => {
+      /** do some thing */
+    })
+  }
+}
 ```
   下面实现一个最简单的插件
 
@@ -256,11 +307,11 @@ module.exports = {
 
 #### Compilation 对象
 
-Compilation 对象代表了一次资源版本构建，当运行webpack开发环境中间件时，每当检测到一个文件变化，就会创建一个新的 compilation, 从而生成一组新的编译资源。一个Compilation对象表现了当前的模块资源，编译生成资源，文件变化及被跟踪依赖的状态信息 换句话说是把本次打包编译的内容存到内存里。Compilation 对象也提供了插件需要自定义功能的回调，以供插件做自定义处理时选择使用。
+  Compilation 对象代表了一次资源版本构建，当运行webpack开发环境中间件时，每当检测到一个文件变化，就会创建一个新的 compilation, 从而生成一组新的编译资源。一个Compilation对象表现了当前的模块资源，编译生成资源，文件变化及被跟踪依赖的状态信息 换句话说是把本次打包编译的内容存到内存里。Compilation 对象也提供了插件需要自定义功能的回调，以供插件做自定义处理时选择使用。
 
-Compiler 代表整个Webpack从启动到关闭的生命周期，而 Compilation 只代表了一次新的编译，只要文件有改动，compilation就会被重新创建。
+  Compiler 代表整个Webpack从启动到关闭的生命周期，而 Compilation 只代表了一次新的编译，只要文件有改动，compilation就会被重新创建。
 
-Compilation 上暴露的一些常用的钩子
+  Compilation 上暴露的一些常用的钩子
 
 |   钩子               |     类型             |       什么时候调用                                      |
 |   ---               |     ---              |       ---                                             |
@@ -280,11 +331,149 @@ Compilation 上暴露的一些常用的钩子
 Compiler: 代表了整个webpack从启动到关闭的生命周期。
 Compilation: 只是代表了一次新的编译，只要文件有改动，compilation 就会被重新创建。
 
-#### 文件清单插件
+#### 1）文件清单插件
 
 这里是网上的demo， 当作提供编写插件的思路。
 
 在每次webpack打包之后，自动产生一个一个markdown文件清单，记录打包之后的文件夹dist里所有的文件的一些信息。
+
+思路：
+```
+  1. 通过 compiler.hooks.emit.tapAsync() 来触发生成资源到output目录之前的钩子。---- 监听emit事件，编译完成后，文件内容输出到硬盘上，触发该事件。
+  2. 通过 Compilation.assets 获取文件数量。
+  3. 定义 markdown 文件的内容，将文件信息写入到 markdown 文件内。
+  4. 给dist文件夹里添加一个资源名称为 fileListName 的变量。
+  5. 写入资源的内容和文件大小。
+  6. 执行回调，让webpack继续执行。
+```
+  我们在 src/plugins/ 目录下新建 fileListPlugin.js 文件, 插件代码如下：
+```
+class FileListPlugin { 
+  constructor(options) { 
+    // 获取插件配置项
+    this.filename = options && options.filename ? options.filename : 'FILELIST.md';
+  }
+  apply(compiler) { 
+    // 监听emit事件，编译完成后，文件内容输出到硬盘上，触发该事件
+    compiler.hooks.emit.tapAsync('FileListPlugin', (compilation, cb) => { 
+
+      // 通过 compilation.assets 获取文件数量
+      let len = Object.keys(compilation.assets).length;
+
+      // 添加统计信息
+      let content = `# ${len} file${len > 1 ? 's' : ''} emitted by webpack \n\n`;
+
+      // 通过 compilation.assets 获取文件名列表
+      for (let filename in compilation.assets) { 
+        content += `- ${filename}\n`;
+      }
+
+      // 往 compilation.assets 中添加清单文件
+      compilation.assets[this.filename] = {
+        // 写入写文件的内容
+        source: function () { 
+          return content;
+        },
+        // 新文件大小(给webpack输出展示使用)
+        size: function () { 
+          return content.length;
+        }
+      }
+      // 执行回调，让webpack继续执行
+      cb();
+    })
+  }
+}
+
+module.exports = FileListPlugin;
+```
+  然后在 webpack.config.js 中引入文件和插件，如下配置代码：
+```
+..... 省略更多代码
+
+const FileListPlugin = require('./src/plugins/fileListPlugin'); // 引入插件
+
+module.exports = {
+  plugins: [
+    //....
+    new FileListPlugin({
+      filename: '_filelist.md'
+    })
+  ]
+}
+```
+  然后我们再进行打包，会在 dist 目录下 生成 _filelist.md 文件， 打开该文件有如下内容：
+```
+# 2 files emitted by webpack 
+
+- index.js
+- index.html
+```
+  我们可以截图如下所示：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/tool/pluginImage/3.png" />
+
+#### 2）去除注释
+
+开发一个插件能够去除打包后的代码注释。
+
+实现思路：
+
+1. 通过 compiler.hooks.emit.tapAsync() 来触发生成资源到output目录之前的钩子。---- 监听emit事件，编译完成后，文件内容输出到硬盘上，触发该事件。
+2. 通过 compilation.assets 拿到生成后的文件，然后去遍历各个文件。
+3. 通过 .source() 获取构建产物的文本， 然后使用正则去 replace 替换注释的代码。
+4. 更新构建产物对象。
+5. 执行回调，让webpack继续执行。
+
+在 src/plugins 目录下新建 removeCommentPlugin.js 文件。添加如下代码：
+
+class RemoveCommentPlugin { 
+  constructor(options) { 
+    this.options = options;
+  }
+  apply(compiler) { 
+    // 去除注释正则
+    const reg = /("([^\\\"]*(\\.)?)*")|('([^\\\']*(\\.)?)*')|(\/{2,}.*?(\r|\n))|(\/\*(\n|.)*?\*\/)|(\/\*\*\*\*\*\*\/)/g;
+    
+    compiler.hooks.emit.tapAsync('RemoveComment', (compilation, cb) => { 
+      // 遍历构建产物， .assets 中包含构建产物的文件名
+      Object.keys(compilation.assets).forEach(item => { 
+        // .source() 是获取构建产物的文本
+        let content = compilation.assets[item].source();
+        content = content.replace(reg, function (word) { // 去除注释后的文本
+          return /^\/{2,}/.test(word) || /^\/\*!/.test(word) || /^\/\*{3,}\//.test(word) ? "" : word;
+        });
+        // 更新构建产物对象
+        compilation.assets[item] = {
+          source: () => content,
+          size: () => content.length
+        }
+      })
+      // 执行回调，让webpack继续执行
+      cb();
+    })
+  }
+}
+
+module.exports = RemoveCommentPlugin;
+
+然后我们在 webpack.config.js 引入如下插件
+
+//.... 其他代码
+
+const RemoveCommentPlugin = require('./src/plugins/removeCommentPlugin');
+
+module.exports = {
+  plugins: [
+    // ... 其他插件
+    new RemoveCommentPlugin(),
+  ]
+}
+
+
+
+
+
 
 
 

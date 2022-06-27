@@ -97,6 +97,7 @@
 10. <a href="./autoDeployment/autoDocker.md">使用 Docker+webHook 实现前端自动化部署</a>
 11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
 12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
+13. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
 
 ### 七) nodejs 相关的知识
 
@@ -158,6 +159,8 @@
 2. <a href="./tool/plugin.md">webpack手写plugin</a>
 
 ### 十六）chrome扩展插件相关的
+
+1. <a href="./tool/chrome1.md">理解 chrome 扩展程序(一)</a>
 
 ### 十七) jest 单元测试
 

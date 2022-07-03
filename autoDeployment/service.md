@@ -102,7 +102,7 @@ sudo /usr/local/nginx/sbin/nginx
 ```
 #### 重新启动服务
 ```
-sudo /usr/local/nginx/sbin/nginx -s reopen
+sudo /usr/local/nginx/sbin/nginx -s reload
 ```
 #### 5) 上传静态资源文件 
 
@@ -137,3 +137,59 @@ echo "这里修改为你的公钥内容" >> ~/.ssh/authorized_keys
 这样我们再次登陆的时候就不需要输入密码了。注意，我们写入的是 ~ 目录里，这就意味着如果我们切换了用户，是需要再按照这个方式配置一遍的。
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/service/12.png" /> <br />
+
+#### 创建测试文件
+
+  我们创建一个用于测试的 index.html 文件， 放在 /home/www/website/ 目录下
+```
+# 创建目录
+mkdir -p /home/www/website
+
+# 进入目录
+cd /home/www/website
+
+# 创建文件
+touch index.html
+
+# 写入内容
+echo '<!doctype html><html><head><meta charset="utf-8"><title>Hello World!</title></head><body>Hello World!</body></html>' > index.html
+```
+#### 修改配置文件
+```
+# 进入配置文件目录
+cd /usr/local/nginx/conf
+
+# 修改配置文件内容
+vim nginx.conf
+```
+  在 location / {} 中添加内容，使访问首页的时候，会返回刚才创建的文件内容
+```
+server {
+  listen       80 default_server;
+  listen       [::]:80 default_server;
+  server_name  _;
+  root         /usr/share/nginx/html;
+  #include      /etc/nginx/default.d/x.conf;
+  #charset koi8-r;
+  #access_log  logs/host.access.log  main;
+
+  location / {
+    root   /home/www/website/;
+    index  index.html index.htm;
+  }
+}
+```
+  如下所示：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/service/13.png" /> <br />
+
+  保存退出 (:wq)后， 重新启动下服务器：
+
+```
+sudo /usr/local/nginx/sbin/nginx -s reload
+```
+
+  这是时候我们访问服务器的IP， 就可以看到页面了， 如下所示：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/service/14.png" /> <br />
+

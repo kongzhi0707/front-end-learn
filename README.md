@@ -174,4 +174,11 @@
 7. <a href="./jest/snapshot.md">jest snapshot 快照测试</a>
 8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试 React 的应用</a>
 
+### 十八) linux 相关的
+
+1. <a href="./linux/find.md">Linux的find命令</a>
+2. <a href="./linux/grep.md">Linux的grep命令</a>
+3. <a href="./linux/xargs.md">Linux的xargs命令</a>
+4. <a href="./linux/linux.md">学习linux命令</a>
+
 

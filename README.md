@@ -176,9 +176,9 @@
 
 ### 十八) linux 相关的
 
-1. <a href="./linux/find.md">Linux的find命令</a>
-2. <a href="./linux/grep.md">Linux的grep命令</a>
-3. <a href="./linux/xargs.md">Linux的xargs命令</a>
-4. <a href="./linux/linux.md">学习linux命令</a>
+1. <a href="./linux/find.md">理解find命令</a>
+2. <a href="./linux/grep.md">理解grep命令</a>
+3. <a href="./linux/xargs.md">xargs命令教程</a>
+4. <a href="./linux/linux.md">系统学习linux命令</a>
 
 

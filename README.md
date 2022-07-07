@@ -180,5 +180,6 @@
 2. <a href="./linux/grep.md">理解grep命令</a>
 3. <a href="./linux/xargs.md">xargs命令教程</a>
 4. <a href="./linux/linux.md">系统学习linux命令</a>
+5. <a href="./linux/centos7.md">Centos7 查看，打开，关闭防火墙的命令 及 查看开放端口及端口号的命令</a>
 
 

@@ -135,6 +135,7 @@
 ### 十一) git 集合
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
+2. <a href="./git/code-home.md">搭建GitLab代码管理仓库</a>
 
 ### 十二）组件库搭建
 

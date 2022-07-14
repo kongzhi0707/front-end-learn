@@ -136,6 +136,7 @@
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
 2. <a href="./git/code-home.md">搭建GitLab代码管理仓库</a>
+3. <a href="./git/git-runner.md">gitlab+gitlab-runner实现前端项目自动化构建部署</a>
 
 ### 十二）组件库搭建
 

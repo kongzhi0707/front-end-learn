@@ -1,7 +1,48 @@
 
 ### 系统学习linux命令
 
-#### 1）命令
+<div id="back"></div>
+
+- [x] [一）命令](#id1) <br />
+  - [x] 命令行提示符 <br />
+- [x] [二）文件和目录](#id2) <br />
+  - [x] 2.1）pwd 查看当前路径 <br />
+  - [x] 2.2) which (查看命令的可执行文件所在路径) <br />
+  - [x] 2.3）浏览和切换目录 <br />
+  - [x] DllPlugin插件打包第三方类库 <br />
+  - [x] 使用 happypack 并发执行任务 <br />
+
+- [x] [三) 用户与权限](#id3) <br />
+  - [x] 3.1) useradd + passwd 添加用户<br />
+  - [x] 3.2) userdel 删除用户 <br />
+  - [x] 3.3) su 切换用户 <br />
+  - [x] 3.4) chmod (修改访问权限) <br />
+  - [x] 3.5) 数字分配权限 <br />
+  - [x] 3.6) 用字母来分配权限 <br />
+
+- [x] [四）软件仓库 (yum 安装软件相关的)](#id4) <br />
+
+- [x] [五) 文本操作](#id5) <br />
+  - [x] 5.1) sort 对文件的行进行排序 <br />
+  - [x] 5.2) wc 用于文件的统计，它可以统计单词数目，行数，字符数，字节数等。 <br />
+  - [x] 5.3) uniq (删除文件中的重复内容。) <br />
+  - [x] 5.4) cut (剪切文件的一部分内容。) <br />
+
+- [x] [六）查看进程](#id6) <br />
+  - [x] 6.1）w (快速了解系统中目前有哪些用户登录) <br />
+  - [x] 6.2）ps (显示当前系统的进程) <br />
+  - [x] 6.3）kill (结束一个进程) <br />
+
+- [x] [七：守护进程](#id7) <br />
+  - [x] 7.1) systemd<br />
+
+- [x] [八 文件压缩解压](#id8) <br />
+  - [x] 8.1）tar (创建一个 tar 归档) <br />
+  - [x] 8.2）gzip / gunzip <br />
+  - [x] 8.3）tar 归档 + 压缩 <br />
+  - [x] 8.4) zip/unzip <br />
+
+#### <div id="id1">一）命令<a href="#back">回到顶部</a></div>
 
 #### 1.1）命令行提示符
 
@@ -30,7 +71,7 @@ iZ2zeds62pwbss0ax04ja6Z：表示主机名；
 
 #### 注意：root是超级用户，具备操作系统的一切权限。
 
-#### 2）文件和目录
+#### <div id="id2">二）文件和目录<a href="#back">回到顶部</a></div>
 
 #### 2.1）pwd 查看当前路径
 
@@ -45,7 +86,7 @@ $ pwd
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/4.png" /> <br />
 
-#### 2.3）浏览和切换目录
+#### 2.3) 浏览和切换目录
 
 #### ls（列出文件和目录）
 
@@ -64,9 +105,9 @@ $ pwd
 我们如上看到 每一行都有7列，我们以上面的 .npm 为列 讲解每列的含义：
 
 
-| drwxr-xr-x  | 4 | root ｜ root ｜ 4096 ｜ 6月 26 09:02 ｜ .npm ｜
-| :-------------------------------------------|-----------------: 
-｜ 文件类型和权限信息 ｜ 链接数或者一级子目录数   ｜  所有者 ｜  所属组  ｜  文件大小，单位字节 ｜  最后修改时间  ｜ 文件名  ｜
+| drwxr-xr-x       | 4                     | root   ｜ root    ｜ 4096             ｜ 6月 26 09:02 ｜ .npm  ｜
+| :----------------|-----------------------|--------|----------|-------------------|--------------|--------: 
+｜ 文件类型和权限信息 ｜ 链接数或者一级子目录数   ｜  所有者 ｜  所属组  ｜  文件大小，单位字节 ｜  最后修改时间  ｜ 文件名 ｜
 
 重点我们看第一列的内容，以 drwxr-xr-x 为列，这里一共有10位，第一位 表示文件类型，其中 - 表示普通文件，d 表示目录文件。
 
@@ -182,7 +223,7 @@ rm f1 f2 f3 	--> 同时删除 f1 f2 f3 3个文件
   -r 递归删除文件夹，常见的删除使用方式: rm -rf node_modules
 ```
 
-#### 3) 用户与权限
+#### <div id="id3"> 三) 用户与权限 <a href="#back">回到顶部</a></div>
 
   Linux 是一个多用户的操作系统。在Linux中，理论来说，我们可以创建无数个用户，但是这些用户会被分到不同的群组里面的，我们有一个超级用户root，它是拥有最高权限的。
 
@@ -190,7 +231,7 @@ rm f1 f2 f3 	--> 同时删除 f1 f2 f3 3个文件
 
   以root身份运行命令。
 
-#### useradd + passwd
+#### 3.1) useradd + passwd
 
   useradd 添加新用户
   passwd 修改用户密码
@@ -200,14 +241,14 @@ rm f1 f2 f3 	--> 同时删除 f1 f2 f3 3个文件
 useradd git  // 添加一个git用户，添加完成之后 在 /home 路径下可以查看的到
 passwd git   // 修改 git 用户的密码
 ```
-#### userdel
+#### 3.2) userdel
 
   删除用户，需要root的用户权限。
 ```
 userdel git // 只会删除用户名，不会从 /home 中删除对应的文件夹
 userdel git -r // 会同时删除 /home 下的对应文件夹
 ```
-#### su
+#### 3.3) su
 
   切换用户，需要 root 用户权限。
 ```
@@ -215,7 +256,7 @@ sudo su -> 切换为root用户
 su git -> 切换为普通用户
 su -  -> 切换为root用户
 ```
-#### chmod (修改访问权限)
+#### 3.4) chmod (修改访问权限)
 
   常用参数：
 
@@ -223,9 +264,9 @@ su -  -> 切换为root用户
 
   如上我们已经介绍过目录权限相关的，比如如下：
 
-| drwxr-xr-x  | 4 | root ｜ root ｜ 4096 ｜ 6月 26 09:02 ｜ .npm ｜
-| :-------------------------------------------|-----------------: 
-｜ 文件类型和权限信息 ｜ 链接数或者一级子目录数   ｜  所有者 ｜  所属组  ｜  文件大小，单位字节 ｜  最后修改时间  ｜ 文件名  ｜
+| drwxr-xr-x       | 4                     | root   ｜ root    ｜ 4096             ｜ 6月 26 09:02 ｜ .npm ｜
+| :--------------- |-----------------------|--------|----------|-------------------|--------------|-------: 
+｜ 文件类型和权限信息 ｜ 链接数或者一级子目录数   ｜  所有者 ｜  所属组  ｜  文件大小，单位字节 ｜  最后修改时间  ｜ 文件名｜
 
   重点我们看第一列的内容，以 drwxr-xr-x 为列，这里一共有10位，第一位 表示文件类型，其中 - 表示普通文件，d 表示目录文件。链接是 l。
 
@@ -243,8 +284,8 @@ su -  -> 切换为root用户
 ```
   权限的整体是按用户来划分的，如下图所示：
 
-| d  | rwx | rwx ｜ rwx ｜
-| :------|-----------------: 
+| d        | rwx     | rwx      ｜ rwx       ｜
+| :--------|---------|----------|------------: 
 ｜ 文件属性 ｜ 所有者   ｜  群组用户 ｜  其他用户  ｜
 
 现在我们再来理解 drwxr-xr-x 的意思：
@@ -256,13 +297,13 @@ su -  -> 切换为root用户
 ```
   现在我们可以使用 chmod 来试着修改权限，chmod 它不需要root用户才能运行的。只要你是此文件的所有者，就可以使用 chmod 来修改文件的访问权限。
 
-#### 数字分配权限如下：
+#### 3.5) 数字分配权限如下：
 
 | 权限 | 数字 ｜
-| :------|---: 
-｜ r ｜  4  ｜
-｜ w ｜  2  ｜
-｜ x ｜  1  ｜
+|:----|------: 
+｜ r  ｜  4  ｜
+｜ w  ｜  2  ｜
+｜ x  ｜  1  ｜
 
 因此我们做如下分析:
 ```
@@ -273,7 +314,7 @@ chmod 640 demo1.txt
 4 = 4 + 0 + 0; // 表示群组用户具有 r 权限
 0 = 0 + 0 + 0; // 表示其他用户没有权限
 ```
-#### 用字母来分配权限
+#### 3.6) 用字母来分配权限
 ```
   u: user的缩写，用户的意思，表示所有者。
   g: group 的缩写，群组的意思，表示群组用户。
@@ -292,7 +333,7 @@ chmod 640 demo1.txt
   chmod u=rwx,g=r,o=- file	--> 文件file的所有者分配读写和执行的权限，群组其它用户分配读的权限，其他用户没有任何权限
 ```
 
-#### 4) 软件仓库 (yum 安装软件相关的)
+#### <div id="id4"> 四) 软件仓库 (yum 安装软件相关的) <a href="#back">回到顶部</a></div>
 
 Linux 的包都存在一个仓库，叫做软件仓库，它可以使用 yum 来管理软件包，yum 是 CentOS 中默认的包管理工具。
 
@@ -321,7 +362,243 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum makecache
 ```
 
-#### 5) 
+#### <div id="id5"> 五) 文本操作 <a href="#back">回到顶部</a></div>
+
+#### 5.1) sort
+
+  对文件的行进行排序。
+
+  基本语法：sort name.txt  // 对 name.txt 文件进行排序
+
+  为了演示，我们可以创建一个文件 name.txt, 然后放入以下内容：
+```
+Christopher
+Shawn
+Ted
+Rock
+Noah
+Zachary
+Bella
+```
+  执行 sort name.txt 命令，会对文本内容进行排序；如下所示：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/11.png" /> <br />
+
+#### 常用如下参数：
+```
+  -o: 将排序后的文件写入新文件， sort -o name_sorted.txt name.txt (将name.txt排序后的文件写入到 name_sorted.txt 文件中)
+  -r: 倒序排序，用法：sort -r name.txt;
+  -R: 随机排序，用法: sort -R name.txt;
+  -n: 对数字进行排序，默认是把数字识别成字符串的，因此 138 会排在 25 前面，如果添加了 -n 数字排序的话，则 25 会在 138 前面。
+```
+#### 5.2) wc 用于文件的统计，它可以统计单词数目，行数，字符数，字节数等。
+
+  word count 的缩写，用于文件的统计。它可以统计单词数目，行数，字符数，字节数等。
+
+#### 基础用法
+```
+wc name.txt // 统计 name.txt
+```
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/12.png" /> <br />
+```
+  第一个7，表示行数。
+  第二个7，表示单词数。
+  第三个46，表示字节数。
+```
+#### 常用参数
+```
+  -l 只统计行数， 如：wc -l name.txt
+  -w 只统计单词数, 如: wc -w name.txt
+  -c 只统计字节数, 如：wc -c name.txt
+  -m 只统计字符数, 如: wc -m name.txt
+```
+#### 5.3) uniq (删除文件中的重复内容。)
+
+  删除文件中的重复内容。
+
+#### 基础语法：
+```
+  uniq name.txt  // 去除name.txt重复的行数，并打印到屏幕上
+  uniq name.txt uniq_name.txt // 把去除重复后的文件保存为 uniq_name.txt
+```
+#### 只能去除连续重复的行数
+
+#### 常用的参数
+```
+  -c 统计重复的行数，如: uniq -c name.txt
+  -d 只显示重复的行数，如: uniq -d name.txt
+```
+#### 5.4) cut (剪切文件的一部分内容。)
+
+  剪切文件的一部分内容。
+
+  基本使用方法如下：
+```
+cut -c 2-4 name.txt // 剪切每一行的 第二道第四个字符
+```
+#### 常用参数
+```
+  -d 用于指定什么分隔符 (比如逗号, 分号，等), 比如使用方法: cut -d , name.txt
+  -f 表示剪切下用分隔符分割的那一块或哪几块区域， cut -d , -f 1 name.txt
+```
+#### <div id="id6"> 六）查看进程 <a href="#back">回到顶部</a></div>
+
+  在window中，我们可以通过 ctrl+Alt+Delete 快捷键查看软件的进程
+
+#### 6.1）w (快速了解系统中目前有哪些用户登录)
+
+  帮我们快速了解系统中目前有哪些用户登录着，以及他们在干什么。
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/13.png" /> <br />
+
+#### 6.2）ps (显示当前系统的进程)
+
+  用于显示当前系统中的进程，ps命令显示的进程列表不会随时间而更新。它是静态的。是运行 ps 命令那个时刻的状态或者说是一个进程快照。
+
+  基本使用方法：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/14.png" /> <br />
+```
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# ps
+    PID TTY          TIME CMD
+  36825 pts/0    00:00:00 bash
+  36875 pts/0    00:00:00 ps
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# 
+
+  PID: 进程号，每个进程都有唯一的进程号
+  TTY: 进程运行所在的终端
+  TIME: 进程运行的时间
+  CMD: 产生这个进程的程序名，如果在进程列表中看到有好几行都是同样的程序名，那么就是同样的程序产生了不止一个进程。
+```
+#### 常用的参数有如下：
+```
+  -ef:   列出所有的进程。
+  -efH:  以乔木状列举出所有进程;
+  -u:    列出此用户运行的进程
+  -aux:  通过CPU和内存使用来过滤进程 ps -aux | less;
+  -aux --sort -pcpu: 按cpu使用降序排列;
+  -aux --sort -pmem: 表示按内存使用降序排列；
+  -axjf: 以树形结构显示进程
+```
+#### 6.3）kill (结束一个进程)
+
+  结束一个进程使用命令：kill + PID;
+```
+  kill 956  // 结束进程号为956的进程
+  kill 956 957 // 结束多个进程
+  kill -9 7291  // 强制结束进程 7291
+```
+#### <div id="id7"> 七：守护进程 <a href="#back">回到顶部</a></div>
+
+  一个运行起来的程序被称为进程。在Linux中有些进程是特殊的，它不与任何进程关联，不论用户的身份如何，都在后台运行，这些进程的父进程是 PID 为1的进程，PID为1的进程只在系统关闭时才会被销毁。它们会在后台一直运行等待分配工作。我们将这类进程称之为守护进程 daemon.
+
+  守护进程的名字一般会在最后有一个d，表示 daemon 守护的意思，比如 systemd, httpd.
+
+#### 7.1) systemd
+
+  systemd 是一个linux系统基础组件的集合，提供了一个系统和服务管理器，运行为 PID 1 并负责启动其他程序。
+```
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.1 103336 10744 ?        Ss   Jul03   0:12 /usr/lib/systemd/systemd --switched-root --system --deserialize 18
+root           2  0.0  0.0      0     0 ?        S    Jul03   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Jul03   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Jul03   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   Jul03   0:00 [kworker/0:0H-events_highpri]
+root           8  0.0  0.0      0     0 ?        I<   Jul03   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    Jul03   0:00 [rcu_tasks_rude_]
+root          10  0.0  0.0      0     0 ?        S    Jul03   0:00 [rcu_tasks_trace]
+root          11  0.0  0.0      0     0 ?        S    Jul03   0:03 [ksoftirqd/0]
+root          12  0.0  0.0      0     0 ?        R    Jul03   0:24 [rcu_sched]
+root          13  0.0  0.0      0     0 ?        S    Jul03   0:00 [migration/0]
+root          14  0.0  0.0      0     0 ?        S    Jul03   0:00 [cpuhp/0]
+root          16  0.0  0.0      0     0 ?        S    Jul03   0:00 [kdevtmpfs]
+root          17  0.0  0.0      0     0 ?        I<   Jul03   0:00 [netns]
+root          18  0.0  0.0      0     0 ?        S    Jul03   0:00 [kauditd]
+root          19  0.0  0.0      0     0 ?        S    Jul03   0:00 [khungtaskd]
+root          20  0.0  0.0      0     0 ?        S    Jul03   0:00 [oom_reaper]
+root          21  0.0  0.0      0     0 ?        I<   Jul03   0:00 [writeback]
+root          22  0.0  0.0      0     0 ?        S    Jul03   0:04 [kcompactd0]
+...... 更多
+```
+  如上我们通过命令看到 PID 为 1 的进程就是 systemd 的系统进程。
+
+  systemd 常用命令如下：
+```
+  systemctl start nginx # 启动服务
+  systemctl stop nginx # 停止服务
+  systemctl restart nginx # 重启服务
+  systemctl status nginx # 查看服务状态
+  systemctl reload nginx # 重载配置文件(不停止服务的情况)
+  systemctl enable nginx # 开机自动启动服务
+  systemctl disable nginx # 开机不自动启动服务
+  systemctl is-enabled nginx # 查看服务是否开机自动启动
+  systemctl list-unit-files --type=service # 查看各个级别下服务的启动和禁用情况
+```
+#### <div id="id8"> 八 文件压缩解压 <a href="#back">回到顶部</a></div>
+
+  打包：是将多个文件变成一个总的文件，我们称它为存档，归档。
+  压缩：是将一个大文件压缩变成一个小的文件。
+
+  我们经常使用 tar 将多个文件 打包一个总的文件，称为 archive, 然后我们使用 gzip 或 bzip2 命令将 archive 压缩为更小的文件。
+
+#### 8.1）tar (创建一个 tar 归档)
+
+  创建一个 tar 归档。
+
+  用法如下：
+```
+  tar -cvf sort.tar sort/   // 将sort文件夹归档为sort.tar
+  tar -cvf archive.tar file1 file2 file3  // 将 file1 file2 file3  归档为archive.tar
+```
+#### 常用参数如下：
+```
+  -cvf  表示 create (创建) + verbose (细节) + file (文件)，创建归档文件并显示操作细节；
+  -tf   显示归档里的内容，并不解开归档; 使用如下： tar -tf sort.tar
+  -rvf  追加文件到归档， 使用如下：tar -rvf archive.tar file.txt
+  -xvf  解开归档， tar -xvf archive.tar
+```
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/15.png" /> <br />
+
+#### 8.2）gzip / gunzip
+
+  压缩 (gzip) / 解压 (gunzip) 归档，默认使用 gzip 命令，压缩后的文件名后缀为 .tar.gz.
+```
+  gzip archive.tar  // 压缩
+  gunzip archive.tar.gz  // 解压
+```
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/16.png" /> <br />
+
+#### 8.3）tar 归档 + 压缩
+
+  我们可以用 tar 命令同时完成归档和压缩的操作，就是给 tar 命令多家一个选项参数，使之完成归档操作后，还是调用 gzip 或 bzip2 命令来完成压缩操作。
+```
+  tar -zcvf archive.tar.gz archive/  // 将archive文件夹归档并压缩
+  tar -zxvf archive.tar.gz  // 将archive.tar.gz归档压缩文件解压
+```
+#### 8.4) zip/unzip
+
+  压缩/解压 zip 文件(zip文件一般来自windows操作系统的)
+
+  命令安装：
+```
+// Red Hat 一族中的安装方式
+yum install zip 
+yum install unzip 
+```
+  使用方法：
+```
+unzip archive.zip # 解压 .zip 文件
+unzip -l archive.zip # 不解开 .zip 文件，只看其中内容
+```
+  zip -r sort.zip sort/ # 将sort文件夹压缩为 sort.zip，其中-r表示递归
+
+
+
+
+
+
+
 
 
 

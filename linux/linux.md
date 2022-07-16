@@ -647,7 +647,7 @@ pm2  pm2-dev  pm2-docker  pm2-runtime
 #### 10.1) ifconfig
 
 查看 ip 网络相关信息，如果命令不存在的话， 执行命令 yum install net-tools 安装。
-
+```
 [root@iZ2zeds62pwbss0ax04ja6Z ~]# ipconfig
 -bash: ipconfig: command not found
 [root@iZ2zeds62pwbss0ax04ja6Z ~]# ifconfig
@@ -676,7 +676,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 2  bytes 140 (140.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
+```
 参数解析：
 
 ```

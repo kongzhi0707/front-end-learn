@@ -57,12 +57,12 @@
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/2.png" /> <br />
 
 如上命令解释：
-
-root: 表示用户名；
-iZ2zeds62pwbss0ax04ja6Z：表示主机名；
-~: 表示目前所在的目录为家目录，其中 root 用户的家目录是 /root; 普通用户的家目录在 /home 下；
-#: 表示我们所具有的权限 (root 用户为 #， 普通用户为 $).
-
+```
+  root: 表示用户名；
+  iZ2zeds62pwbss0ax04ja6Z：表示主机名；
+  ~: 表示目前所在的目录为家目录，其中 root 用户的家目录是 /root; 普通用户的家目录在 /home 下；
+  #: 表示我们所具有的权限 (root 用户为 #， 普通用户为 $).
+```
 执行 whoami 命令可以查看当前用户名；执行 hostname 命令可以查看当前主机名；
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/3.png" /> <br />
@@ -89,13 +89,13 @@ $ pwd
 #### ls（列出文件和目录）
 
 常用的参数如下：
-
--a 显示所有文件和目录(包括隐藏的)
--l 显示详细列表
--h 适合人类阅读的
--t 按文件最近一次修改时间排序
--i 显示文件的 inode （inode是文件内容的标识）
-
+```
+  -a 显示所有文件和目录(包括隐藏的)
+  -l 显示详细列表
+  -h 适合人类阅读的
+  -t 按文件最近一次修改时间排序
+  -i 显示文件的 inode （inode是文件内容的标识）
+```
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/5.png" /> <br />
 
 如上 ls -la 命令是由 显示所有文件和目录(包括隐藏) 和 -l 显示详细列表组成。
@@ -122,22 +122,22 @@ $ pwd
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/6.png" /> <br />
 
 #### cd (表示切换目录)
-
-cd /  ---> 跳转到根目录
-cd ~  ----> 跳转到家目录
-cd .. ----> 跳转到上级目录
-cd ./home ----> 跳转到当前目录的home目录下
-cd /home/xxx  ----> 跳转到根目录下的home目录下的xxx目录
-cd  ----> 不添加任何参数，也是回到家目录
-
+```
+  cd /  ---> 跳转到根目录
+  cd ~  ----> 跳转到家目录
+  cd .. ----> 跳转到上级目录
+  cd ./home ----> 跳转到当前目录的home目录下
+  cd /home/xxx  ----> 跳转到根目录下的home目录下的xxx目录
+  cd  ----> 不添加任何参数，也是回到家目录
+```
 #### du（列举目录大小信息）
 
  常用参数如下：
-
--h 适合人类阅读的
--a 同时列举目录下文件的大小信息
--s 只显示总计带下，不显示具体信息。
-
+```
+  -h 适合人类阅读的
+  -a 同时列举目录下文件的大小信息
+  -s 只显示总计带下，不显示具体信息。
+```
 #### cat 查看文件
 
 一次性显示文件的所有内容，更适合查看小的文件。常用的参数如下：
@@ -147,27 +147,27 @@ cd  ----> 不添加任何参数，也是回到家目录
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/7.png" /> <br />
 
 #### less (分页显示文件内容，更适合查看大的文件。)
-
+```
 less index.js
-
+```
 #### head --- 显示文件的开头几行 (默认是10行)
-
+```
 head index.js
-
+```
 可使用的参数如下：
-
+```
 -n 指定行数; 比如查看2行；使用命令 head index.js -n 2;
-
+```
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/8.png" /> <br />
 
 #### tail -- 显示文件的结尾几行 (默认是10行)
 
 常用的参数如下：
 
--n 指定行数；
+  -n 指定行数；
 
-比如 tail index.js -n 2; 代表末尾2行。
--f 每过1秒检查下文件是否有更新内容，也可以使用 -s 参数指定间隔的时间 tail -f -s 4 index.js
+  比如 tail index.js -n 2; 代表末尾2行。
+  -f 每过1秒检查下文件是否有更新内容，也可以使用 -s 参数指定间隔的时间 tail -f -s 4 index.js
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/9.png" /> <br />
 
@@ -262,9 +262,10 @@ su -  -> 切换为root用户
 
   如上我们已经介绍过目录权限相关的，比如如下：
 
-| drwxr-xr-x       | 4                     | root   | root    ｜ 4096             ｜ 6月 26 09:02 | .npm ｜
-| :--------------- |-----------------------|--------|---------|-------------------|--------------|-------: 
-| 文件类型和权限信息  | 链接数或者一级子目录数    |  所有者 |  所属组  |  文件大小，单位字节  |  最后修改时间  | 文件名 |
+| drwxr-xr-x       | 4                     | root   | root    | 4096             | 6月 26 09:02 | .npm  |
+| :----------------|-----------------------|--------|---------|------------------|--------------|--------: 
+| 文件类型和权限信息  | 链接数或者一级子目录数    |  所有者 |  所属组  |  文件大小，单位字节 |  最后修改时间  | 文件名 |
+
 
   重点我们看第一列的内容，以 drwxr-xr-x 为列，这里一共有10位，第一位 表示文件类型，其中 - 表示普通文件，d 表示目录文件。链接是 l。
 

@@ -592,6 +592,234 @@ unzip -l archive.zip # 不解开 .zip 文件，只看其中内容
 ```
   zip -r sort.zip sort/ # 将sort文件夹压缩为 sort.zip，其中-r表示递归
 
+#### <div id="id9"> 九）编译安装软件 <a href="#back"> 回到顶部</a></div>
+
+之前我们学会了使用 yum 命令进行软件安装， 但是如果碰到 yum 仓库中没有软件的话，我们就需要会更高级的软件安装 "源码编译安装"。
+
+#### 编译安装
+
+编译就是将程序的源代码转换成可执行文件的过程。大多数Linux的程序都是开放源码的，可以编译成适合我们的电脑和操作系统的可执行文件。
+
+基本步骤可以理解为如下：
+
+1. 下载源代码
+2. 解压压缩包
+3. 配置
+4. 编译
+5. 安装
+
+##### 1）下载
+
+比如我们将下载好的源码在本机电脑上使用如下命令同步到我们的服务器上：
+
+scp 文件名 用户名@服务器ip:目录路径
+
+scp ~/Desktop/xxx.tar.giz root@47.94.155.8:.
+
+我们也可以使用 wget 进行下载：
+
+wegt+下载地址
+
+wegt https://bintray.com/htop/source/download_file?file_path=htop-3.0.0.tar.gz
+
+##### 2）解压文件
+
+tar -zxvf htop-3.0.0.tar.gz // 解压 htop-3.0.0.tar.gz 包，如果我们是其他软件包，就换成其他名字
+cd htop-3.0.0 // 进入目录
+
+##### 3) 配置
+
+执行 ./configure , 它会分析我们的电脑去确认编译所需的工具是否都已经安装了。
+
+##### 4）编译
+
+执行 make 命令。
+
+##### 5）安装
+
+执行 make install 命令，安装完成后执行 ls /usr/local/bin/ 查看是否有 htop 软件。比如我查看我服务器下的可执行文件有如下：
+
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# ls /usr/local/bin/
+pm2  pm2-dev  pm2-docker  pm2-runtime
+
+#### <div id="id10"> 十）网络 <a href="#back"> 回到顶部</a></div>
+
+#### 10.1) ifconfig
+
+查看 ip 网络相关信息，如果命令不存在的话， 执行命令 yum install net-tools 安装。
+
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# ipconfig
+-bash: ipconfig: command not found
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# ifconfig
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:e3:ac:62:96  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.23.161.210  netmask 255.255.240.0  broadcast 172.23.175.255
+        inet6 fe80::216:3eff:fe34:5f5b  prefixlen 64  scopeid 0x20<link>
+        ether 00:16:3e:34:5f:5b  txqueuelen 1000  (Ethernet)
+        RX packets 1014182  bytes 370788848 (353.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 785388  bytes 104196015 (99.3 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2  bytes 140 (140.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2  bytes 140 (140.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+参数解析：
+
+```
+eth0 对应有线连接（对应你的有线网卡），就是用网线来连接的上网。 eth 是 Ethernet 的缩写，表示“以太网”。有些电脑可能同时有好几条网线连着，例如服务器，那么除了 eht0 ，你还会看到 eth1 、 eth2 等。
+
+lo 表示本地回环（ Local Loopback 的缩写，对应一个虚拟网卡）可以看到它的 ip 地址是 127.0.0.1 。每台电脑都应该有这个接口，因为它对应着“连向自己的链接”。这也是被称之为“本地回环”的原因。所有经由这个接口发送的东西都会回到你自己的电脑。看起来好像并没有什么用，但有时为了某些缘故，我们需要连接自己。例如用来测试一个网络程序，但又不想让局域网或外网的用户查看，只能在此台主机上运行和查看所有的网络接口。例如在我们启动一个前端工程时，在浏览器输入 127.0.0.1:3000 启动项目就能查看到自己的 web 网站，并且它只有你能看到。
+
+wlan0 表示无线局域网（上面案例并未展示）。
+```
+
+#### 10.2) host
+
+ip 地址 和 主机名的互相转换。
+
+##### 软件安装
+```
+yum install bind-utils
+```
+##### 基础用法
+```
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# host github.com
+github.com has address 20.205.243.166
+
+[root@iZ2zeds62pwbss0ax04ja6Z ~]# host 13.229.188.59
+59.188.229.13.in-addr.arpa domain name pointer ec2-13-229-188-59.ap-southeast-1.compute.amazonaws.com.
+```
+#### 10.3) ssh 链接远程服务器
+
+基本使用方法如下：
+
+ssh 用户@ip:port
+```
+  1、ssh root@47.94.155.8:22 # 端口号可以省略不写，默认是22端口
+  2、输入连接密码后就可以操作远端服务器了
+```
+#### 配置 ssh
+
+  config 文件可以配置 ssh, 方便批量管理多个 ssh 链接。
+
+  配置文件分为以下几种：
+```
+  1）全局ssh服务器端的配置: /etc/ssh/sshd_config;
+  2）全局ssh客户端的配置: /etc/ssh/ssh_config
+  3）当前用户 ssh 客户端的配置: ~/.ssh/config
+```
+#### 服务器端 config 文件的常用配置参数如下：
+
+| 服务端config参数       | 作用                                | 
+|:---------------------|-------------------------------------: 
+| Port                 | sshd服务器端口号(默认是22)             |
+| PermitRootLogin      | 是否允许以 root 用户身份登录（默认是可以）|
+| PasswordAuthentication| 是否允许密码验证登录（默认是可以）       |
+| PubkeyAuthentication | 是否允许公钥验证登录（默认是可以）        |
+| PermitEmptyPasswords | 是否允许空密码登录（不安全，默认不可以）   |
+
+#### 注意：修改完服务端配置文件需要重启服务： systemctl restart sshd
+
+#### 客户端 config 文件的常用配置参数
+
+| 客户端config参数       | 作用                                | 
+|:---------------------|-------------------------------------: 
+| Host                 | 别名                                |
+| HostName             | 远程主机名（或 IP 地址）               |
+| Port                 | 连接到远程主机的端口                   |
+| User                 | 用户名                               |
+
+  下面是配置我们当前用户的config的实例.
+
+  我们之前在本地shell命令，需要如下登录远程服务器：
+```
+1）ssh root@47.94.155.8:22  // 22 端口默认，可以不写
+2）输入密码即可登录到远程服务器中。
+```
+  现在我们只需要配置我们的 config 文件即可.
+```
+// 创建config
+vim ~/.ssh/config
+
+// 填写一下内容
+Host lion # 别名
+HostName 172.x.x.x # ip 地址
+Port 22 # 端口
+User root # 用户
+```
+  如上我们配置如下操作：
+```
+// 创建config
+vim ~/.ssh/config
+
+Host lion
+HostName 47.94.155.8
+Port 22
+User root
+```
+  如上配置完成后，下次我们登录只需要 ssh lion ， 然后再输入远程服务器密码即可登录了。
+
+#### 免密码登录
+
+  ssh 登录分两种，一种是基于口令(账号密码)，另外一种是基于密钥的方式。
+
+  基于口令：就是我们每次登录远程服务器都需要输入账号和密码。
+
+#### 基于密钥验证原理
+
+客户端生成密钥对(公约和私钥)，把公钥上传到服务器，每次登录会与服务器的公约进行对比，这种验证登录的方法更加安全，也被称为 "公约验证登录"。
+
+##### 具体实现步骤
+
+  1) 在客户机中生成密钥对(公钥和私钥)  ssh-keygen (默认使用RSA非对称加密算法)
+
+  运行完 ssh-keygen 会在 ~/.ssh/ 目录下，生成两个文件：
+```
+id_rsa.pub: 公钥
+id_rsa: 私钥
+```
+  在shell命令行中执行 ssh-keygen 命令，运行完后，会在 ~/.ssh/ 目录下，生成两个文件；
+```
+cd ~/.ssh/ 
+ls
+```
+  id_rsa.pub: 公钥
+  id_rsa: 私钥
+
+  2）把客户端的公钥传送到服务器
+
+  使用 <a href="http://lnmp.ailinux.net/ssh-copy-id">ssh-copy-id</a> 命令, 
+
+  把本地的ssh公钥文件安装到远程主机对应的账户下：
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@47.94.155.8
+```
+  选项 -i：指定公钥文件
+
+如下所示:
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/linux/linuxImage/17.png" /> <br />
+
+  如上我的 ssh 设置了密码为 123456
+
+  因此现在我们只需要 使用 ssh lion, 然后再输入密码：123456 即可登录了。
+
+#### 十一）备份
+
 
 
 

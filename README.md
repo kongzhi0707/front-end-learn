@@ -185,4 +185,8 @@
 5. <a href="./linux/linux.md">系统学习linux命令</a>
 6. <a href="./linux/centos7.md">Centos7 查看，打开，关闭防火墙的命令 及 查看开放端口及端口号的命令</a>
 
+### 十九）Shell 相关的
+
+1. <a href="./shell/basic.md">shell 脚本全面学习</a>
+
 

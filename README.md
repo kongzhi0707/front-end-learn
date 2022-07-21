@@ -98,6 +98,7 @@
 11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
 12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 13. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
+14. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD</a>
 
 ### 七) nodejs 相关的知识
 
@@ -137,6 +138,7 @@
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
 2. <a href="./git/code-home.md">搭建GitLab代码管理仓库</a>
 3. <a href="./git/git-runner.md">gitlab+gitlab-runner实现前端项目自动化构建部署</a>
+4. <a href="./git/git-init.md">git init 和 git init --bare的区别</a>
 
 ### 十二）组件库搭建
 

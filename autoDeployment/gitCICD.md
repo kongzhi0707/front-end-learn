@@ -14,7 +14,7 @@ $ npm install && npm run build
   我服务器的IP: 47.94.155.8
   项目的存放目录: /home/www/react-test
 ```
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/51.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/51.png" /> <br />
 
 #### 创建裸仓库
 
@@ -22,11 +22,11 @@ $ npm install && npm run build
 
   什么是裸仓库？裸仓库就是没有工作目录的仓库。执行如下命令创建：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/52.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/52.png" /> <br />
 
   创建好后，如上会生成 react-test.git 文件夹。因此我们仓库的位置是 /root/opt/react-test.git.
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/53.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/53.png" /> <br />
 
   如上可以看到，在我们的裸仓库 react-test.git 文件夹下，里面又个 hook 文件夹。该文件夹的作用是存放 Git 钩子。其实Git钩子就是一个shell文件。在执行 git 操作(比如push, pull) 时会触发执行。
 
@@ -143,19 +143,19 @@ $ git push prod release2
 ```
 如下执行完成后， 可以看到我们控制台打印如下信息：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/54.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/54.png" /> <br />
 
 当我们看到如下信息了，说明我们成功了。
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/55.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/55.png" /> <br />
 
 然后到我们的远程服务下，可以看到有如下文件了，如下所示：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/56.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/56.png" /> <br />
 
 现在访问我们的网站就可以访问的到了，如下所示：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/57.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/57.png" /> <br />
 
 #### 注意：如上我们一定要切换到 release2 分支再推送。因为在远程仓库shell命令钩子中，我们定义的是检出 release2 分支。因此我们推送的是 release2 分支。
 因此我们的 CI/CD 已经完成了。
@@ -182,7 +182,7 @@ export default App;
 ```
 然后我重新执行上面提交代码，然后会重新打包，上传，最后我们访问我们的服务器地址，结果如下：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/images/58.jpg" /> <br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/58.png" /> <br />
 
 
 

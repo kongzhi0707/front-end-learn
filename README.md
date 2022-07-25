@@ -99,6 +99,7 @@
 12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 13. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
 14. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD </a>
+15. <a href="./autoDeployment/shell.md">shell脚本实现前端自动部署</a>
 
 ### 七) nodejs 相关的知识
 

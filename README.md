@@ -120,6 +120,7 @@
 15. <a href="./node/vscode.md">vscode代码格式化prettier,eslint环境配置</a>
 16. <a href="./node/yaml.md">理解yaml配置</a>
 17. <a href="./node/npmScripts.md">npm scripts介绍</a>
+18. <a href="./node/child_process.md">node子进程child_process</a>
 
 ### 八) mock 数据
 

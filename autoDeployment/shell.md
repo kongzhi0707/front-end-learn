@@ -178,8 +178,7 @@ fi
 
 #### 注意，如果 publish.sh 文件的执行权限不够，我们在命令行中先给改文件 设置执行权限，使用命令: chmod 777 publish.sh; 运行一次即可。
 
-#### 基本原理：执行命令：ssh-keygen -t rsa 本地会生成公钥和私钥，然后把公钥上传到服务器上，然后我们上传文件的时候，把我们电脑上的私钥上传上去，然后
-#### 服务区可能公钥和私钥进行解密操作，如果解密成功，说明是正确的，所以就不需要输入密码了。
+#### 基本原理：执行命令：ssh-keygen -t rsa 本地会生成公钥和私钥，然后把公钥上传到服务器上，然后我们上传文件的时候，把我们电脑上的私钥上传上去，然后服务区可能公钥和私钥进行解密操作，如果解密成功，说明是正确的，所以就不需要输入密码了。
 
 #### 去掉ssh密码 (假如如果有的话)
 
@@ -213,7 +212,7 @@ Enter same passphrase again:
 当我们每次把项目部署到线上的时候，我们希望编写一个shell命令，实现自动打tag，打tag的目的可以防止代码回滚操作。每次发布上线后打一个tag，当本次发布到上线后，假如代码不正常的话，我们可以回滚到上一个tag代码里面即可。因此打tag也是非常重要的。
 
 我们首先在 scripts/ 目录下 新建 tag.sh 文件，目的是为了运行命令就可以自动打tag。shell 代码如下：
-
+```
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
@@ -240,15 +239,15 @@ fi
 # 创建tag并上传远程Git仓库
 git tag $1
 git push -f origin $1
-
+```
 如上脚本内容做了如下判断：
-
+```
 1）tag名称不能为空。
 2）tag名称使用正则匹配了 vx.x.x格式，比如 v1.0.0 版本的。
 3）项目的根目录是否存在 build 目录。
-
+```
 2）package.json 文件的scripts中添加 tag 命令如下：
-
+```
 "scripts": {
   "start": "react-scripts start",
   "build": "react-scripts build",
@@ -260,7 +259,7 @@ git push -f origin $1
   "publish:prod": "sh scripts/publish.sh prod",
   "tag": "sh scripts/tag.sh"
 },
-
+```
 3) 执行 npm run tag v1.0.0, 创建了名为 v1.0.0 的tag了。
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/images/64.png" /> <br />

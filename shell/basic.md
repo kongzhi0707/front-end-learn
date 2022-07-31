@@ -1109,7 +1109,7 @@ Bash 接收输入，并以字符序列或 字符流 的形式产生输出。这�
 | <<<        |                               |
 
 以下是一些使用重定向的demo
-
+```
 ### ls的结果将会被写到list.txt中
 ls -l > list.txt
 
@@ -1121,7 +1121,7 @@ grep da * 2> errors.txt
 
 ### 从errors.txt中读取输入
 less < errors.txt
-
+```
 
 
 

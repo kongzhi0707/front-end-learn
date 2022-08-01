@@ -83,7 +83,9 @@
 2. <a href="./visual/expression.md">表达式计算</a>
 3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
-### 六) 前端自动化部署
+### 六）1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
+
+### 七) 前端自动化部署
 
 1. <a href="./autoDeployment/inquirer.md">inquirer.js---命令行交互工具</a>
 2. <a href="./autoDeployment/archive.md">nodejs 使用 archive 文件压缩</a>
@@ -101,7 +103,7 @@
 14. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD </a>
 15. <a href="./autoDeployment/shell.md">shell脚本实现前端自动部署</a>
 
-### 七) nodejs 相关的知识
+### 八) nodejs 相关的知识
 
 1. <a href="./node/bin.md">理解 package.json 中的 bin 字段</a>
 2. <a href="./node/commander.md">了解 Commander.js 命令行框架</a>
@@ -122,38 +124,38 @@
 17. <a href="./node/npmScripts.md">npm scripts介绍</a>
 18. <a href="./node/child_process.md">node子进程child_process</a>
 
-### 八) mock 数据
+### 九) mock 数据
 
 1. <a href="./mock/mock.md">开发一个简单的前端 mock 工具</a>
 
-### 九) ajax 相关
+### 十) ajax 相关
 
 1. <a href="./ajax/axios.md">axios 对请求的封装和 API 接口管理</a>
 
-### 十）深入了解 Vite 模式
+### 十一）深入了解 Vite 模式
 
 1. <a href="./vite/specification.md">理解 JS 模块化的各种规范 commonJS/AMD/CMD/UMD/ESM</a>
 2. <a href="./vite/esbuild.md">Esbuild 为什么这么快</a>
 3. <a href="./vite/vite1.md">初识 vite 使用及工作机制</a>
 
-### 十一) git 集合
+### 十二) git 集合
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
 2. <a href="./git/code-home.md">搭建GitLab代码管理仓库</a>
 3. <a href="./git/git-runner.md">gitlab+gitlab-runner实现前端项目自动化构建部署</a>
 4. <a href="./git/git-init.md">git init 和 git init --bare的区别</a>
 
-### 十二）组件库搭建
+### 十三）组件库搭建
 
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue 组件库搭建</a>
 2. <a href="https://github.com/kongzhi0707/r-component-ui">React 组件库搭建</a>
 
-### 十三) 脚手架搭建
+### 十四) 脚手架搭建
 
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
-### 十四) babel 相关的
+### 十五) babel 相关的
 
 1. <a href="./babel/babelCode.md">深入了解 babel 及编写 babel 插件</a>
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
@@ -161,16 +163,16 @@
 4. <a href="./babel/astType.md">AST 节点类型对照表</a>
 5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
 
-### 十五）前端构建工具相关的
+### 十六）前端构建工具相关的
 
 1. <a href="./tool/loader.md">webpack手写loader</a>
 2. <a href="./tool/plugin.md">webpack手写plugin</a>
 
-### 十六）chrome扩展插件相关的
+### 十七）chrome扩展插件相关的
 
 1. <a href="./tool/chrome1.md">理解 chrome 扩展程序(一)</a>
 
-### 十七) jest 单元测试
+### 十八) jest 单元测试
 
 1. <a href="./jest/jest1.md">jest 自动化测试 及 常用的命令行工具</a>
 2. <a href="./jest/jest2.md">jest --- matchers 匹配器</a>
@@ -181,7 +183,7 @@
 7. <a href="./jest/snapshot.md">jest snapshot 快照测试</a>
 8. <a href="./jest/reactJest.md">如何使用 React Testing Library 和 Jest 测试 React 的应用</a>
 
-### 十八) linux 相关的
+### 十九) linux 相关的
 
 1. <a href="./linux/find.md">理解find命令</a>
 2. <a href="./linux/grep.md">理解grep命令</a>
@@ -190,7 +192,7 @@
 5. <a href="./linux/linux.md">系统学习linux命令</a>
 6. <a href="./linux/centos7.md">Centos7 查看，打开，关闭防火墙的命令 及 查看开放端口及端口号的命令</a>
 
-### 十九）Shell 相关的
+### 二十）Shell 相关的
 
 1. <a href="./shell/basic.md">shell 脚本全面学习</a>
 

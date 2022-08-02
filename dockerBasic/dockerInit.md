@@ -107,3 +107,5 @@ docker run -d -p 8888:80 --name=imageName2 nginx
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/autoDocker/17.png" /> <br />
 
   然后我们再访问公网ip就可以了，如: http://47.94.155.8:8888/
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/autoDeployment/autoDocker/18.png" /> <br />

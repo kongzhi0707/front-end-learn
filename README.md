@@ -83,7 +83,9 @@
 2. <a href="./visual/expression.md">表达式计算</a>
 3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
-### 六）1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
+### 六）docker相关的
+
+1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
 
 ### 七) 前端自动化部署
 
@@ -123,6 +125,7 @@
 16. <a href="./node/yaml.md">理解yaml配置</a>
 17. <a href="./node/npmScripts.md">npm scripts介绍</a>
 18. <a href="./node/child_process.md">node子进程child_process</a>
+19. <a href="./beta/index.md">软件版本号的命名规范 / 文件命名规范 / package.json 中的版本号规则</a>
 
 ### 九) mock 数据
 

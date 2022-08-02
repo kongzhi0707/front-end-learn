@@ -5,7 +5,7 @@
 
   软件版本号由四部分组成, 如下所示:
 
-如图1
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/beta/images/1.jpg" /> <br />
 
   第一个1为主版本号, 第二个1为子版本号, 第三个1为阶段版本号, 第四部分为 日期版本号 加 希腊字母版本号. 其中希腊字母版本号共分为5种, 分别为: base, alpha, beta, RC, release. 比如 1.1.1.20220802_beta.
 
@@ -81,7 +81,7 @@
 
   如下所示:
 
-如图2
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/beta/images/2.jpg" /> <br />
 
   1) 如果是同一版本同一阶段的文件修改过两次以上, 则在阶段标识后面加以数字标识, 每次修改数字加1, 比如上面的可以修改成为: "某某后台管理系统测试报告1.1.1.20220802_beta_d1.xls".
 

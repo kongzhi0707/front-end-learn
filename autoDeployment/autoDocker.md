@@ -40,7 +40,7 @@ Payload URL: 填写云服务器公网IP，记得添加 http(s) 前缀。
 Content type: 选择 application/json 即发送json格式的post请求。
 触发时机：Just the push event， 即仓库的push事件，根据不同的需求还可以选择其他事件，比如 PR, 提交 Commit ，提交 issues 等。
 ```
-  最后我们点击 Add webhook 为当前项目添加一个 webhook, 现在当我们 docker-webhook-test 项目有代码提交的时候，就会向 http://47.94.155.8/ 发送一个post请求。
+  最后我们点击 Add webhook 为当前项目添加一个 webhook, 现在当我们 docker-webhook-test 项目有代码提交的时候，就会向 http://47.94.155.8/ 发送一个post请求。 
 
 #### 测试 webhook
 

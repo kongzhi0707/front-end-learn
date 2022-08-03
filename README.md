@@ -126,6 +126,7 @@
 17. <a href="./node/npmScripts.md">npm scripts介绍</a>
 18. <a href="./node/child_process.md">node子进程child_process</a>
 19. <a href="./beta/index.md">软件版本号的命名规范 / 文件命名规范 / package.json 中的版本号规则</a>
+20. <a href="./beta/changeNum.md">使用npm命令行更新版本号</a>
 
 ### 九) mock 数据
 

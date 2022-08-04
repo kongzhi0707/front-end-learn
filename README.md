@@ -200,4 +200,8 @@
 
 1. <a href="./shell/basic.md">shell 脚本全面学习</a>
 
+### 二十一）nginx相关的
+
+1. <a href="./nginx.md">前端学习常用的nginx配置</a>
+
 

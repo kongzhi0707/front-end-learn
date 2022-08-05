@@ -60,14 +60,14 @@ docker create  --name mynginx  nginx:latest
 docker run --name mynginx -d nginx:latest
 ```
 #### OPTIONS 选项常见的参数说明
-
+```
   -d: 后台运行的容器守护进程.
   -i: 以交互模式运行容器, 通常与-t同时使用.
   -t: 告诉Docker容器分配一个虚拟终端,以便我们接下来安装nginx服务器.
   --name web: 告诉Docker创建一个名称是web的容器. 如果我们不指定的话,Docker会为我们创建的容器自动生成一个随机的名称. 随机名称的可读性比较差, 并且对后期维护的理解成本会比较大, 因此我们需要指定一个web容器的名称. 
   -P: 随机端口映射, 容器内部端口随机映射到主机的端口.
   -p: 指定端口映射, 格式为: 主机(宿主)端口:容器端口
-
+```
 因此我们使用如下命令来创建一个web(容器)服务器, 使用如下命令:
 ```
 docker run -d -p 8888:80 --name web nginx
@@ -151,12 +151,13 @@ docker build -t tugenhua/nginx_demo:v1
 ```
 docker images
 ```
+```
   REPOSITORY：仓库名称。
   TAG：镜像标签，其中 lastest 表示最新版本。
   IMAGE ID：镜像唯一的ID。
   CREATED：创建时间。
   SIZE：镜像大小。
-
+```
 #### 2.3) 查看所有的镜像id
 ```
 docker images -q
@@ -215,11 +216,12 @@ docker logs -f `容器名称`
 ```
 docker logs -f -t --since="2019-05-11" --tail=10 `容器名称`
 ```
+```
   --since: 此参数指定了输出日志的开始日期, 即只输出指定日期之后的日志.
   -f: 查看实时日志
   -t: 查看日志产生的日期
   --tail=10: 查看最后的10条日志.
-
+```
 #### 3.2) 查看docker服务的信息
 ```
 docker info
@@ -228,7 +230,7 @@ docker info
 ```
 docker inspect `容器名称`
 ```
-#### 四) docker 文件拷贝
+#### <div id="id4">四) docker 文件拷贝 <a href="#back"> 回到顶部</a></div>
 
   将容器的某个文件拷贝出来, 使用 cp 命令即可;
 ```

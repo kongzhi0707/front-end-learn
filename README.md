@@ -86,6 +86,7 @@
 ### 六）docker相关的
 
 1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
+2. <a href="./dockerBasic/dockerCMD.md">docker 常用的命令操作</a>
 
 ### 七) 前端自动化部署
 

@@ -86,7 +86,8 @@
 ### 六）docker相关的
 
 1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
-2. <a href="./dockerBasic/dockerCMD.md">docker 常用的命令操作</a>
+2. <a href="./autoDeployment/docker.md">docker 全面学习</a>
+3. <a href="./dockerBasic/dockerCMD.md">docker 常用的命令操作</a>
 
 ### 七) 前端自动化部署
 
@@ -95,16 +96,15 @@
 3. <a href="./autoDeployment/autoDeploy1.md"> Node 实现前端自动化部署(一)</a>
 4. <a href="./autoDeployment/autoDeploy2.md">使用 WebHook 来自动部署 NodeJS 项目</a>
 5. <a href="./autoDeployment/frame.md">搭建一个 nodejs 脚手架</a>
-6. <a href="./autoDeployment/docker.md">docker 全面学习</a>
-7. <a href="./autoDeployment/dockerCompose.md">Docker 部署前端应用</a>
-8. <a href="./autoDeployment/multi.md">理解 Docker 多阶段构建减少镜像体积</a>
-9. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
-10. <a href="./autoDeployment/autoDocker.md">使用 Docker+webHook 实现前端自动化部署</a>
-11. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
-12. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
-13. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
-14. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD </a>
-15. <a href="./autoDeployment/shell.md">shell脚本实现前端自动部署</a>
+6. <a href="./autoDeployment/dockerCompose.md">Docker 部署前端应用</a>
+7. <a href="./autoDeployment/multi.md">理解 Docker 多阶段构建减少镜像体积</a>
+8. <a href="./autoDeployment/compose.md">使用 docker-compose 构建项目</a>
+9. <a href="./autoDeployment/autoDocker.md">使用 Docker+webHook 实现前端自动化部署</a>
+10. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
+11. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
+12. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
+13. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD </a>
+14. <a href="./autoDeployment/shell.md">shell脚本实现前端自动部署</a>
 
 ### 八) nodejs 相关的知识
 
@@ -128,6 +128,7 @@
 18. <a href="./node/child_process.md">node子进程child_process</a>
 19. <a href="./beta/index.md">软件版本号的命名规范 / 文件命名规范 / package.json 中的版本号规则</a>
 20. <a href="./beta/changeNum.md">使用npm命令行更新版本号</a>
+21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写cli命令行工具</a>
 
 ### 九) mock 数据
 

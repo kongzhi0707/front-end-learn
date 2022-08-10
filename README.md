@@ -117,7 +117,7 @@
 7. <a href="./node/log4js.md">log4js 入门介绍</a>
 8. <a href="./node/nodeStaging.md">node + koa2 + mongodb + GraphQl 从 0 到 1 搭建脚手架</a>
 9. <a href="./node/pm2.md">pm2 入门及自动化部署 nodejs 项目</a>
-10. <a href="./node/interface.md">node 实现接口转发</a>
+10. <a href="https://github.com/kongzhi0707/node-forward">node 实现接口转发</a>
 11. <a href="./node/npx.md">npx, npm, yarn, cnpm, pnpm 的区别</a>
 12. <a href="./node/peerDependencies.md">理解 peerDependencies 作用</a>
 13. <a href="./node/tsconfig.md">tsconfig.json 配置详解</a>

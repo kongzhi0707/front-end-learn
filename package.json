@@ -1,0 +1,22 @@
+{
+  "name": "front-end-learn",
+  "version": "1.0.0",
+  "description": "1. <a href=\"./path.md\">二叉树的所有路径。</a> <br/> 2. <a href=\"./total.md\">路径总和。</a> <br/> 3. <a href=\"./longest_common_prefix.md\">最长公共前缀。</a> <br/> 4. <a href=\"./selection_sort.md\">选择排序</a> <br/> 5. <a href=\"./bubble_sort.md\">冒泡排序</a> <br/> 6. <a href=\"./fast_sort.md\">快速排序</a> <br/> 7. <div>JS 链表</div>     |--- <a href=\"./single-link.md\">js实现单向链表</a> <br/>     |--- <a href=\"./double-link.md\">js实现双向链表</a> <br/>     |--- <a href=\"./remove_node.md\">删除链表的倒数第N个节点</a> <br/>     |--- <a href=\"\">合并两个有序链表。</a> <br/> 8. <a href=\"./request.md\">实现一个请求控制函数</a> 9. <a href=\"./arrangement.md\">全排列组合算法</a> 10. <a href=\"./flatten.md\">JS 扁平化(flatten)数组</a> 11. <a href=\"./mergeSort.md\">js 归并排序</a> 12. <a href=\"./hasCycle.md\">判断链表是否有环</a>",
+  "main": "shell.js",
+  "devDependencies": {
+    "shelljs": "^0.8.5"
+  },
+  "scripts": {
+    "push": "node ./shell.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/kongzhi0707/front-end-learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongzhi0707/front-end-learn/issues"
+  },
+  "homepage": "https://github.com/kongzhi0707/front-end-learn#readme"
+}

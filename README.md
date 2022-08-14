@@ -130,6 +130,7 @@
 20. <a href="./beta/changeNum.md">使用npm命令行更新版本号</a>
 21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写cli命令行工具</a>
 22. <a href="./node/shelljs.md">学习ShellJS使用</a>
+23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个node-cli命令行工具</a>
 ### 九) mock 数据
 
 1. <a href="./mock/mock.md">开发一个简单的前端 mock 工具</a>

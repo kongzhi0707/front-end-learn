@@ -46,6 +46,7 @@
 12. <a href="https://github.com/kongzhi0707/echarts4-fly-line-graph">echarts 实现飞线图效果</a>
 13. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props 发生改变组件重新渲染</a>
 14. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
+15. <a href="./react/renderProps.md">理解 Render Props</a>
 
 ### 四）ES6 知识相关的
 

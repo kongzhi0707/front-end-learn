@@ -1,5 +1,21 @@
 
-### 理解 Render Props
+### React Render Props
+
+#### 什么是 Render Props ?
+
+组件上名为 render 的 prop, 该属性可以动态决定要渲染的内容.
+
+写法如下:
+```
+<Component render={data => (
+  <h1>Hello {data.message}</h1>
+)}>
+```
+如上代码, 在 Component 组件内部渲染的时候, 会调用 this.props.render 方法获取外部传递过来的jsx, 来改变自己真正 render 时的效果. 因此render prop 是一个用于告知组件要渲染什么内容的函数 prop.
+
+#### 为什么要用 Render Props ?
+
+目的是为了组件的复用, 把无关视图的逻辑抽离出来, 比如下面的代码封装了鼠标追踪器的逻辑, 能够根据鼠标位置来实时更新坐标;
 
 搭建React环境。使用命令：
 ```
@@ -15,144 +31,117 @@ $ cd demo1
 ```
 src/Toggle.js 代码如下：
 ```
-import React, { useState } from 'react';
-
-export const Toggle = props => { 
-  const [on, setOn] = useState(false);
-  const toggle = () => setOn(prev => !prev);
-  return (
-    <div>
-      {on && <h1>{props.children}</h1>}
-      <button onClick={ toggle }>show/hide</button>
-    </div>
-  )
-}
-
-export default Toggle;
-```
-src/App.js 代码如下：
-```
 import React from 'react';
-import Toggle from './Toggle';
+
+class MouseTracker extends React.Component {
+  state = {
+    x: 0,
+    y: 0,
+  }
+  handleMouseMove = event => {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY,
+    })
+  }
+  render() {
+    return (
+      <div onMouseMove={this.handleMouseMove}>
+        {this.props.render(this.state)}
+      </div>
+    )
+  }
+}
+export default MouseTracker;
+```
+  如上组件的作用就是输出鼠标坐标的值, 并不关心当用户拿到了坐标的值, 如何做展示, 所以把视图层的渲染内容交给了 render 属性处理.
+
+src/App.js 代码如下:
+```
+import MouseTracker from './Toggle';
 
 function App() {
   return (
-    <div>
-      <Toggle>Hello World</Toggle>
-    </div>
-  )
-}
-
-export default App;
-```
-  如上 Toggle 组件，是用来切换 h1 的显示和隐藏的。点击button来显示和隐藏的。App.js 是父组件， Toggle.js 是子组件。
-  那如果能把 on 和 toggle 传递给父组件的话，子组件在里面用，子组件提供食材，那么 render prop 就生成了。
-
-  比如如下的函数组件，有如下两种方式来调用渲染：
-```
-function Render = ({on, toggle}) => {
-  return (
-    <div>Hello World</div>
+    <MouseTracker render={props => (
+      <div style={{ height: '100vh'}}>
+        {props.x},
+        {props.y}
+      </div>
+    )}/>
   );
 }
 
-// 1. 函数调用
-Render({ on, toggle }); // props 通过对象传参
-
-// 2. jsx 的方式
-<Render on={on} toggle={toggle} />
+export default App;
 ```
-  有了如上两种方式的调用思路，我们可以把代码稍微改造下，
+  如上面编写代码, 在 render 方法里面创建 render 函数的话, 每次渲染都会创建一个新的函数. 但是我们可以把代码改成如下:
 
-Toggle.js 代码改为如下：
+App.js 代码改成如下:
 ```
-import React, { useState } from 'react';
-
-export const ToggleRenderProps = props => { 
-  const [on, setOn] = useState(false);
-  const toggle = () => setOn(prev => !prev);
-  const { Render } = props;
-  return (
-    <div>
-      {
-        Render({on, toggle})
-      }
-      <Render on={on} toggle={toggle} />
-    </div>
-  )
-}
-
-export default ToggleRenderProps;
-```
-App.js 改为如下：
-```
+import MouseTracker from './Toggle';
 import React from 'react';
-import Toggle from './Toggle';
 
-const Child = ({ on, toggle }) => (
-  <>
-    {on && <nav>Hello World</nav>}
-    <div onClick={toggle}>click me</div>
-  </>
-)
-function App() { 
-  return (
-    <div>
-      <Toggle Render={ Child } />
-    </div>
-  )
+class App extends React.PureComponent {
+  renderView(props) {
+    return (
+      <div style={{ height: '100vh'}}>
+        {props.x},
+        {props.y}
+      </div>
+    )
+  }
+  render() {
+    return <MouseTracker render={this.renderView} />
+  }
 }
 
 export default App;
 ```
-  如上代码，在App.js 中给 Toggle子组件传递了一个 Child的函数组件，然后子组件Toggle拿到这个函数组件，来渲染这个函数组件，函数调用和JSX调用的两种方式都可以的，那为什么这种模式叫 render props 呢？通过一个名叫 render 的 prop 传一个函数给子组件，叫子组件来渲染这个函数。而 函数 中 的 on 和 toggle 参数是哪里来的呢？这是子组件 toggle 传递过来的。
+如上再操作也是ok的.
 
-  我们可以利用 React 自带的 props.children 属性来进行改造代码，如下：
+#### 和高阶函数HOC的对比
 
-  我们上面是 props.render = 一个函数组件, 现在我们可以改造成 props.children = 一个函数组件。
+  逻辑复用还有一种方式就是高阶函数(HOC), 是可以达到相同的效果, 代码如下:
 
-  Toggle.js 代码改为如下：
-```
-import React, { useState } from 'react';
-
-export const ToggleRPC = props => { 
-  const [on, setOn] = useState(false);
-  const toggle = () => setOn(prev => !prev);
-  const { children } = props;
-  return children({
-    on,
-    toggle
-  });
-}
-
-export default ToggleRPC;
-```
-  App.js 代码改为如下：
+Toggle.js 代码如下:
 ```
 import React from 'react';
-import ToggleRPC from './Toggle';
+const withMouse = Component => {
+  return class extends React.Component {
+    state = {
+      x: 0,
+      y: 0,
+    }
+    handleMouseMove = event => {
+      this.setState({
+        x: event.clientX,
+        y: event.clientY,
+      })
+    }
+    render() {
+      return (
+        <div onMouseMove={this.handleMouseMove}>
+          <Component {...this.props} {...this.state} />
+        </div>
+      )
+    }
+  }
+}
 
-function App() { 
+export default withMouse;
+```
+App.js 代码如下:
+```
+import withMouse from './Toggle';
+import React from 'react';
+
+function Tracker(props) {
   return (
-    <div>
-      <ToggleRPC>
-        {
-          ({ on, toggle }) => (
-            <div>
-              {on && <h1>Show me</h1>}
-              <button onClick={ toggle }>Show / Hide</button>
-            </div>
-          )
-        }
-      </ToggleRPC>
+    <div style={{ height: '100vh'}}>
+      {props.x},
+      {props.y}
     </div>
   )
 }
 
-export default App;
+export default withMouse(Tracker);
 ```
-  然后页面可以实现一样的效果。
-
-
-
-

@@ -47,6 +47,8 @@
 13. <a href="./performance/memo.md" target="_blank">React.memo、React.PureComponent props 发生改变组件重新渲染</a>
 14. <a href="./frontEndComponent/design.md">React 组件设计原则</a>
 15. <a href="./react/renderProps.md">理解 Render Props</a>
+16. <a href="./es6/typescript3.md">React.FC 和 React.Component 使用和区别</a>
+17. <a href="./es6/context.md">React Context 使用介绍</a>
 
 ### 四）ES6 知识相关的
 
@@ -79,7 +81,6 @@
 27. <a href="./es6/objSort.md">JS中的数组对象排序</a>
 28. <a href='./es6/typescript.md'>typescript入门教程</a>
 29. <a href="./es6/typescript2.md">typescript泛型</a>
-30. <a href="./es6/typescript3.md">React.FC 和 React.Component 使用和区别</a>
 
 ### 五）可视化搭建整理
 

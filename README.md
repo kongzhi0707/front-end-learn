@@ -49,6 +49,7 @@
 15. <a href="./react/renderProps.md">理解 Render Props</a>
 16. <a href="./es6/typescript3.md">React.FC 和 React.Component 使用和区别</a>
 17. <a href="./es6/context.md">React Context 使用介绍</a>
+18. <a href='./react/typescript1.md'>TypeScript如何在React中使用</a>
 
 ### 四）ES6 知识相关的
 
@@ -69,7 +70,7 @@
 15. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
 16. <a href="./learn/debounce.md">函数防抖</a>
 17. <a href="./learn/throttle.md">函数节流</a>
-18. <a href="./learn/curry.md">函数柯里化</a>
+18. <a href="./learn/curry.md">函数柯里化</a> 
 19. <a href="./learn/deepClone.md">深度克隆</a>
 20. <a href="./learn/flatten.md">数组扁平化</a>
 21. <a href="./learn/jsonp.md">实现 JSONP</a>
@@ -81,6 +82,7 @@
 27. <a href="./es6/objSort.md">JS中的数组对象排序</a>
 28. <a href='./es6/typescript.md'>typescript入门教程</a>
 29. <a href="./es6/typescript2.md">typescript泛型</a>
+30. <a href="./es6/typescript4.md">全面学习typescript</a>
 
 ### 五）可视化搭建整理
 

@@ -16,6 +16,7 @@
 10. <a href="./flatten.md">JS 扁平化(flatten)数组</a>
 11. <a href="./mergeSort.md">js 归并排序</a>
 12. <a href="./hasCycle.md">判断链表是否有环</a>
+13. <a href="./dictionaryTree.md">js字典树-实现搜索</a>
 
 ### 二）React Hooks 相关的
 
@@ -83,6 +84,8 @@
 28. <a href='./es6/typescript.md'>typescript入门教程</a>
 29. <a href="./es6/typescript2.md">typescript泛型</a>
 30. <a href="./es6/typescript4.md">全面学习typescript</a>
+31. <a href="./es6/goodSearch.md">前端大量检索优化</a>
+32. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
 
 ### 五）可视化搭建整理
 

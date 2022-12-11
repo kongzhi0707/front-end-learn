@@ -1,7 +1,9 @@
 
-### React组件设计原则
+### React组件目录结构设计原则
 
-#### 一：单一职责原则
+#### 一：组件的基本原则
+
+#### 1.1）单一职责原则
 
 组件库开发中，我们组件原则上只专注一件事情，并且把这件事做好。单一职责的优点是最大可能性的复用组件。
 
@@ -13,7 +15,13 @@
 
 因此，所谓的单一职责组件是要建立在可复用的基础之上，对于不可复用的单一职责组件我们仅仅把它作为独立组件的内部组件即可。
 
-#### 二：通用性考量
+职责单一的优点是：
+
+1）降低组件的复杂度，职责单一组件代码量少，容易被理解，可读性高。
+2）降低对其他组件的耦合，当变更到来时可以降低对其他功能的影响，不至于牵一发动而全身。
+3）提高可复用性，功能越单一可复用性越高。
+
+#### 1.2）通用性考量
 
 我们组件设计需要有通用性方案，通用组件是和业务解藕但是又服务于业务开发的。那么如何保证组件的通用性呢？
 
@@ -27,7 +35,7 @@
 
 因此我们设计组件的时候不仅仅要考虑上面的通用性各种情况下结构外，我们还需要给组件预留类似 itemRender 的自定义渲染函数，对于一些特殊的结构可以让用户自己去渲染相对应的DOM结构来满足对应的需求。也就是需要把对应的钩子回调初始化函数暴露给开发者，让他们自己去负责渲染操作。当然提供回调钩子还有很多情况，比如选择下拉框的某一项后，我们也可以给开发者提供回调，让他们自己做自己的事情。
 
-#### 三：可配置性
+#### 1.3）可配置性
 
 一个组件，需要明确它的输入和输出分别是什么。
 
@@ -37,93 +45,45 @@
 
 在做可配置性时，为了让组件更加的健壮，保证组件接收的是有效的属性，函数接收到的是有效的参数，我们需要做一些校验。
 
-#### 3.1）属性值的校验
+#### 二）组件的分类
 
-对属性值的校验，我们一般需要考虑如下的点：
+#### 2.1）容器组件和展示组件的分离
 
-1）属性值的类型是否是有效的，如果某个属性要求传递是一个Number类型，那么传递过来的值不是Number类型的话，我们就要抛出异常，并给出相应的提示。
-2）属性是否是必填的。有的属性值是组件内不可缺少的，就是要必填的，那么在组件初始化时要做是否传递的检查，如果没有传递，则需要抛出异常，并给出相应的提示。
-如果属性不是必填的，我们可以设置一个默认值，当属性没有传递该值时，就使用默认的值。
+两者的区别是：
 
-在React中，我们可以使用 React.PropTypes 进行类型检车设置。比如类似如下代码：
-```
-import React, { Component, PropTypes } from 'react';
+|            |  容器组件            |     展示组件       |     
+|  关注点     |   业务               |     UI           |
+|  数据源     |   状态管理器/后端      |     props        |
+|  组件形式   |   高阶组件            |     普通组件       |
 
-export default class Index extends Component {
-  constructor(props) {
-    super(props);
-  }
-  static defaultProps = {
-    title: ''
-  };
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-  }
-  render() {
-    const { title } = this.props;
-    return (
-      <div>{ title }</div>
-    )
-  }
-}
-```
-#### 3.2) 函数参数的校验
+1）展示组件 是一个只关注展示的元件，为了可以在多个地方被复用，它不应该耦合 '业务/功能'。
 
-函数的参数校验，我们只要按照传统的方法进行校验即可。在函数内部上面判断参数的类型和值，如果不满足要求，则抛出异常，并给出相应的提示。
+下面是一个典型的应用目录结构，可以看到 展示组件和业务/功能是可能有不同的耦合程度，和业务的耦合程度越低，通用性/可复用性越好。
 
-如下代码，判断一个函数的参数是必填的，且为String的格式，可以如下：
-```
-changeTitle(title) {
-  if (typeof title !== 'string') {
-    throw new Error('title的类型必须为字符串类型');
-    return;
-  }
-  this.setState({
-    title,
-  })
-}
-```
-#### 四：生命周期
+｜--- src 
+｜ |--- components         # 通用的组件库，可以被多个容器/页面组件共享
+｜ |--- container
+｜ | |--- Foo
+｜ | | |--- components    # 容器/页面组件特有的组件库，和一个业务/功能深度耦合，以至于不能被其他容器组件共享 
+｜ | | |--- index.tsx
+｜ | |--- Bar
+｜ | | |--- components
+｜ | | |--- index.tsx
 
-一个组件，需要明确知道在生命周期的不同阶段做该做的事情。
+2）容器组件 主要关注业务处理，容器组件一般以 '高阶组件' 的形式存在。它一般从外部数据源(redux状态管理器或直接请求服务器端)获取数据，然后以组合展示组件来构建完整的视图页面。
 
-初始化阶段：读取属性的值，如果需要做数据和逻辑处理的话，在这个阶段执行。
-属性值变化时，如果属性发生变化，且需要对变化后的数据进行处理的话，那么在该生命周期内执行等等。
+#### 容器组件和展示组件的分离 优点是 提高复用性和可维护性
 
-组件销毁阶段：如果组件已经创建了一些可能会对系统产生一些副作用的东西，可以在该阶段进行清除，比如 setTimeout, setInterval 等。
+1）可复用性：展示组件可以用于多个不同的数据源（容器组件），容器组件（业务逻辑）也可以被复用于不同的展示组件。
+2）展示和容器组件更好的分离，有助于更好的理解应用和UI，两者可以被独立的维护。
+3）展示组件变得轻量，更容器被测试。
 
-如果组件在渲染的时候报错，需要显示错误的信息，React 16 提供了 componentDidCatch 生命周期函数 进行处理。
+#### 2.2）分离逻辑和视图
 
-React 中提供了一些生命周期函数：componentWillMount，componentDidMount，componentWillReceiveProps，shouldComponentUpdate，componentWillUpdate，componentDidUpdate，render，componentWillUnmount，componentDidCatch。 等等更多。
+容器组件和展示组件的分离本质上是 逻辑和视图的分离。
 
-#### 五：事件传递
 
-在React中，父组件可以使用Props向子组件传递值，而子组件向父组件传递值，需要在父组件内定义函数并通过属性传递给子组件，在子组件内通过调用该属性对应的函数。
-```
-// 子组件 child-component.js
 
-import React from 'react';
-export default class ChildComponent extends React.Component {
-  render() {
-    <button onClick={ ()=> { this.props.clickHandler('kongzhi')}}></button>
-  }
-}
-
-// 父组件 parent-component.js
-
-import ChildComponent from './child-component';
-
-export default class ParentComponent extends React.Component {
-  clickHandler(name) {
-    console.log(name);
-  }
-  render() {
-    return (
-      <ChildComponent clickHandler={ this.clickHandler.bind(this) }/>
-    )
-  }
-}
-```
 
 
 

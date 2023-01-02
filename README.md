@@ -52,6 +52,7 @@
 17. <a href="./es6/context.md">React Context 使用介绍</a>
 18. <a href='./react/typescript1.md'>TypeScript如何在React中使用</a>
 19. <a href="./react/render.md">React中重新渲染的四种方式</a>
+20. <a href="./react/createRef.md">理解使用React.createRef()使用 及 React父组件调用子组件的方法</a>
 
 ### 四）ES6 知识相关的
 

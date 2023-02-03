@@ -54,6 +54,8 @@
 19. <a href="./react/render.md">React中重新渲染的四种方式</a>
 20. <a href="./react/createRef.md">理解使用React.createRef()使用 及 React父组件调用子组件的方法</a>
 21. <a href="./react/drag.md">React中实现拖拽的基本知识点</a>
+22. <a href="./react/high.md">React高阶组件及应用场景</a>
+23. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
 
 ### 四）ES6 知识相关的
 

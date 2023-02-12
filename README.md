@@ -31,6 +31,7 @@
 7. <a href="./hooks/useRef.md" target="_blank">理解 useRef 的用法</a><br />
 8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
 9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle 和 forwardRef 的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
+10. <a href="./hooks/useLayoutEffect.md">理解useLayoutEffect的用法</a>
 
 ### 三）React 技术相关的
 1. <a href="./lifecycle/lifecycle.md" target="_blank">React 生命周期</a>
@@ -56,6 +57,7 @@
 21. <a href="./react/drag.md">React中实现拖拽的基本知识点</a>
 22. <a href="./react/high.md">React高阶组件及应用场景</a>
 23. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
+24. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
 
 ### 四）ES6 知识相关的
 

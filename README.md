@@ -93,6 +93,7 @@
 30. <a href="./es6/typescript4.md">全面学习typescript</a>
 31. <a href="./es6/goodSearch.md">前端大量检索优化</a>
 32. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
+33. <a href='./es6/getComputedStyle.md'>getComputedStyle的用法</a>
 
 ### 五）可视化搭建整理
 

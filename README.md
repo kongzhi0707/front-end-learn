@@ -94,6 +94,8 @@
 31. <a href="./es6/goodSearch.md">前端大量检索优化</a>
 32. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
 33. <a href='./es6/getComputedStyle.md'>getComputedStyle的用法</a>
+34. <a href="./es6/getPropertyValue.md">css声明变量:root伪类及getPropertyValue方法</a>
+35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
 
 ### 五）可视化搭建整理
 

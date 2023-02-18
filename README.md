@@ -59,6 +59,7 @@
 23. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
 24. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
 25. <a href="./react/context2.md">React Context 嵌套传值</a>
+26. <a href="./react/context3.md">避免React Context导致的重复渲染</a>
 
 ### 四）ES6 知识相关的
 

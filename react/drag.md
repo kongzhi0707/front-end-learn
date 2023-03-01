@@ -171,3 +171,141 @@ class Parent extends React.Component {
 
 export default Parent;
 ```
+#### 实现拖拽效果
+
+拖拽流程三步：开始拖拽 -> 拖拽中 -> 结束拖拽。
+
+完整的流程如下：
+```
+1）设置指定元素为可拖拽元素(使用 draggable属性，只有设置了 draggable 属性，元素才可以被拖动).
+2) 点击拖拽元素开始进行拖拽并监听拖拽开始事件 (我们可以设置拖拽相关的数据保存起来)。
+3）监听拖拽移动时的事件。
+4）监听拖拽元素目标进入目标元素事件。
+5）监听拖拽元素在目标元素上移动的事件（处理移动中的一些操作）。
+6）在目标元素上松开拖拽元素完成拖拽（处理拖拽完成时的操作）。
+```
+#### 注意：
+```
+1） dragover 事件下需要阻止浏览器默认行为让目标元素成为可释放的目标元素。
+2）当从操作系统向浏览器中拖拽文件时，不会触发 dragstart 和 dragend 事件。
+```
+JS 代码如下：
+```
+import React, { useState, useRef } from 'react';
+import './index.less';
+const list = [
+  { id: '1', text: '序列1' },
+  { id: '2', text: '序列2' },
+  { id: '3', text: '序列3' },
+  { id: '4', text: '序列4' },
+  { id: '5', text: '序列5' },
+];
+
+export default function DragEvent() { 
+
+  const [leftDragList, setleftDragList] = useState(list);
+  const [rightDragList, setrightDragList] = useState([]);
+  const dataRef = useRef(null);
+  // 定义初始化元素需要的数据
+  dataRef.current = {
+    left: {
+      callback: setleftDragList,
+      list: leftDragList
+    },
+    right: {
+      callback: setrightDragList,
+      list: rightDragList
+    }
+  }
+  // 拖拽元素在目标元素移动事件-阻止浏览器默认行为让目标元素成为可释放的目标元素
+  const handleDragOver = e => e.preventDefault();
+
+  // 拖拽完成事件
+  const handleDrop = (callback, arrow) => { 
+    return e => { 
+      const { dataset: { id }, classList } = e.target;
+      classList.remove('over');
+      const curData = JSON.parse(e.dataTransfer.getData('itemData'));
+      callback(preData => { 
+        const mapPreData = JSON.parse(JSON.stringify(preData)).filter(item => item.id !== curData.id);
+        if (!id) { 
+          return [...mapPreData, curData];
+        }
+        const index = mapPreData.findIndex(item => item.id === id);
+        mapPreData.splice(index, 0, curData);
+        return mapPreData;
+      })
+      if (arrow === 'left') {
+        setrightDragList(preData => preData.filter(item => item.id !== curData.id))
+      } else { 
+        setleftDragList(preData => preData.filter(item => item.id !== curData.id))
+      }
+    }
+  }
+  // 拖拽元素进入目标元素时触发的事件 - 为目标元素添加拖拽元素进入时的样式效果
+  const handleDragEnter = e => e.target.classList.add('over');
+
+  // 拖拽元素离开目标元素时触发事件 --- 移除目标元素的样式效果
+  const handleDragLevel = e => e.target.classList.remove('over');
+
+  // 拖拽开始时触发的事件 --- 通过dataTransfer对象设置所需要的数据
+  const handleDragStart = data => e => e.dataTransfer.setData('itemData', JSON.stringify(data));
+
+  return (
+    <div className="dragEvent-wrap">
+      {
+        Object.entries(dataRef.current).map(([key, { callback, list }]) => { 
+          return (
+            <div
+              key={key}
+              className="content-wrap"
+              onDragOver={handleDragOver}
+              onDragEnter={handleDragEnter}
+              onDragLeave={handleDragLevel}
+              onDrop={ handleDrop(callback, key)}
+            >
+              {
+                list.map(item => (
+                  <div
+                    className="item-text"
+                    key={item.id}
+                    data-id={item.id}
+                    draggable
+                    onDragStart={ handleDragStart(item)}
+                  >{item.text}</div>
+                ))
+              }
+            </div>
+          )
+        })
+      }
+    </div>
+  )
+}
+```
+css 代码如下：
+```
+.dragEvent-wrap {
+  height: 500px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.content-wrap {
+  width: 102px;
+  height: 200px;
+  border: solid 1px black;
+  margin-left: 100px;
+}
+
+.item-text {
+  background-color: blueviolet;
+  width: 100px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.over {
+  border: red solid 2px;
+}
+```

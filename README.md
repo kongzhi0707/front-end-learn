@@ -60,6 +60,7 @@
 24. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
 25. <a href="./react/context2.md">React Context 嵌套传值</a>
 26. <a href="./react/context3.md">避免React Context导致的重复渲染</a>
+27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
 
 ### 四）ES6 知识相关的
 

@@ -61,6 +61,7 @@
 25. <a href="./react/context2.md">React Context 嵌套传值</a>
 26. <a href="./react/context3.md">避免React Context导致的重复渲染</a>
 27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
+28. <a href="./react/schema.md">JSON Schema入门和应用</a>
 
 ### 四）ES6 知识相关的
 
@@ -99,6 +100,7 @@
 33. <a href='./es6/getComputedStyle.md'>getComputedStyle的用法</a>
 34. <a href="./es6/getPropertyValue.md">css声明变量:root伪类及getPropertyValue方法</a>
 35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
+36. <a href="./es6/flex.md">理解css中的 flex-grow/flex-shrink/flex-basis</a>
 
 ### 五）可视化搭建整理
 

@@ -101,6 +101,7 @@
 34. <a href="./es6/getPropertyValue.md">css声明变量:root伪类及getPropertyValue方法</a>
 35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
 36. <a href="./es6/flex.md">理解css中的 flex-grow/flex-shrink/flex-basis</a>
+37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
 
 ### 五）可视化搭建整理
 

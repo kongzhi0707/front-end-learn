@@ -62,6 +62,7 @@
 26. <a href="./react/context3.md">避免React Context导致的重复渲染</a>
 27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
 28. <a href="./react/schema.md">JSON Schema入门和应用</a>
+29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
 
 ### 四）ES6 知识相关的
 

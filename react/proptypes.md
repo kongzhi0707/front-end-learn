@@ -140,6 +140,62 @@ export default App;
 ```
 一旦我们设置了 props 校验，就必须按照规定， 如上编写的传入一个函数的壳子 也会报错。
 
+#### 在类组件中写法如下
+```
+import React from 'react';
+import PropTypes from 'prop-types'; 
+
+class Comp extends React.Component {
+  // react 会解析 propTypes 静态属性，
+  static propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    hobby: PropTypes.array,
+    gender: PropTypes.any, // 任意类型
+    say: PropTypes.func, // function 类型
+  };
+  // react 会解析 defaultProps 静态属性，props 默认值
+  static defaultProps = {
+    msg: 'kongzhi'
+  };
+  render() {
+    const { name, age, gender, hobby, say } = this.props;
+    return (
+      <div>
+        <h2>{this.props.msg}</h2>
+        <button onClick={say}>click</button>
+        <div>名字: {name}</div>
+        <div>年龄: {age}</div>
+        <div>性别: {gender}</div>
+        <div>爱好：{hobby.map((item index) => <span key={index}>{item}</span>)}</div>
+      </div>
+    )
+  }
+}
+
+class App extends React.Component {
+  state = {
+    obj: {
+      name: 'kongzhi',
+      age: 35,
+      gender: '男',
+      hobby: ['游戏', '美女']
+    }
+  }
+  say = () => {
+    alert(11)
+  }
+  render() {
+    return (
+      <div className="App">
+        <Comp {...this.state.obj} say={this.say} />
+      </div>
+    )
+  }
+}
+
+export default App;
+```
 
 
 

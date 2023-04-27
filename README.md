@@ -63,6 +63,7 @@
 27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
 28. <a href="./react/schema.md">JSON Schema入门和应用</a>
 29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
+30. <a href="./react/context4.md">react之context前世今生</a>
 
 ### 四）ES6 知识相关的
 
@@ -103,6 +104,8 @@
 35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
 36. <a href="./es6/flex.md">理解css中的 flex-grow/flex-shrink/flex-basis</a>
 37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
+38. <a href="./es6/tree1.md">js递归遍历树，查找符合条件的子项</a>
+39. <a href="./es6/tree2.md">js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点</a>
 
 ### 五）可视化搭建整理
 

@@ -105,7 +105,7 @@
 36. <a href="./es6/flex.md">理解css中的 flex-grow/flex-shrink/flex-basis</a>
 37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
 38. <a href="./es6/tree1.md">js递归遍历树，查找符合条件的子项</a>
-39. <a href="./es6/tree2.md">js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点</a>
+39. <a href="./es6/tree2.md">js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
 
 ### 五）可视化搭建整理
 

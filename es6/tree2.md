@@ -1,5 +1,5 @@
 
-### js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点
+### js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点
 
 #### 1）根据value获取该节点的所有父节点对象
 
@@ -397,3 +397,92 @@ function getChildNode(list, newNodeId = []) {
   */
   console.log('----childs---', childs);
 ```
+
+#### 4）根据value获取某个节点的所有的兄弟节点
+```
+const list = [
+  {
+    "value": 192,
+    "label": "技术部",
+    "children": [
+      {
+        "value": 193,
+        "label": "软件组",
+        "children": [
+          {
+            "value": 195,
+            "label": "软件一组"
+          },
+          {
+            "value": 196,
+            "label": "软件二组"
+          },
+          {
+            "value": 197,
+            "label": "软件三组"
+          }
+        ]
+      },
+      {
+        "value": 198,
+        "label": "运维组"
+      }
+    ]
+  },
+  {
+    "value": 200,
+    "label": "财务部",
+    "children": [
+      {
+        "value": 201,
+        "label": "会计"
+      },
+      {
+        "value": 203,
+        "label": "出纳"
+      }
+    ]
+  },
+  {
+    "value": 300,
+    "label": "人资部",
+    "children": [
+      {
+        "value": 301,
+        "label": "行政"
+      },
+      {
+        "value": 302,
+        "label": "人资"
+      }
+    ]
+  }
+]
+
+function getBrotherNodes(list, value) {
+  for(let i in list) {
+    if(list[i].value === value) {
+      return list.filter(v => v.value !== value)
+    }
+    if(list[i].children?.length > 0) {
+      let node = getBrotherNodes(list[i].children, value)
+      if(node) return node.filter(v => v.value !== value)
+    }
+  }
+}
+
+const ids2 = getBrotherNodes(list, 195);
+console.log('---ids2----', ids2);
+/**
+  * [
+      {
+        "value": 196,
+        "label": "软件二组"
+      },
+      {
+        "value": 197,
+        "label": "软件三组"
+      }
+    ]
+  */
+  ```

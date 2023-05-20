@@ -106,6 +106,7 @@
 37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
 38. <a href="./es6/tree1.md">js递归遍历树，查找符合条件的子项</a>
 39. <a href="./es6/tree2.md">js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
+40. <a href="./es6/theme1.md">前端主题切换方案</a>
 
 ### 五）可视化搭建整理
 
@@ -204,6 +205,7 @@
 
 1. <a href="./tool/loader.md">webpack手写loader</a>
 2. <a href="./tool/plugin.md">webpack手写plugin</a>
+3. <a href="./tool/model.md">浅谈前端数据模型</a>
 
 ### 十七）chrome扩展插件相关的
 

@@ -64,6 +64,7 @@
 28. <a href="./react/schema.md">JSON Schema入门和应用</a>
 29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
 30. <a href="./react/context4.md">react之context前世今生</a>
+31. <a href="./react/method.md">React组件开发方式</a>
 
 ### 四）ES6 知识相关的
 
@@ -162,6 +163,7 @@
 21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写cli命令行工具</a>
 22. <a href="./node/shelljs.md">学习ShellJS使用</a>
 23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个node-cli命令行工具</a>
+
 ### 九) mock 数据
 
 1. <a href="./mock/mock.md">开发一个简单的前端 mock 工具</a>

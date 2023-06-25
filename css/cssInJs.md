@@ -185,6 +185,37 @@ export default App;
 
 <img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/css/images/12.png" /> <br />
 
+#### 2.5) 普通样式
+
+我们使用过vue，在 .VUE 文件中有个style标签，我们只要加上了 scoped 就可以进行样式隔离，而 styled-components 其实也可以具有 vue 的style标签的能力，
+我们只需要在外面包一层，就可以实现vue中样式隔离的效果。
+
+import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const AppStyle = styled.div`
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+`;
+
+class App extends Component { 
+  render() { 
+    return (<AppStyle>
+      <div className="box" />
+    </AppStyle>)
+  }
+}
+
+export default App;
+
+实现效果如下：
+
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/css/images/13.png" /> <br />
+
+
 #### 3） Css in JS 与 css 预处理器 (比如Less，Sass，PostCss) 有什么区别？
 
 CSS in JS 使用 javaScript的语法，是Javascript脚本的一部分，不用从头学习一套API，也不会多一道编译步骤，但是会在运行时动态生成css，造成一定运行时的开销。

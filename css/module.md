@@ -273,6 +273,7 @@ export default Index
 
 当然我们也可以将 CSS Modules 和 sass/less 进行组合使用， 可以有 Sass/Less 的CSS预处理能力, 又可以拥有 CSS Modules 提供的局部作用域的能力。避免全局污染。
 
+测试demo， 请看下面的包代码 <a href="https://github.com/kongzhi0707/css-modules-react-test">测试demo，请克隆下来</a>
 
 
 

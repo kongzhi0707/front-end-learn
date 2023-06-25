@@ -65,6 +65,7 @@
 29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
 30. <a href="./react/context4.md">react之context前世今生</a>
 31. <a href="./react/method.md">React组件开发方式</a>
+32. <a href="./react/method2.md">React 组件设计思路和风格</a>
 
 ### 四）ES6 知识相关的
 
@@ -244,5 +245,7 @@
 ### 二十二）css相关的
 
 1. <a href="./css/css1.md">css实现箭头</a>
+2. <a href="./css/module.md">CSS Modules(模块化方案)</a>
+3. <a href="./css/cssInJs.md">css in JS 模块化方案</a>
 
 

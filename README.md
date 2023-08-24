@@ -7,16 +7,16 @@
 5. <a href="./bubble_sort.md">冒泡排序</a> <br/>
 6. <a href="./fast_sort.md">快速排序</a> <br/>
 7. <div>JS 链表</div>
-    |--- <a href="./single-link.md">js实现单向链表</a> <br/>
-    |--- <a href="./double-link.md">js实现双向链表</a> <br/>
-    |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
-    |--- <a href="">合并两个有序链表。</a> <br/>
+   |--- <a href="./single-link.md">js实现单向链表</a> <br/>
+   |--- <a href="./double-link.md">js实现双向链表</a> <br/>
+   |--- <a href="./remove_node.md">删除链表的倒数第N个节点</a> <br/>
+   |--- <a href="">合并两个有序链表。</a> <br/>
 8. <a href="./request.md">实现一个请求控制函数</a>
 9. <a href="./arrangement.md">全排列组合算法</a>
 10. <a href="./flatten.md">JS 扁平化(flatten)数组</a>
 11. <a href="./mergeSort.md">js 归并排序</a>
 12. <a href="./hasCycle.md">判断链表是否有环</a>
-13. <a href="./dictionaryTree.md">js字典树-实现搜索</a>
+13. <a href="./dictionaryTree.md">js 字典树-实现搜索</a>
 
 ### 二）React Hooks 相关的
 
@@ -31,9 +31,10 @@
 7. <a href="./hooks/useRef.md" target="_blank">理解 useRef 的用法</a><br />
 8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
 9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle 和 forwardRef 的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
-10. <a href="./hooks/useLayoutEffect.md">理解useLayoutEffect的用法</a>
+10. <a href="./hooks/useLayoutEffect.md">理解 useLayoutEffect 的用法</a>
 
 ### 三）React 技术相关的
+
 1. <a href="./lifecycle/lifecycle.md" target="_blank">React 生命周期</a>
 2. <a href="./react/objAndArray.md" target="_blank">React setState 数组、对象多种方式</a>
 3. <a href="./react/redux.md">redux 的理解</a>
@@ -51,20 +52,20 @@
 15. <a href="./react/renderProps.md">理解 Render Props</a>
 16. <a href="./es6/typescript3.md">React.FC 和 React.Component 使用和区别</a>
 17. <a href="./es6/context.md">React Context 使用介绍</a>
-18. <a href='./react/typescript1.md'>TypeScript如何在React中使用</a>
-19. <a href="./react/render.md">React中重新渲染的四种方式</a>
-20. <a href="./react/createRef.md">理解使用React.createRef()使用 及 React父组件调用子组件的方法</a>
-21. <a href="./react/drag.md">React中实现拖拽的基本知识点</a>
-22. <a href="./react/high.md">React高阶组件及应用场景</a>
+18. <a href='./react/typescript1.md'>TypeScript 如何在 React 中使用</a>
+19. <a href="./react/render.md">React 中重新渲染的四种方式</a>
+20. <a href="./react/createRef.md">理解使用 React.createRef()使用 及 React 父组件调用子组件的方法</a>
+21. <a href="./react/drag.md">React 中实现拖拽的基本知识点</a>
+22. <a href="./react/high.md">React 高阶组件及应用场景</a>
 23. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
 24. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
 25. <a href="./react/context2.md">React Context 嵌套传值</a>
-26. <a href="./react/context3.md">避免React Context导致的重复渲染</a>
+26. <a href="./react/context3.md">避免 React Context 导致的重复渲染</a>
 27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
-28. <a href="./react/schema.md">JSON Schema入门和应用</a>
+28. <a href="./react/schema.md">JSON Schema 入门和应用</a>
 29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
-30. <a href="./react/context4.md">react之context前世今生</a>
-31. <a href="./react/method.md">React组件开发方式</a>
+30. <a href="./react/context4.md">react 之 context 前世今生</a>
+31. <a href="./react/method.md">React 组件开发方式</a>
 32. <a href="./react/method2.md">React 组件设计思路和风格</a>
 
 ### 四）ES6 知识相关的
@@ -86,7 +87,7 @@
 15. <a href="./learn/customEvent.md">发布订阅模式---自定义事件</a>
 16. <a href="./learn/debounce.md">函数防抖</a>
 17. <a href="./learn/throttle.md">函数节流</a>
-18. <a href="./learn/curry.md">函数柯里化</a> 
+18. <a href="./learn/curry.md">函数柯里化</a>
 19. <a href="./learn/deepClone.md">深度克隆</a>
 20. <a href="./learn/flatten.md">数组扁平化</a>
 21. <a href="./learn/jsonp.md">实现 JSONP</a>
@@ -95,19 +96,19 @@
 24. <a href="./learn/filterData.md">JS 树形数据递归过滤</a>
 25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
-27. <a href="./es6/objSort.md">JS中的数组对象排序</a>
-28. <a href='./es6/typescript.md'>typescript入门教程</a>
-29. <a href="./es6/typescript2.md">typescript泛型</a>
-30. <a href="./es6/typescript4.md">全面学习typescript</a>
+27. <a href="./es6/objSort.md">JS 中的数组对象排序</a>
+28. <a href='./es6/typescript.md'>typescript 入门教程</a>
+29. <a href="./es6/typescript2.md">typescript 泛型</a>
+30. <a href="./es6/typescript4.md">全面学习 typescript</a>
 31. <a href="./es6/goodSearch.md">前端大量检索优化</a>
 32. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
-33. <a href='./es6/getComputedStyle.md'>getComputedStyle的用法</a>
-34. <a href="./es6/getPropertyValue.md">css声明变量:root伪类及getPropertyValue方法</a>
+33. <a href='./es6/getComputedStyle.md'>getComputedStyle 的用法</a>
+34. <a href="./es6/getPropertyValue.md">css 声明变量:root 伪类及 getPropertyValue 方法</a>
 35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
-36. <a href="./es6/flex.md">理解css中的 flex-grow/flex-shrink/flex-basis</a>
+36. <a href="./es6/flex.md">理解 css 中的 flex-grow/flex-shrink/flex-basis</a>
 37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
-38. <a href="./es6/tree1.md">js递归遍历树，查找符合条件的子项</a>
-39. <a href="./es6/tree2.md">js递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
+38. <a href="./es6/tree1.md">js 递归遍历树，查找符合条件的子项</a>
+39. <a href="./es6/tree2.md">js 递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
 40. <a href="./es6/theme1.md">前端主题切换方案</a>
 
 ### 五）可视化搭建整理
@@ -116,9 +117,9 @@
 2. <a href="./visual/expression.md">表达式计算</a>
 3. <a href="./visual/express-config-remove.md">表达式计算添加 "删除" 功能</a>
 
-### 六）docker相关的
+### 六）docker 相关的
 
-1. <a href="./dockerBasic/dockerInit.md">初始化docker项目环境配置</a>
+1. <a href="./dockerBasic/dockerInit.md">初始化 docker 项目环境配置</a>
 2. <a href="./autoDeployment/docker.md">docker 全面学习</a>
 3. <a href="./dockerBasic/dockerCMD.md">docker 常用的命令操作</a>
 
@@ -136,8 +137,8 @@
 10. <a href="./vuepress.md">VuePress + Github Pages 搭建博客</a>
 11. <a href="./gitActions.md">Github Actions 实现前端应用部署</a>
 12. <a href="./autoDeployment/service.md">如何将前端项目部署到阿里云服务器上</a>
-13. <a href="./autoDeployment/gitCICD.md">Git实现前端的CI/CD </a>
-14. <a href="./autoDeployment/shell.md">shell脚本实现前端自动部署</a>
+13. <a href="./autoDeployment/gitCICD.md">Git 实现前端的 CI/CD </a>
+14. <a href="./autoDeployment/shell.md">shell 脚本实现前端自动部署</a>
 
 ### 八) nodejs 相关的知识
 
@@ -155,15 +156,15 @@
 12. <a href="./node/peerDependencies.md">理解 peerDependencies 作用</a>
 13. <a href="./node/tsconfig.md">tsconfig.json 配置详解</a>
 14. <a href="./node/prettierrc.md">prettierrc 文件常见配置</a>
-15. <a href="./node/vscode.md">vscode代码格式化prettier,eslint环境配置</a>
-16. <a href="./node/yaml.md">理解yaml配置</a>
-17. <a href="./node/npmScripts.md">npm scripts介绍</a>
-18. <a href="./node/child_process.md">node子进程child_process</a>
+15. <a href="./node/vscode.md">vscode 代码格式化 prettier,eslint 环境配置</a>
+16. <a href="./node/yaml.md">理解 yaml 配置</a>
+17. <a href="./node/npmScripts.md">npm scripts 介绍</a>
+18. <a href="./node/child_process.md">node 子进程 child_process</a>
 19. <a href="./beta/index.md">软件版本号的命名规范 / 文件命名规范 / package.json 中的版本号规则</a>
-20. <a href="./beta/changeNum.md">使用npm命令行更新版本号</a>
-21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写cli命令行工具</a>
-22. <a href="./node/shelljs.md">学习ShellJS使用</a>
-23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个node-cli命令行工具</a>
+20. <a href="./beta/changeNum.md">使用 npm 命令行更新版本号</a>
+21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写 cli 命令行工具</a>
+22. <a href="./node/shelljs.md">学习 ShellJS 使用</a>
+23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个 node-cli 命令行工具</a>
 
 ### 九) mock 数据
 
@@ -182,9 +183,9 @@
 ### 十二) git 集合
 
 1. <a href="./git/cherry-pick.md">git cherry-pick</a>
-2. <a href="./git/code-home.md">搭建GitLab代码管理仓库</a>
-3. <a href="./git/git-runner.md">gitlab+gitlab-runner实现前端项目自动化构建部署</a>
-4. <a href="./git/git-init.md">git init 和 git init --bare的区别</a>
+2. <a href="./git/code-home.md">搭建 GitLab 代码管理仓库</a>
+3. <a href="./git/git-runner.md">gitlab+gitlab-runner 实现前端项目自动化构建部署</a>
+4. <a href="./git/git-init.md">git init 和 git init --bare 的区别</a>
 
 ### 十三）组件库搭建
 
@@ -193,7 +194,7 @@
 
 ### 十四) 脚手架搭建
 
-1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>   
+1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 
 ### 十五) babel 相关的
@@ -206,11 +207,11 @@
 
 ### 十六）前端构建工具相关的
 
-1. <a href="./tool/loader.md">webpack手写loader</a>
-2. <a href="./tool/plugin.md">webpack手写plugin</a>
+1. <a href="./tool/loader.md">webpack 手写 loader</a>
+2. <a href="./tool/plugin.md">webpack 手写 plugin</a>
 3. <a href="./tool/model.md">浅谈前端数据模型</a>
 
-### 十七）chrome扩展插件相关的
+### 十七）chrome 扩展插件相关的
 
 1. <a href="./tool/chrome1.md">理解 chrome 扩展程序(一)</a>
 
@@ -227,25 +228,27 @@
 
 ### 十九) linux 相关的
 
-1. <a href="./linux/find.md">理解find命令</a>
-2. <a href="./linux/grep.md">理解grep命令</a>
-3. <a href="./linux/xargs.md">xargs命令教程</a>
-4. <a href="./linux/awk.md">awk用法详解</a>
-5. <a href="./linux/linux.md">系统学习linux命令</a>
+1. <a href="./linux/find.md">理解 find 命令</a>
+2. <a href="./linux/grep.md">理解 grep 命令</a>
+3. <a href="./linux/xargs.md">xargs 命令教程</a>
+4. <a href="./linux/awk.md">awk 用法详解</a>
+5. <a href="./linux/linux.md">系统学习 linux 命令</a>
 6. <a href="./linux/centos7.md">Centos7 查看，打开，关闭防火墙的命令 及 查看开放端口及端口号的命令</a>
 
 ### 二十）Shell 相关的
 
 1. <a href="./shell/basic.md">shell 脚本全面学习</a>
 
-### 二十一）nginx相关的
+### 二十一）nginx 相关的
 
-1. <a href="./nginx.md">前端学习常用的nginx配置</a>
+1. <a href="./nginx.md">前端学习常用的 nginx 配置</a>
 
-### 二十二）css相关的
+### 二十二）css 相关的
 
-1. <a href="./css/css1.md">css实现箭头</a>
+1. <a href="./css/css1.md">css 实现箭头</a>
 2. <a href="./css/module.md">CSS Modules(模块化方案)</a>
 3. <a href="./css/cssInJs.md">css in JS 模块化方案</a>
 
+### 二十三) 前端规范
 
+1. <a href="./rules/config.md">react+ts 代码规范配置和 git 提交规则</a>

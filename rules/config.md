@@ -7,19 +7,23 @@
 
 #### 1.1）代码格式规范和语法检测
 
+```
 1）vscode：统一的前端编辑器。
 2）editorconfig: 统一团队 vscode 编辑器默认配置。
 3）prettier: 保存文件自动格式化代码。
 4）eslint：检测代码语法规范和错误。
 5）lint-staged: 只检测暂存区文件代码，优化 eslint 检测速度。
+```
 
 #### 1.2）代码 git 提交规范
 
+```
 1）husky：可以监听 githooks 执行，在对应 hooks 执行阶段做一些处理的操作。
 2）pre-commit: 在 commit 提交之前使用 tsc 和 eslint 对语法进行检测。
 3）commit-msg: 在 commit 提交之前对 commit 备注信息进行检测。
 4）commitlint: 在 githooks 的 pre-commit 阶段对 commit 备注信息进行检测。
 5）commitizen: git 的规范化提交工具，辅助填写 commit 信息。
+```
 
 #### 二）创建 react18+vite2+ts 项目
 

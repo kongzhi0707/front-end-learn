@@ -1,16 +1,17 @@
 ### 从 0 到 1 搭建一个 react 组件库
 
 <div id="back"></div>
-- [一) useState (#id1)<br />
-- [二) useReducer(#id2) <br />
-- [三) useContext(#id3) <br />
-- [四) useRef(#id4) <br />
-- [五) forwardRef(#id5) <br />
-- [六) useEffect (#id6) <br />
-- [七) useLayoutEffect (#id7) <br />
-- [八) useMemo (#id8) <br />
-- [九) useCallback (#id9) <br />
-- [九) useCallback (#id10) <br />
+
+- [x] [一) useState](#id1)<br />
+- [x] [二) useReducer](#id2) <br />
+- [x] [三) useContext](#id3) <br />
+- [x] [四) useRef](#id4) <br />
+- [x] [五) forwardRef](#id5) <br />
+- [x] [六) useEffect](#id6) <br />
+- [x] [七) useLayoutEffect](#id7) <br />
+- [x] [八) useMemo](#id8) <br />
+- [x] [九) useCallback](#id9) <br />
+- [x] [九) useCallback](#id10) <br />
 
 开发一个组件库提供给外部或内部使用，是很常见的，本文将从 0 到 1 搭建一个包含 文档/自动化部署/单元测试/开发环境，介绍组件库开发模版。
 

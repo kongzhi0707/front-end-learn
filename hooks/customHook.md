@@ -1,14 +1,15 @@
 ### React 自定义 hook
 
 <div id="back"></div>
-- 1) 什么是 hook？ (#id1)<br />
-- 2）自定义 hook(#id2) <br />
-- 3) 数据获取(#id3) <br />
-- 4) 定义 "计数器" 钩子函数(#id4) <br />
-- 5) 获取窗口宽高的变化 (#id5) <br />
-- 6) 获取滚动偏移量变化 (#id6) <br />
-- 7) 自动同步至 localStorage (#id7) <br />
-- 8) useStorage  (#id8) <br />
+
+- [x] [1) 什么是 hook](#id1)<br />
+- [x] [2）自定义 hook](#id2) <br />
+- [x] [3) 数据获取](#id3) <br />
+- [x] [4) 定义 "计数器" 钩子函数](#id4) <br />
+- [x] [5) 获取窗口宽高的变化](#id5) <br />
+- [x] [6) 获取滚动偏移量变化](#id6) <br />
+- [x] [7) 自动同步至 localStorage](#id7) <br />
+- [x] [8) useStorage](#id8) <br />
 
 #### <div id="id1"> 1) 什么是 hook？<a href="#back"> 回到顶部</a></div>
 

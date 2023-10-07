@@ -3,15 +3,16 @@
 React 官网目前一共有 10 几种内置的 hook。我们来整理下这 10 几种 hook 的用法和使用场景进行介绍。
 
 <div id="back"></div>
-- [一) useState (#id1)<br />
-- [二) useReducer(#id2) <br />
-- [三) useContext(#id3) <br />
-- [四) useRef(#id4) <br />
-- [五) forwardRef(#id5) <br />
-- [六) useEffect (#id6) <br />
-- [七) useLayoutEffect (#id8) <br />
-- [八) useMemo (#id9) <br />
-- [九) useCallback (#id10) <br />
+
+- [x] [一) useState](#id1)<br />
+- [x] [二) useReducer](#id2) <br />
+- [x] [三) useContext](#id3) <br />
+- [x] [四) useRef](#id4) <br />
+- [x] [五) forwardRef](#id5) <br />
+- [x] [六) useEffect](#id6) <br />
+- [x] [七) useLayoutEffect](#id8) <br />
+- [x] [八) useMemo](#id9) <br />
+- [x] [九) useCallback](#id10) <br />
 
 #### <div id="id1">1）useState<a href="#back"> 回到顶部</a></div>
 

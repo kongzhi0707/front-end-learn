@@ -2,16 +2,16 @@
 
 <div id="back"></div>
 
-- [x] [一) useState](#id1)<br />
-- [x] [二) useReducer](#id2) <br />
-- [x] [三) useContext](#id3) <br />
-- [x] [四) useRef](#id4) <br />
-- [x] [五) forwardRef](#id5) <br />
-- [x] [六) useEffect](#id6) <br />
-- [x] [七) useLayoutEffect](#id7) <br />
-- [x] [八) useMemo](#id8) <br />
-- [x] [九) useCallback](#id9) <br />
-- [x] [九) useCallback](#id10) <br />
+- [x] [一) 初始化项目](#id1)<br />
+- [x] [二) 安装所需依赖](#id2) <br />
+- [x] [三) 创建开发目录](#id3) <br />
+- [x] [四) 启动项目](#id4) <br />
+- [x] [五) Storybook Css 支持](#id5) <br />
+- [x] [六) 构建打包](#id6) <br />
+- [x] [七) 测试打包库](#id7) <br />
+- [x] [八) 发布到 npm](#id8) <br />
+- [x] [九) 增加发布日志](#id9) <br />
+- [x] [十) 部署文档](#id10) <br />
 
 开发一个组件库提供给外部或内部使用，是很常见的，本文将从 0 到 1 搭建一个包含 文档/自动化部署/单元测试/开发环境，介绍组件库开发模版。
 

@@ -32,6 +32,8 @@
 8. <a href="./hooks/useCallback.md" target="_blank">理解 useCallback 的用法</a><br />
 9. <a href="./hooks/forwardRef.md" target="_blank">useImperativeHandle 和 forwardRef 的结合使用可以使子组件对外提供方法和属性供父组件使用</a>
 10. <a href="./hooks/useLayoutEffect.md">理解 useLayoutEffect 的用法</a>
+11. <a href="./react/hook.md">React 内置 hook 全面学习</a>
+12. <a href="./hooks/customHook.md">React 自定义 hook</a>
 
 ### 三）React 技术相关的
 
@@ -191,6 +193,7 @@
 
 1. <a href="https://github.com/kongzhi0707/v-component-ui">Vue 组件库搭建</a>
 2. <a href="https://github.com/kongzhi0707/r-component-ui">React 组件库搭建</a>
+3. <a href="./react/component1.md">从 0 到 1 搭建 react 组件库</a>
 
 ### 十四) 脚手架搭建
 
@@ -210,6 +213,7 @@
 1. <a href="./tool/loader.md">webpack 手写 loader</a>
 2. <a href="./tool/plugin.md">webpack 手写 plugin</a>
 3. <a href="./tool/model.md">浅谈前端数据模型</a>
+4. <a href="./tool/storybook.md">理解 Storybook 组件库构建</a>
 
 ### 十七）chrome 扩展插件相关的
 

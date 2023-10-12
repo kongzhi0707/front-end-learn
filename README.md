@@ -199,6 +199,7 @@
 
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
+3. <a href="https://github.com/kongzhi0707/ts-staging">搭建 typescript 脚手架工具 ts-cli</a>
 
 ### 十五) babel 相关的
 

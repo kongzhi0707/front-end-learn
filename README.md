@@ -200,6 +200,7 @@
 1. <a href="./react/reactStaging.md">搭建一个 React 脚手架</a>
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 3. <a href="https://github.com/kongzhi0707/ts-staging">搭建 typescript 脚手架工具 ts-cli</a>
+4. <a href="https://github.com/kongzhi0707/kz-staging-cli">从零搭建一个前端脚手架命令行工具</a>
 
 ### 十五) babel 相关的
 
@@ -215,6 +216,7 @@
 2. <a href="./tool/plugin.md">webpack 手写 plugin</a>
 3. <a href="./tool/model.md">浅谈前端数据模型</a>
 4. <a href="./tool/storybook.md">理解 Storybook 组件库构建</a>
+5. <a href="./tool/rollup.md">Rollup 打包 js 库</a>
 
 ### 十七）chrome 扩展插件相关的
 

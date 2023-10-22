@@ -208,8 +208,9 @@
 2. <a href="./node/babelrc.md">babel 配置文件详解</a>
 3. <a href="./babel/babel2.md">Babel 中 plugin,preset 的区别和使用</a>
 4. <a href="./babel/astType.md">AST 节点类型对照表</a>
-5. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
-6. <a href="https://github.com/kongzhi0707/babel-plugin-component-test">组件库实现按需加载 babel 插件编写</a>
+5. <a href="./babel/babelplugin1.md">认识 babel 插件的 相关的 API 使用</a>
+6. <a href="./babel/babelPlugin.md">如何编写 babel 插件及在项目中调用</a>
+7. <a href="https://github.com/kongzhi0707/babel-plugin-component-test">组件库实现按需加载 babel 插件编写</a>
 
 ### 十六）前端构建工具相关的
 

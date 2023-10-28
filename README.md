@@ -197,7 +197,7 @@
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 3. <a href="https://github.com/kongzhi0707/ts-staging">搭建 typescript 脚手架工具 ts-cli</a>
 4. <a href="https://github.com/kongzhi0707/kz-staging-cli">从零搭建一个前端脚手架命令行工具</a>
-5. <a href="./template/vu2template.md">从 0 搭建 vite3 + vue2 + router + vuex + javascript 脚手架项目</a>
+5. <a href="./template/vue2template.md">从 0 搭建 vite3 + vue2 + router + vuex + javascript 脚手架项目</a>
 
 ### 十五) babel 相关的
 

@@ -54,21 +54,20 @@
 15. <a href="./react/renderProps.md">理解 Render Props</a>
 16. <a href="./es6/typescript3.md">React.FC 和 React.Component 使用和区别</a>
 17. <a href="./es6/context.md">React Context 使用介绍</a>
-18. <a href='./react/typescript1.md'>TypeScript 如何在 React 中使用</a>
-19. <a href="./react/render.md">React 中重新渲染的四种方式</a>
-20. <a href="./react/createRef.md">理解使用 React.createRef()使用 及 React 父组件调用子组件的方法</a>
-21. <a href="./react/drag.md">React 中实现拖拽的基本知识点</a>
-22. <a href="./react/high.md">React 高阶组件及应用场景</a>
-23. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
-24. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
-25. <a href="./react/context2.md">React Context 嵌套传值</a>
-26. <a href="./react/context3.md">避免 React Context 导致的重复渲染</a>
-27. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
-28. <a href="./react/schema.md">JSON Schema 入门和应用</a>
-29. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
-30. <a href="./react/context4.md">react 之 context 前世今生</a>
-31. <a href="./react/method.md">React 组件开发方式</a>
-32. <a href="./react/method2.md">React 组件设计思路和风格</a>
+18. <a href="./react/render.md">React 中重新渲染的四种方式</a>
+19. <a href="./react/createRef.md">理解使用 React.createRef()使用 及 React 父组件调用子组件的方法</a>
+20. <a href="./react/drag.md">React 中实现拖拽的基本知识点</a>
+21. <a href="./react/high.md">React 高阶组件及应用场景</a>
+22. <a href="./react/reactTs.md">使用 React + TypeScript 开发</a>
+23. <a href="./react/sortlist.md">手动实践一个可拖放列表</a>
+24. <a href="./react/context2.md">React Context 嵌套传值</a>
+25. <a href="./react/context3.md">避免 React Context 导致的重复渲染</a>
+26. <a href="./react/reactSmoothDnd.md">React-smooth-dnd 实现拖拽排序</a>
+27. <a href="./react/schema.md">JSON Schema 入门和应用</a>
+28. <a href="./react/proptypes.md">react 中的 prop-types 插件对数据类型进行检测。</a>
+29. <a href="./react/context4.md">react 之 context 前世今生</a>
+30. <a href="./react/method.md">React 组件开发方式</a>
+31. <a href="./react/method2.md">React 组件设计思路和风格</a>
 
 ### 四）ES6 知识相关的
 
@@ -99,19 +98,16 @@
 25. <a href="./es6/objectIsSame.md">JS 判断两个对象是否相同</a>
 26. <a href="./es6/deteleObject.md">js 去掉数组对象中的重复对象</a>
 27. <a href="./es6/objSort.md">JS 中的数组对象排序</a>
-28. <a href='./es6/typescript.md'>typescript 入门教程</a>
-29. <a href="./es6/typescript2.md">typescript 泛型</a>
-30. <a href="./es6/typescript4.md">全面学习 typescript</a>
-31. <a href="./es6/goodSearch.md">前端大量检索优化</a>
-32. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
-33. <a href='./es6/getComputedStyle.md'>getComputedStyle 的用法</a>
-34. <a href="./es6/getPropertyValue.md">css 声明变量:root 伪类及 getPropertyValue 方法</a>
-35. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
-36. <a href="./es6/flex.md">理解 css 中的 flex-grow/flex-shrink/flex-basis</a>
-37. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
-38. <a href="./es6/tree1.md">js 递归遍历树，查找符合条件的子项</a>
-39. <a href="./es6/tree2.md">js 递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
-40. <a href="./es6/theme1.md">前端主题切换方案</a>
+28. <a href="./es6/goodSearch.md">前端大量检索优化</a>
+29. <a href="./es6/array2.md">数组中拥有相同值的部分放在一起</a>
+30. <a href='./es6/getComputedStyle.md'>getComputedStyle 的用法</a>
+31. <a href="./es6/getPropertyValue.md">css 声明变量:root 伪类及 getPropertyValue 方法</a>
+32. <a href='./es6/getComputedStyle2.md'>JS 修改 CSS 变量</a>
+33. <a href="./es6/flex.md">理解 css 中的 flex-grow/flex-shrink/flex-basis</a>
+34. <a href="./es6/autowidth.md">使用 Flexbox 布局可以轻松实现换行自适应宽度</a>
+35. <a href="./es6/tree1.md">js 递归遍历树，查找符合条件的子项</a>
+36. <a href="./es6/tree2.md">js 递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
+37. <a href="./es6/theme1.md">前端主题切换方案</a>
 
 ### 五）可视化搭建整理
 
@@ -201,6 +197,7 @@
 2. <a href="https://github.com/kongzhi0707/react-typescript-staging">React+TypeScript 项目搭建</a>
 3. <a href="https://github.com/kongzhi0707/ts-staging">搭建 typescript 脚手架工具 ts-cli</a>
 4. <a href="https://github.com/kongzhi0707/kz-staging-cli">从零搭建一个前端脚手架命令行工具</a>
+5. <a href="./template/vu2template.md">从 0 搭建 vite3 + vue2 + router + vuex + javascript 脚手架项目</a>
 
 ### 十五) babel 相关的
 
@@ -261,3 +258,10 @@
 ### 二十三) 前端规范
 
 1. <a href="./rules/config.md">react+ts 代码规范配置和 git 提交规则</a>
+
+### 二十四）TypeScript + React 相关的
+
+1. <a href='./es6/typescript.md'>typescript 入门教程</a>
+2. <a href="./es6/typescript2.md">typescript 泛型</a>
+3. <a href="./es6/typescript4.md">全面学习 typescript</a>
+4. <a href='./react/typescript1.md'>TypeScript 如何在 React 中使用</a>

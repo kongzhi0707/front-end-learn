@@ -14,6 +14,7 @@
 - [x] [十) 集成 Stylelint 配置](#id10) <br />
 - [x] [十一) 集成 husky 和 lint-staged](#id11) <br />
 - [x] [十二) 提交规范](#id12) <br />
+- [x] [十三) 使用 Github Actions 实现自动部署](#id13) <br />
 
 #### 用到的技术栈
 
@@ -1183,3 +1184,7 @@ npx --no-install commitlint --edit "$1"
 ```
 
 <a href="https://github.com/kongzhi0707/vite3-vue2-router-vuex-javascript">github 源码查看</a>
+
+<div id="id13">十三）使用Github Actions 实现自动部署 <a href="#back"> 回到顶部</a></div>
+
+下面我们可以使用 GitHub Actions 来完成前端自动化部署功能，<a href="https://github.com/kongzhi0707/front-end-learn/blob/master/gitActions.md">Github Actions 实现前端应用部署</a> 可以看之前的文章。

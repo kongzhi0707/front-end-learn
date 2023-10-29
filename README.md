@@ -163,6 +163,7 @@
 21. <a href="https://github.com/kongzhi0707/v-cli">nodejs 编写 cli 命令行工具</a>
 22. <a href="./node/shelljs.md">学习 ShellJS 使用</a>
 23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个 node-cli 命令行工具</a>
+24. <a href="./node/package.md">理解 package.json 各个配置的含义</a>
 
 ### 九) mock 数据
 

@@ -3,40 +3,40 @@
 <div id="back"></div>
 
 - [x] [一：描述配置](#id1)<br />
-      |--- 1.1) name
-      |--- 1.2) version
-      |--- 1.3) repository
-      |--- 1.4) description
-      |--- 1.5) keywords
-      |--- 1.6）homepage
-      |--- 1.7) bugs
-      |--- 1.8) license
-      |--- 1.9) author
+  - [x] 1.1) name
+  - [x] 1.2) version
+  - [x] 1.3) repository
+  - [x] 1.4) description
+  - [x] 1.5) keywords
+  - [x] 1.6）homepage
+  - [x] 1.7) bugs
+  - [x] 1.8) license
+  - [x] 1.9) author
 - [x] [二：文件配置](#id2) <br />
-      |--- 2.1）files
-      |--- 2.2）types
-      |--- 2.3) main
-      |--- 2.4）browser
-      |--- 2.5) module
-      |--- 2.6）exports
-      |--- 2.7) workspaces
+  - [x] 2.1）files
+  - [x] 2.2）types
+  - [x] 2.3) main
+  - [x] 2.4）browser
+  - [x] 2.5) module
+  - [x] 2.6）exports
+  - [x] 2.7) workspaces
 - [x] [三：脚本配置](#id3) <br />
-      |--- 3.1）scripts
-      |--- 3.2）config
+  - [x] 3.1）scripts
+  - [x] 3.2）config
 - [x] [四：依赖配置](#id4) <br />
-      |--- 4.1）dependencies
-      |--- 4.2) devDependencies
-      |--- 4.3) peerDependencies
+  - [x] 4.1）dependencies
+  - [x] 4.2) devDependencies
+  - [x] 4.3) peerDependencies
 - [x] [五：发布配置](#id5) <br />
-      |--- 5.1）private
-      |--- 5.2) publishConfig
+  - [x] 5.1）private
+  - [x] 5.2) publishConfig
 - [x] [六：系统配置](#id6) <br />
-      |--- 6.1）engines
+  - [x] 6.1）engines
 - [x] [七：第三方配置](#id7) <br />
-      |--- 7.1）types 或 typings
-      |--- 7.2）browserslist
-      |--- 7.3）sideEffects
-      |--- 7.4）lint-staged
+  - [x] 7.1）types 或 typings
+  - [x] 7.2）browserslist
+  - [x] 7.3）sideEffects
+  - [x] 7.4）lint-staged
 
 package.json 是前端每个项目都有的 json 文件，位于项目的根目录下。package.json 有许许多多的配置，它与项目息息相关。了解他们有助于了解项目，提效开发，规范代码。
 

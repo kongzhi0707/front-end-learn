@@ -89,7 +89,7 @@ module.exports = {
 
 然后我们点击第一行的 Open User Setting，可以进入用户设置界面。进去后我们可以看到页面如下：
 
-<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/rules/images2s/5.png" /><br />
+<img src="https://raw.githubusercontent.com/kongzhi0707/front-end-learn/master/rules/images2/5.png" /><br />
 
 有两个 tab，分别是 用户 和 工作区，用户是对用户进行配置，可以理解为全局配置，在用户的配置项会对所有的 VsCode 打开的文件有效。工作区的配置只对当前工作目录有效。如果我们改了工作区的配置，那么 VsCode 会在当前打开的目录下新建 .vscode 目录用来保存做的修改。工作区的配置的优先级大于 用户里面配置的优先级。
 

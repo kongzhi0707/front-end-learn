@@ -199,6 +199,7 @@
 3. <a href="https://github.com/kongzhi0707/ts-staging">搭建 typescript 脚手架工具 ts-cli</a>
 4. <a href="https://github.com/kongzhi0707/kz-staging-cli">从零搭建一个前端脚手架命令行工具</a>
 5. <a href="./template/vue2template.md">从 0 搭建 vite3 + vue2 + router + vuex + javascript 脚手架项目</a>
+6. <a href="./template/vue3template.md">从 0 搭建 vite + vue3 + router + Pinia + typescript 脚手架项目</a>
 
 ### 十五) babel 相关的
 
@@ -259,6 +260,7 @@
 ### 二十三) 前端规范
 
 1. <a href="./rules/config.md">react+ts 代码规范配置和 git 提交规则</a>
+2. <a href="./rules/config2.md">ESLint + Prettier + husky + lint-staged 规范统一前端代码风格</a>
 
 ### 二十四）TypeScript + React 相关的
 

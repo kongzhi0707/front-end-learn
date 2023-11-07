@@ -1655,3 +1655,5 @@ const shopInstance = createInstance(
 
 export { baseInstance, shopInstance };
 ```
+
+<a href="https://github.com/kongzhi0707/vite-vue3-router-Pinia-typescript">github 源码</a>

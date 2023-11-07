@@ -172,6 +172,7 @@
 ### 十) ajax 相关
 
 1. <a href="./ajax/axios.md">axios 对请求的封装和 API 接口管理</a>
+2. <a href="./ajax/axiosts.md">Axios+ts 的封装</a>
 
 ### 十一）深入了解 Vite 模式
 

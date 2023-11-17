@@ -164,6 +164,7 @@
 22. <a href="./node/shelljs.md">学习 ShellJS 使用</a>
 23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个 node-cli 命令行工具</a>
 24. <a href="./node/package.md">理解 package.json 各个配置的含义</a>
+25. <a href="./node/package2.md">package.json 和 package-lock.json 的用途</a>
 
 ### 九) mock 数据
 
@@ -201,6 +202,7 @@
 4. <a href="https://github.com/kongzhi0707/kz-staging-cli">从零搭建一个前端脚手架命令行工具</a>
 5. <a href="./template/vue2template.md">从 0 搭建 vite3 + vue2 + router + vuex + javascript 脚手架项目</a>
 6. <a href="./template/vue3template.md">从 0 搭建 vite + vue3 + router + Pinia + typescript 脚手架项目</a>
+7. <a href="./template/reactTemplate.md">从 0 到 1 搭建 React18+typescript4+webpack5 脚手架项目</a>
 
 ### 十五) babel 相关的
 

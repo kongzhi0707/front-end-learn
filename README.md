@@ -275,3 +275,4 @@
 ### 二十五）H5 相关的技术
 
 1. <a href="./h5/layout.md">响应性布局方案</a>
+2. <a href="./h5/jsbridge.md">APP 与 H5 通信</a>

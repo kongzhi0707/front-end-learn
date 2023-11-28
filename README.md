@@ -165,8 +165,9 @@
 23. <a href="https://github.com/kongzhi0707/v-cli2">实现一个 node-cli 命令行工具</a>
 24. <a href="./node/package.md">理解 package.json 各个配置的含义</a>
 25. <a href="./node/package2.md">package.json 和 package-lock.json 的用途</a>
-26. <a href="https://github.com/kongzhi0707/kz-source">node 实现切换源</a>
-27. <a href="https://github.com/kongzhi0707/kz-request">node 测试接口工具</a>
+26. <a href="https://github.com/kongzhi0707/kz-source">kz-source 实现切换源</a>
+27. <a href="https://github.com/kongzhi0707/kz-request">kz-request 测试接口工具</a>
+28. <a href="https://github.com/kongzhi0707/kz-git/tree/main">kz-git 命令行 git 工具</a>
 
 ### 九) mock 数据
 

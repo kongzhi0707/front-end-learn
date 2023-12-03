@@ -267,6 +267,8 @@
 
 1. <a href="./rules/config.md">react+ts 代码规范配置和 git 提交规则</a>
 2. <a href="./rules/config2.md">ESLint + Prettier + husky + lint-staged 规范统一前端代码风格</a>
+3. <a href="./rules/eslint.md">Eslint 配置详解</a>
+4. <a href="./rules/prettier.md">使用 prettier 统一代码格式化</a>
 
 ### 二十四）TypeScript + React 相关的
 

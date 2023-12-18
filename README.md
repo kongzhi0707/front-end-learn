@@ -108,6 +108,7 @@
 35. <a href="./es6/tree1.md">js 递归遍历树，查找符合条件的子项</a>
 36. <a href="./es6/tree2.md">js 递归树形数据查询该节点的所有父级节点，查询该节点的所有子节点，及当前节点所有兄弟节点</a>
 37. <a href="./es6/theme1.md">前端主题切换方案</a>
+38. <a href="./es6/request.md">相似的请求合并</a>
 
 ### 五）可视化搭建整理
 
@@ -268,7 +269,6 @@
 1. <a href="./rules/config.md">react+ts 代码规范配置和 git 提交规则</a>
 2. <a href="./rules/config2.md">ESLint + Prettier + husky + lint-staged 规范统一前端代码风格</a>
 3. <a href="./rules/eslint.md">Eslint 配置详解</a>
-4. <a href="./rules/prettier.md">使用 prettier 统一代码格式化</a>
 
 ### 二十四）TypeScript + React 相关的
 
